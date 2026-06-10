@@ -10,6 +10,9 @@ data/raw/*
 !data/raw/liste_lamal_ems_vd_2024.pdf
 !data/raw/ems_vd_source.csv
 !data/raw/ems_communes_manuel.csv
+!data/raw/ifd_revenu_communes_2022.xlsx
+!data/raw/coefficients_impot_communes_2026.xls
+!data/raw/fortune_districts.xlsx
 # (les caches d'API restent ignorés : cache_searchch.json, cache_osm.json)
 
 # Système

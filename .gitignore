@@ -6,6 +6,11 @@ __pycache__/
 # Données brutes volumineuses (on garde les scripts qui les téléchargent)
 data/raw/*
 !data/raw/.gitkeep
+# ... sauf les sources officielles et la curation manuelle (à versionner)
+!data/raw/liste_lamal_ems_vd_2024.pdf
+!data/raw/ems_vd_source.csv
+!data/raw/ems_communes_manuel.csv
+# (les caches d'API restent ignorés : cache_searchch.json, cache_osm.json)
 
 # Système
 .DS_Store

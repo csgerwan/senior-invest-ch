@@ -49,8 +49,13 @@ def norm(s: str) -> str:
     return re.sub(r"[^a-z0-9 ]", " ", s).strip()
 
 
+OSM_CACHE = Path("data/raw/cache_osm.json")
+
+
 def charger_osm():
-    """EMS OSM (nom + coordonnées) pour servir d'ancrage de géolocalisation."""
+    """EMS OSM (nom + coordonnées) servant d'ancrage de géolocalisation.
+    Tolérant aux pannes : met en cache et retombe sur le cache (ou []) si
+    l'API Overpass est indisponible (les ancrages OSM ne sont qu'un bonus)."""
     query = """
     [out:json][timeout:90];
     area["name"="Vaud"]["admin_level"="4"]->.a;
@@ -59,19 +64,27 @@ def charger_osm():
       nwr["social_facility"="assisted_living"](area.a); );
     out center tags;
     """
-    r = requests.post("https://overpass-api.de/api/interpreter",
-                      data={"data": query}, headers=UA, timeout=120)
-    r.raise_for_status()
-    pts = []
-    for e in r.json()["elements"]:
-        t = e.get("tags", {})
-        if not t.get("name"):
-            continue
-        lat = e.get("lat") or e.get("center", {}).get("lat")
-        lon = e.get("lon") or e.get("center", {}).get("lon")
-        if lat and lon:
-            pts.append({"nom_norm": norm(t["name"]), "lat": lat, "lon": lon})
-    return pts
+    try:
+        r = requests.post("https://overpass-api.de/api/interpreter",
+                          data={"data": query}, headers=UA, timeout=120)
+        r.raise_for_status()
+        pts = []
+        for e in r.json()["elements"]:
+            t = e.get("tags", {})
+            if not t.get("name"):
+                continue
+            lat = e.get("lat") or e.get("center", {}).get("lat")
+            lon = e.get("lon") or e.get("center", {}).get("lon")
+            if lat and lon:
+                pts.append({"nom_norm": norm(t["name"]), "lat": lat, "lon": lon})
+        OSM_CACHE.write_text(json.dumps(pts, ensure_ascii=False))
+        return pts
+    except Exception as ex:
+        if OSM_CACHE.exists():
+            print(f"  ⚠️ Overpass indisponible ({ex}) — utilisation du cache OSM.")
+            return json.loads(OSM_CACHE.read_text())
+        print(f"  ⚠️ Overpass indisponible ({ex}) — on continue sans ancrage OSM.")
+        return []
 
 
 def match_osm(nom_norm, osm, seuil=0.6):
@@ -84,12 +97,12 @@ def match_osm(nom_norm, osm, seuil=0.6):
     return (best["lat"], best["lon"]) if best and best_r >= seuil else (None, None)
 
 
-def geocode_adresse(nom):
+def geocode_adresse(texte):
     """geo.admin SearchServer : n'accepte qu'une ADRESSE située dans le canton."""
     try:
         r = requests.get(
             "https://api3.geo.admin.ch/rest/services/api/SearchServer",
-            params={"type": "locations", "searchText": nom, "limit": 3,
+            params={"type": "locations", "searchText": texte, "limit": 3,
                     "origins": "address"},
             headers=UA, timeout=15)
         for res in r.json().get("results", []):
@@ -100,6 +113,60 @@ def geocode_adresse(nom):
     except Exception:
         pass
     return None, None
+
+
+# Cache disque des réponses search.ch (évite de regâcher le quota quotidien gratuit)
+CACHE = Path("data/raw/cache_searchch.json")
+_cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
+_rate_limited = False
+
+
+def adresse_searchch(nom, nom_norm):
+    """Cherche un EMS dans l'annuaire search.ch (sans clé), avec cache disque.
+    Parse le contenu ligne par ligne. Renvoie (rue, npa, ville) en VD, ou None.
+    En cas de quota dépassé (HTTP 429), arrête d'interroger l'API pour la session."""
+    global _rate_limited
+    if nom in _cache:                       # déjà connu -> aucune requête
+        return tuple(_cache[nom]) if _cache[nom] else None
+    if _rate_limited:                       # quota épuisé -> on n'insiste pas
+        return None
+    try:
+        r = requests.get("https://tel.search.ch/api/",
+                         params={"was": nom, "wo": "VD"}, headers=UA, timeout=15)
+        if r.status_code == 429:
+            _rate_limited = True
+            print("  ⚠️ search.ch : quota quotidien épuisé (429) — reprise possible demain.")
+            return None
+        entries = re.findall(r"<entry>(.*?)</entry>", r.text, re.S)
+        mots = [w for w in nom_norm.split() if len(w) > 3]
+        resultat = None
+        for e in entries:
+            titre = re.search(r"<title[^>]*>(.*?)</title>", e, re.S)
+            contenu = re.search(r"<content[^>]*>(.*?)</content>", e, re.S)
+            if not contenu:
+                continue
+            lignes = [l.strip() for l in contenu.group(1).splitlines() if l.strip()]
+            # validation de pertinence : le nom doit se retrouver dans l'entrée
+            ref = norm(titre.group(1) if titre else "") + " " + norm(" ".join(lignes))
+            if mots and not any(w in ref for w in mots):
+                continue  # entrée non pertinente -> entrée suivante
+            for i, l in enumerate(lignes):
+                m = re.match(r"^(1\d{3})\s+(.+)$", l)
+                if not m:
+                    continue
+                npa = m.group(1)
+                ville = re.sub(r"\s+(VD|VS|FR|GE|NE|JU|BE)$", "", m.group(2)).strip()
+                rue = lignes[i - 1] if i > 0 else ""
+                resultat = [rue, npa, ville]
+                break
+            if resultat:
+                break
+        _cache[nom] = resultat            # mémorise même les échecs (None)
+        CACHE.write_text(json.dumps(_cache, ensure_ascii=False))
+        return tuple(resultat) if resultat else None
+    except Exception:
+        pass
+    return None
 
 
 def main():
@@ -115,18 +182,30 @@ def main():
     osm = charger_osm()
     print(f"  {len(osm)} points OSM disponibles")
 
-    lats, lons, conf = [], [], []
+    lats, lons, conf, villes = [], [], [], []
     print(f"Géolocalisation de {len(df)} établissements...")
     for nom in df["nom_clean"]:
         nn = norm(nom)
+        ville_sc = None
+        # 1) ancrage OpenStreetMap (coordonnées directes)
         lat, lon = match_osm(nn, osm)
         c = "OSM" if lat else None
+        # 2) adresse trouvée dans l'annuaire search.ch -> ville (commune) + coords
         if not lat:
+            res = adresse_searchch(nom, nn)
+            time.sleep(0.2)
+            if res:
+                rue, npa, ville_sc = res
+                lat, lon = geocode_adresse(f"{rue} {npa} {ville_sc}".strip())
+                c = "search.ch" if (lat or ville_sc) else None
+                time.sleep(0.15)
+        # 3) géocodage direct du nom (rare)
+        if not lat and not ville_sc:
             lat, lon = geocode_adresse(nom)
             c = "adresse" if lat else None
             time.sleep(0.15)
-        lats.append(lat); lons.append(lon); conf.append(c)
-    df["lat"], df["lon"], df["geo_source"] = lats, lons, conf
+        lats.append(lat); lons.append(lon); conf.append(c); villes.append(ville_sc)
+    df["lat"], df["lon"], df["geo_source"], df["ville_sc"] = lats, lons, conf, villes
 
     # Commune par "commune la plus proche" si coordonnées (gère les points
     # tombant en bordure ou sur le lac à cause d'une géométrie simplifiée)
@@ -144,7 +223,28 @@ def main():
         df.loc[j.index, "commune"] = (j["commune_right"].values
                                       if "commune_right" in j else j["commune"].values)
 
-    # Repli commune : nom de commune vaudoise présent dans le nom de l'établissement
+    # Repli 0 : référence manuelle vérifiée (data/raw/ems_communes_manuel.csv)
+    manuel = Path("data/raw/ems_communes_manuel.csv")
+    if manuel.exists():
+        ref = pd.read_csv(manuel)
+        for _, m in ref.iterrows():
+            cle, comm = str(m["motcle"]).upper(), norm(m["commune"])
+            if comm not in noms_communes:
+                continue
+            ofs, cnom = noms_communes[comm]
+            for i in df[df["ofs"].isna()].index:
+                if cle in str(df.at[i, "nom"]).upper():
+                    df.at[i, "ofs"], df.at[i, "commune"] = ofs, cnom
+                    df.at[i, "geo_source"] = "manuel"
+
+    # Repli 1 : commune déduite de la ville renvoyée par search.ch
+    for i in df[df["ofs"].isna()].index:
+        v = df.at[i, "ville_sc"]
+        if isinstance(v, str) and norm(v) in noms_communes:
+            ofs, cnom = noms_communes[norm(v)]
+            df.at[i, "ofs"], df.at[i, "commune"] = ofs, cnom
+
+    # Repli 2 : nom de commune vaudoise présent dans le nom de l'établissement
     for i in df[df["ofs"].isna()].index:
         nn = " " + norm(df.at[i, "nom"]) + " "
         for cnorm, (ofs, cnom) in noms_communes.items():

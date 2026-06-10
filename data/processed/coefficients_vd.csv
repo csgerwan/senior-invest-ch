@@ -1,0 +1,299 @@
+ofs,nom,coefficient
+5401,Aigle,66.0
+5402,Bex,71.0
+5403,Chessel,65.0
+5404,Corbeyrier,74.0
+5405,Gryon,73.5
+5406,Lavey-Morcles,71.5
+5407,Leysin,78.0
+5408,Noville,75.0
+5409,Ollon,68.0
+5410,Ormont-Dessous,77.0
+5411,Ormont-Dessus,76.0
+5412,Rennaz,64.0
+5413,Roche (VD),66.5
+5414,Villeneuve (VD),66.5
+5415,Yvorne,71.5
+5451,Avenches,65.0
+5663,Bussy-sur-Moudon,78.5
+5812,Champtauroz,77.0
+5665,Chavannes-sur-Moudon,70.0
+5813,Chevroux,68.5
+5785,Corcelles-le-Jorat,75.0
+5816,Corcelles-près-Payerne,65.0
+5456,Cudrefin,59.0
+5669,Curtilles,71.0
+5671,Dompierre (VD),78.0
+5458,Faoug,65.0
+5817,Grandcour,72.0
+5819,Henniez,69.0
+5673,Hermenches,78.0
+5674,Lovatens,75.0
+5675,Lucens,69.5
+5821,Missy,69.0
+5678,Moudon,72.5
+5822,Payerne,70.0
+5683,Prévonloup,72.5
+5798,Ropraz,77.5
+5684,Rossenges,65.0
+5688,Syens,65.0
+5827,Trey,78.0
+5831,Valbroye,70.5
+5690,Villars-le-Comte,68.0
+5830,Villarzel,75.0
+5692,Vucherens,75.0
+5803,Vulliens,74.0
+5464,Vully-les-Lacs,67.0
+5511,Assens,70.0
+5512,Bercher,79.0
+5471,Bettens,70.0
+5514,Bottens,72.5
+5661,Boulens,71.5
+5472,Bournens,65.0
+5473,Boussens,64.0
+5515,Bretigny-sur-Morrens,76.0
+5516,Cugy (VD),76.0
+5480,Daillens,66.0
+5518,Echallens,72.5
+5520,Essertines-sur-Yverdon,72.0
+5521,Etagnières,73.0
+5522,Fey,75.0
+5523,Froideville,72.0
+5541,Goumoëns,75.5
+5804,Jorat-Menthue,70.5
+5487,Lussery-Villars,75.0
+5489,Mex (VD),59.5
+5693,Montanaire,70.0
+5540,Montilliez,72.5
+5527,Morrens (VD),74.0
+5680,Ogens,76.0
+5923,Oppens,79.0
+5529,Oulens-sous-Echallens,71.0
+5530,Pailly,76.0
+5495,Penthalaz,72.5
+5496,Penthaz,69.5
+5531,Penthéréaz,74.0
+5533,Poliez-Pittet,73.0
+5534,Rueyres,73.0
+5535,Saint-Barthélemy (VD),77.0
+5501,Sullens,64.0
+5537,Villars-le-Terroir,76.0
+5539,Vuarrens,73.5
+5503,Vufflens-la-Ville,65.0
+5742,Agiez,76.0
+5743,Arnex-sur-Orbe,71.0
+5744,Ballaigues,65.0
+5745,Baulmes,76.5
+5746,Bavois,72.0
+5902,Belmont-sur-Yverdon,70.0
+5903,Bioley-Magnoux,72.0
+5747,Bofflens,69.0
+5551,Bonvillars,67.0
+5748,Bretonnières,69.0
+5552,Bullet,75.0
+5904,Chamblon,66.0
+5553,Champagne,65.0
+5905,Champvent,70.0
+5907,Chavannes-le-Chêne,75.0
+5749,Chavornay,70.5
+5908,Chêne-Pâquier,75.0
+5909,Cheseaux-Noréaz,67.0
+5554,Concise,68.0
+5555,Corcelles-près-Concise,69.0
+5910,Cronay,75.0
+5752,Croy,74.0
+5911,Cuarny,73.0
+5912,Démoret,78.0
+5913,Donneloye,73.0
+5914,Ependes (VD),73.5
+5556,Fiez,69.0
+5557,Fontaines-sur-Grandson,72.0
+5559,Giez,69.0
+5560,Grandevent,71.0
+5561,Grandson,69.0
+5754,Juriens,79.0
+5758,La Praz,83.0
+5871,L'Abbaye,76.0
+5741,L'Abergement,80.0
+5872,Le Chenit,58.5
+5873,Le Lieu,70.0
+5750,Les Clées,80.0
+5755,Lignerolle,78.5
+5919,Mathod,72.0
+5562,Mauborget,70.0
+5921,Molondin,81.0
+5922,Montagny-près-Yverdon,64.5
+5756,Montcherand,72.0
+5563,Mutrux,80.0
+5564,Novalles,76.0
+5565,Onnens (VD),65.0
+5757,Orbe,75.5
+5924,Orges,74.0
+5925,Orzens,79.0
+5926,Pomy,71.0
+5759,Premier,79.5
+5566,Provence,81.0
+5760,Rances,76.5
+5761,Romainmôtier-Envy,81.0
+5928,Rovray,73.0
+5568,Sainte-Croix,70.0
+5762,Sergey,76.0
+5929,Suchy,70.0
+5930,Suscévaz,72.0
+5571,Tévenon,71.5
+5931,Treycovagnes,73.0
+5932,Ursins,75.0
+5933,Valeyres-sous-Montagny,70.5
+5763,Valeyres-sous-Rances,71.0
+5934,Valeyres-sous-Ursins,77.0
+5764,Vallorbe,70.0
+5765,Vaulion,81.0
+5935,Villars-Epeney,72.0
+5937,Vugelles-La Mothe,70.0
+5766,Vuiteboeuf,75.0
+5938,Yverdon-les-Bains,75.0
+5939,Yvonand,73.0
+5582,Cheseaux-sur-Lausanne,73.0
+5584,Epalinges,64.5
+5585,Jouxtens-Mézery,59.0
+5586,Lausanne,78.5
+5587,Le Mont-sur-Lausanne,72.0
+5592,Romanel-sur-Lausanne,70.5
+5581,Belmont-sur-Lausanne,72.0
+5613,Bourg-en-Lavaux,62.5
+5601,Chexbres,67.5
+5604,Forel (Lavaux),69.0
+5806,Jorat-Mézières,71.0
+5606,Lutry,54.0
+5790,Maracon,74.5
+5792,Montpreveyres,74.5
+5805,Oron,69.0
+5588,Paudex,66.5
+5607,Puidoux,68.5
+5590,Pully,61.0
+5609,Rivaz,62.0
+5611,Savigny,69.0
+5799,Servion,69.0
+5621,Aclens,60.0
+5851,Allaman,65.0
+5422,Aubonne,68.0
+5423,Ballens,73.0
+5424,Berolle,75.5
+5425,Bière,69.0
+5426,Bougy-Villars,62.0
+5622,Bremblens,68.0
+5623,Buchillon,52.0
+5475,Chavannes-le-Veyron,77.0
+5476,Chevilly,70.0
+5628,Chigny,62.0
+5629,Clarmont,72.0
+5477,Cossonay,66.0
+5479,Cuarnens,76.0
+5631,Denens,63.0
+5632,Denges,62.0
+5481,Dizy,75.0
+5633,Echandens,60.5
+5634,Echichens,66.0
+5482,Eclépens,46.0
+5636,Etoy,60.0
+5427,Féchy,64.0
+5483,Ferreyres,76.0
+5428,Gimel,73.0
+5484,Gollion,74.0
+5485,Grancy,70.0
+5656,Hautemorges,68.0
+5474,La Chaux (Cossonay),76.0
+5498,La Sarraz,70.0
+5637,Lavigny,73.0
+5486,L'Isle,75.0
+5638,Lonay,55.0
+5639,Lully (VD),58.0
+5640,Lussy-sur-Morges,61.5
+5488,Mauraz,75.0
+5490,Moiry,76.0
+5431,Mollens (VD),74.0
+5491,Mont-la-Ville,76.0
+5492,Montricher,64.0
+5642,Morges,67.0
+5493,Orny,73.0
+5497,Pompaples,66.0
+5643,Préverenges,65.0
+5645,Romanel-sur-Morges,56.0
+5435,Saint-Livres,69.0
+5436,Saint-Oyens,77.0
+5646,Saint-Prex,59.0
+5437,Saubraz,77.0
+5499,Senarclens,68.5
+5649,Tolochenaz,64.0
+5650,Vaux-sur-Morges,56.0
+5652,Villars-sous-Yens,74.0
+5653,Vufflens-le-Château,60.5
+5654,Vullierens,76.0
+5655,Yens,68.0
+5701,Arnex-sur-Nyon,66.0
+5702,Arzier-Le Muids,64.0
+5703,Bassins,72.5
+5704,Begnins,62.5
+5705,Bogis-Bossey,70.0
+5706,Borex,57.0
+5852,Bursinel,62.0
+5853,Bursins,71.0
+5854,Burtigny,75.0
+5707,Chavannes-de-Bogis,58.0
+5708,Chavannes-des-Bois,66.0
+5709,Chéserex,59.0
+5710,Coinsins,49.0
+5711,Commugny,58.0
+5712,Coppet,57.0
+5713,Crans (VD),59.0
+5714,Crassier,65.0
+5715,Duillier,66.0
+5855,Dully,53.0
+5856,Essertines-sur-Rolle,66.5
+5716,Eysins,59.5
+5717,Founex,57.0
+5718,Genolier,52.0
+5857,Gilly,62.5
+5719,Gingins,60.0
+5720,Givrins,68.5
+5721,Gland,61.0
+5722,Grens,60.0
+5726,La Rippe,63.5
+5731,Le Vaud,69.0
+5429,Longirod,77.5
+5858,Luins,58.5
+5430,Marchissy,77.5
+5723,Mies,54.0
+5859,Mont-sur-Rolle,62.0
+5724,Nyon,61.0
+5860,Perroy,60.5
+5725,Prangins,57.0
+5861,Rolle,59.5
+5727,Saint-Cergue,66.0
+5434,Saint-George,69.5
+5728,Signy-Avenex,58.0
+5729,Tannay,60.5
+5862,Tartegnin,79.0
+5730,Trélex,57.0
+5732,Vich,63.0
+5863,Vinzel,65.0
+5624,Bussigny,62.5
+5627,Chavannes-près-Renens,77.5
+5583,Crissier,63.5
+5635,Ecublens (VD),62.5
+5589,Prilly,72.5
+5591,Renens (VD),77.0
+5648,Saint-Sulpice (VD),55.0
+5651,Villars-Sainte-Croix,60.5
+5892,Blonay - Saint-Légier,67.5
+5882,Chardonne,68.0
+5841,Château-d'Oex,81.5
+5883,Corseaux,67.5
+5884,Corsier-sur-Vevey,64.5
+5885,Jongny,69.5
+5889,La Tour-de-Peilz,64.0
+5886,Montreux,65.0
+5842,Rossinière,81.0
+5843,Rougemont,79.0
+5890,Vevey,74.5
+5891,Veytaux,65.0

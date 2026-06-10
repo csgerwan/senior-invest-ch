@@ -1,8 +1,10 @@
 """
 Étape 3 — Concurrence : les EMS face à la demande senior.
 
-Superpose les EMS (offre) sur la part de 80+ par commune (demande), et calcule
-un PROXY DE TENSION = nb de personnes de 80+ par lit d'EMS dans la commune.
+Données EMS : liste officielle LAMal 2024 du canton (163 établissements + lits),
+géolocalisée (cf. scripts 03a et 03). Superpose l'offre (EMS) sur la demande
+(part de 80+) et calcule un PROXY DE TENSION par commune :
+    tension = personnes de 80+ / lits d'EMS de la commune
 Plus le ratio est élevé, plus l'offre locale est sous pression (estimation).
 """
 
@@ -20,14 +22,13 @@ GEO = ROOT / "data/processed/communes_vd.geojson"
 DEMO = ROOT / "data/processed/demographie_vd.csv"
 EMS = ROOT / "data/processed/ems_vd.csv"
 
-# Chiffres officiels cantonaux (INFOSAN / DGS Vaud, 2024) — contexte pitch
-VD_LITS_TOTAL = 6986
+# Repères officiels cantonaux (INFOSAN / DGS Vaud, 2024)
 VD_TAUX_OCCUPATION = 98  # %
 
 st.set_page_config(page_title="Concurrence EMS", page_icon="🏥", layout="wide")
 st.title("🏥 Concurrence — EMS face à la demande senior")
-st.caption("EMS : OpenStreetMap (partiel) · Démographie : OFS 2024 · "
-           "Lits/occupation canton : INFOSAN/DGS Vaud 2024")
+st.caption("EMS : liste officielle LAMal VD 2024 (lits) · Démographie : OFS 2024 · "
+           "Occupation canton : INFOSAN/DGS Vaud 2024")
 
 
 @st.cache_data
@@ -39,96 +40,107 @@ def load():
 
 
 geo, demo, ems = load()
+ems_loc = ems.dropna(subset=["lat", "lon"])
+lits_total = int(ems["lits"].sum())
+lits_localises = int(ems.dropna(subset=["ofs"])["lits"].sum())
 
-ems_geo = ems.dropna(subset=["lat", "lon"])
-lits_dispo = ems["lits"].notna().any() and ems["lits"].fillna(0).sum() > 0
-
-# --- Bandeau d'avertissement sur la complétude des données ---
-if not lits_dispo:
-    st.warning(
-        f"**Données EMS partielles** : {len(ems_geo)} EMS localisés (source OpenStreetMap), "
-        "**sans nombre de lits**. Le proxy de tension par commune s'affichera dès qu'on "
-        "aura branché la liste officielle DGS (lits par EMS) via `data/raw/ems_vd_source.csv`. "
-        f"En attendant : repère officiel cantonal = **{VD_LITS_TOTAL:,} lits**, "
-        f"**{VD_TAUX_OCCUPATION}% d'occupation**.".replace(",", "'")
-    )
-
-# --- Agrégat EMS par commune ---
-par_commune = ems_geo.groupby("ofs").agg(
-    nb_ems=("nom", "count"),
-    lits_commune=("lits", "sum"),
-).reset_index()
+# --- Agrégat par commune ---
+par_commune = ems.dropna(subset=["ofs"]).groupby("ofs").agg(
+    nb_ems=("nom", "count"), lits_commune=("lits", "sum")).reset_index()
 d = demo.merge(par_commune, on="ofs", how="left")
 d["nb_ems"] = d["nb_ems"].fillna(0).astype(int)
 d["lits_commune"] = d["lits_commune"].fillna(0)
+# Proxy de tension : 80+ par lit (NaN si aucun lit recensé dans la commune)
+d["tension"] = (d["pop_80plus"] / d["lits_commune"].where(d["lits_commune"] > 0)).round(1)
 
-# Proxy de tension (si lits dispo) sinon indicateur de repli = nb d'EMS
-if lits_dispo:
-    d["tension"] = (d["pop_80plus"] / d["lits_commune"].replace(0, pd.NA)).round(1)
-    indic_col, indic_lbl = "tension", "Tension : 80+ par lit d'EMS (estimation)"
+# --- Choix d'affichage ---
+mode = st.sidebar.radio(
+    "Couche de fond (communes)",
+    ["Tension : 80+ par lit (estimation)", "Part des 80+ (%) — demande",
+     "Lits d'EMS par commune — offre"])
+seuil = st.sidebar.slider("Population min. de la commune", 0, 3000, 500, 250)
+d_aff = d[d["pop_totale"] >= seuil].copy()
+
+if mode.startswith("Tension"):
+    col, cap, fmt = "tension", "80+ par lit (plus c'est haut, plus c'est tendu)", "{:.1f}"
+elif mode.startswith("Part"):
+    col, cap, fmt = "part_80plus", "Part des 80+ (%)", "{:.1f}"
 else:
-    indic_col, indic_lbl = "nb_ems", "Nombre d'EMS localisés (OSM, partiel)"
+    col, cap, fmt = "lits_commune", "Lits d'EMS", "{:.0f}"
 
+vals = {r.ofs: getattr(r, col) for r in d_aff.itertuples() if pd.notna(getattr(r, col))}
 infos = d.set_index("ofs").to_dict("index")
 
-# --- Couches carte ---
 col1, col2 = st.columns([3, 1])
 
 with col2:
-    st.metric("EMS localisés", len(ems_geo))
-    st.metric("Lits (canton, officiel)", f"{VD_LITS_TOTAL:,}".replace(",", "'"))
+    st.metric("Établissements (liste off.)", len(ems))
+    st.metric("Lits totaux (canton)", f"{lits_total:,}".replace(",", "'"))
     st.metric("Occupation (canton)", f"{VD_TAUX_OCCUPATION} %")
-    ratio = VD_LITS_TOTAL / demo["pop_80plus"].sum() * 100
+    ratio = lits_total / demo["pop_80plus"].sum() * 100
     st.metric("Lits pour 100 pers. de 80+", f"{ratio:.0f}")
-    st.info("💡 Pitch : 98% d'occupation = marché saturé. "
-            "Croise les communes foncées (forte part 80+) avec le manque d'EMS = opportunité.")
+    st.caption(f"Géolocalisés : {len(ems_loc)}/{len(ems)} EMS · "
+               f"{lits_localises:,}/{lits_total:,} lits cartographiés".replace(",", "'"))
+    st.info("💡 Pitch : 98 % d'occupation = marché saturé. Les communes les plus "
+            "« tendues » (beaucoup de 80+ pour peu de lits) sont les cibles à creuser.")
 
 with col1:
     m = folium.Map(location=[46.6, 6.6], zoom_start=9, tiles="CartoDB positron")
+    if vals:
+        cmap = cm.linear.YlOrRd_09.scale(min(vals.values()), max(vals.values()))
+        cmap.caption = cap
+        for f in geo["features"]:
+            o = f["properties"]["ofs"]
+            inf = infos.get(o, {})
+            f["properties"].update({
+                "v": vals.get(o),
+                "part_80plus": inf.get("part_80plus"),
+                "lits_commune": int(inf.get("lits_commune", 0)),
+                "nb_ems": int(inf.get("nb_ems", 0)),
+                "tension": inf.get("tension"),
+            })
 
-    # Fond : part des 80+ (la demande)
-    vals = dict(zip(demo["ofs"], demo["part_80plus"]))
-    cmap = cm.linear.YlOrRd_09.scale(min(vals.values()), max(vals.values()))
-    cmap.caption = "Part des 80+ (%) — la demande"
-    for f in geo["features"]:
-        f["properties"]["part_80plus"] = vals.get(f["properties"]["ofs"])
-        f["properties"]["nb_ems"] = infos.get(f["properties"]["ofs"], {}).get("nb_ems", 0)
+        def style(ft):
+            v = ft["properties"]["v"]
+            return {"fillColor": cmap(v) if v is not None else "#eeeeee",
+                    "color": "#999", "weight": 0.4, "fillOpacity": 0.75}
 
-    folium.GeoJson(
-        geo,
-        style_function=lambda ft: {
-            "fillColor": cmap(ft["properties"]["part_80plus"]),
-            "color": "#999", "weight": 0.4, "fillOpacity": 0.7,
-        },
-        tooltip=folium.GeoJsonTooltip(
-            fields=["nom", "part_80plus", "nb_ems"],
-            aliases=["Commune :", "Part 80+ (%) :", "EMS (OSM) :"],
-        ),
-    ).add_to(m)
-    cmap.add_to(m)
-
-    # Points : EMS (l'offre)
-    for _, e in ems_geo.iterrows():
-        lits = f" — {int(e['lits'])} lits" if pd.notna(e["lits"]) else ""
-        folium.CircleMarker(
-            [e["lat"], e["lon"]], radius=4, color="#1a5276",
-            fill=True, fill_color="#2980b9", fill_opacity=0.9,
-            tooltip=f"{e['nom']}{lits}",
+        folium.GeoJson(
+            geo, style_function=style,
+            highlight_function=lambda _: {"weight": 2, "color": "black"},
+            tooltip=folium.GeoJsonTooltip(
+                fields=["nom", "part_80plus", "lits_commune", "nb_ems", "tension"],
+                aliases=["Commune :", "Part 80+ (%) :", "Lits EMS :",
+                         "Nb EMS :", "Tension (80+/lit) :"]),
         ).add_to(m)
+        cmap.add_to(m)
+
+    for e in ems_loc.itertuples():
+        folium.CircleMarker(
+            [e.lat, e.lon], radius=3 + (e.lits or 0) ** 0.5 / 2,
+            color="#1a5276", fill=True, fill_color="#2980b9", fill_opacity=0.85,
+            tooltip=f"{e.nom_clean} — {int(e.lits)} lits ({e.commune})").add_to(m)
 
     st_folium(m, width=None, height=600, returned_objects=[])
+    st.caption("⚪ Communes en gris = aucun lit recensé localement (ou EMS non géolocalisé). "
+               "Taille des points ∝ nombre de lits.")
 
-# --- Tableau : communes à fort potentiel (forte demande, peu/pas d'EMS) ---
-st.subheader("🎯 Communes à creuser (forte part de 80+ et peu d'EMS recensés)")
-cibles = d[d["pop_totale"] >= 1500].sort_values(
-    ["nb_ems", "part_80plus"], ascending=[True, False]
-).head(12)
-st.dataframe(
-    cibles[["nom", "pop_totale", "part_80plus", "pop_80plus", "nb_ems"]].rename(columns={
-        "nom": "Commune", "pop_totale": "Population", "part_80plus": "Part 80+ (%)",
-        "pop_80plus": "Nombre 80+", "nb_ems": "EMS (OSM)",
-    }),
-    hide_index=True, use_container_width=True,
-)
-st.caption("⚠️ « EMS (OSM) » est partiel : une commune à 0 peut avoir un EMS non recensé. "
-           "À fiabiliser avec la liste officielle DGS.")
+# --- Tableaux ---
+t1, t2 = st.tabs(["🎯 Communes les plus tendues", "📋 Liste des EMS (officielle)"])
+with t1:
+    st.caption("Communes avec le plus de 80+ par lit d'EMS local (offre sous pression). "
+               "Hors communes sans lit recensé. ⚠️ Biais possible : une commune dont "
+               "des EMS ne sont pas encore géolocalisés (42/163) peut apparaître "
+               "artificiellement « tendue » (lits sous-comptés). À vérifier avant un pitch.")
+    cibles = d_aff.dropna(subset=["tension"]).nlargest(15, "tension")
+    st.dataframe(cibles[["nom", "pop_totale", "pop_80plus", "lits_commune",
+                         "nb_ems", "tension"]].rename(columns={
+        "nom": "Commune", "pop_totale": "Population", "pop_80plus": "80+",
+        "lits_commune": "Lits", "nb_ems": "Nb EMS", "tension": "80+/lit"}),
+        hide_index=True, use_container_width=True)
+with t2:
+    st.caption(f"{len(ems)} établissements (EMS + EPSM), source liste LAMal VD 2024.")
+    st.dataframe(ems[["nom_clean", "type", "lits", "commune", "geo_source"]].rename(columns={
+        "nom_clean": "Établissement", "type": "Type", "lits": "Lits",
+        "commune": "Commune", "geo_source": "Géoloc."}).sort_values("Lits", ascending=False),
+        hide_index=True, use_container_width=True)

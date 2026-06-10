@@ -42,7 +42,7 @@ with col2:
         "✅ Étape 0 — Setup\n\n"
         "✅ Étape 1 — Carte des communes VD\n\n"
         "✅ Étape 2 — Démographie & vieillissement\n\n"
-        "🟡 Étape 3 — Concurrence (EMS) — partiel, lits à compléter\n\n"
+        "✅ Étape 3 — Concurrence (EMS) — 163 EMS officiels + lits\n\n"
         "⬜ Étape 4 — Immobilier\n\n"
         "⬜ Étape 5 — Score d'opportunité\n\n"
         "⬜ Étape 6 — Fiche pitch"

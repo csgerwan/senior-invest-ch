@@ -1,0 +1,23 @@
+ofs,nom,district,prix_m2_appart,prix_source,prix_date,pop_80plus,part_80plus,indice_pouvoir_achat,revenu_median_est
+5712,Coppet,Nyon,15000.0,portails (RealAdvisor/Neho) via recherche web,2025,194,6.0,69.0,68436
+5606,Lutry,Lavaux-Oron,14200.0,portails (RealAdvisor/Neho/Acheteur) via recherche web,2025,871,8.1,69.4,65281
+5590,Pully,Lavaux-Oron,13700.0,portails (RealAdvisor/Neho) via recherche web,2025,1654,8.5,56.9,62708
+5724,Nyon,Nyon,13200.0,portails (RealAdvisor/Neho) via recherche web,2025,1167,5.0,51.3,57968
+5648,Saint-Sulpice (VD),Ouest lausannois,13100.0,portails (RealAdvisor/Comparis) via recherche web,2025,303,5.9,75.1,71296
+5586,Lausanne,Lausanne,13000.0,portails (RealAdvisor/Neho/Acheteur) via recherche web,2025,6992,4.8,14.8,47070
+5713,Crans (VD),Nyon,12700.0,portails (RealAdvisor) via recherche web,2025,140,5.7,73.1,74213
+5886,Montreux,Riviera-Pays-d'Enhaut,12200.0,portails (RealAdvisor/Neho/properti) via recherche web,2025,1976,7.3,30.5,44881
+5717,Founex,Nyon,12000.0,portails (RealAdvisor/Homegate) via recherche web,2025,166,4.4,65.6,65571
+5642,Morges,Morges,11800.0,portails (RealAdvisor/Neho) via recherche web,2025,1273,7.2,38.1,53661
+5725,Prangins,Nyon,11800.0,portails (RealAdvisor/Neho) via recherche web,2025,242,5.7,66.3,66114
+5646,Saint-Prex,Morges,11450.0,portails (RealAdvisor/Neho/Comparis) via recherche web,2025,240,4.1,57.0,60549
+5638,Lonay,Morges,11200.0,portails (RealAdvisor) via recherche web,2025,260,9.5,67.0,64417
+5704,Begnins,Nyon,11200.0,portails (RealAdvisor/Barnes) via recherche web,2025,172,8.5,55.9,63637
+5633,Echandens,Morges,11000.0,portails (RealAdvisor) via recherche web,2025,216,7.2,56.9,62188
+5718,Genolier,Nyon,10700.0,portails (RealAdvisor) via recherche web,2025,109,5.4,82.6,74246
+5721,Gland,Nyon,10500.0,portails (RealAdvisor/Comparis) via recherche web,2025,490,3.5,51.9,58504
+5584,Epalinges,Lausanne,10500.0,portails (RealAdvisor/Neho) via recherche web,2025,566,5.7,50.2,61040
+5892,Blonay - Saint-Légier,Riviera-Pays-d'Enhaut,10000.0,portails (immoscout/RealAdvisor) via recherche web,2025,824,6.6,46.2,61142
+5938,Yverdon-les-Bains,Jura-Nord vaudois,8500.0,portails (RealAdvisor/Neho/Comparis) via recherche web,2025,1817,6.0,17.3,45149
+5872,Le Chenit,Jura-Nord vaudois,6900.0,portails (RealAdvisor) via recherche web,2025,366,7.7,46.4,50898
+5711,Commugny,Nyon,,donnée commune non trouvée,2025,165,5.5,63.6,65000

@@ -44,7 +44,7 @@ with col2:
         "✅ Étape 2 — Démographie & vieillissement\n\n"
         "✅ Étape 3 — Concurrence (EMS) — 163 EMS officiels + lits\n\n"
         "✅ Étape 4 — Pouvoir d'achat (revenu, fiscalité, fortune)\n\n"
-        "⬜ Étape 5 — Immobilier\n\n"
+        "🟡 Étape 5 — Immobilier (prix indicatifs, short-list)\n\n"
         "⬜ Étape 6 — Score d'opportunité\n\n"
         "⬜ Étape 7 — Fiche pitch"
     )

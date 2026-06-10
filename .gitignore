@@ -13,6 +13,7 @@ data/raw/*
 !data/raw/ifd_revenu_communes_2022.xlsx
 !data/raw/coefficients_impot_communes_2026.xls
 !data/raw/fortune_districts.xlsx
+!data/raw/prix_m2_manuel.csv
 # (les caches d'API restent ignorés : cache_searchch.json, cache_osm.json)
 
 # Système

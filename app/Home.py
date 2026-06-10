@@ -40,8 +40,8 @@ with col2:
     st.info(
         "**Statut du projet**\n\n"
         "✅ Étape 0 — Setup\n\n"
-        "⬜ Étape 1 — Carte des communes VD\n\n"
-        "⬜ Étape 2 — Démographie & vieillissement\n\n"
+        "✅ Étape 1 — Carte des communes VD\n\n"
+        "✅ Étape 2 — Démographie & vieillissement\n\n"
         "⬜ Étape 3 — Concurrence (EMS)\n\n"
         "⬜ Étape 4 — Immobilier\n\n"
         "⬜ Étape 5 — Score d'opportunité\n\n"

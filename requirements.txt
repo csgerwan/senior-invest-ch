@@ -6,3 +6,6 @@ streamlit-folium
 plotly
 requests
 openpyxl
+xlrd
+pdfplumber
+fpdf2

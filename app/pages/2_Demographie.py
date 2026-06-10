@@ -32,13 +32,13 @@ INDICATEURS = {
 
 
 @st.cache_data
-def load_data():
+def load_data(_sig):  # _sig = mtime des fichiers -> rafraîchit le cache si maj
     geo = json.loads(GEOJSON_PATH.read_text(encoding="utf-8"))
     demo = pd.read_csv(DEMO_PATH, dtype={"ofs": str})
     return geo, demo
 
 
-geo, demo = load_data()
+geo, demo = load_data(tuple(p.stat().st_mtime for p in (GEOJSON_PATH, DEMO_PATH)))
 
 # --- Choix de l'indicateur ---
 libelle = st.sidebar.selectbox("Indicateur à cartographier", list(INDICATEURS.keys()))

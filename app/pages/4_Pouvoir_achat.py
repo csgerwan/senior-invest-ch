@@ -36,13 +36,13 @@ INDICATEURS = {
 
 
 @st.cache_data
-def load():
+def load(_sig):  # _sig = mtime des fichiers -> rafraîchit le cache si maj
     geo = json.loads(GEO.read_text(encoding="utf-8"))
     df = pd.read_csv(PA, dtype={"ofs": str})
     return geo, df
 
 
-geo, df = load()
+geo, df = load(tuple(p.stat().st_mtime for p in (GEO, PA)))
 
 libelle = st.sidebar.selectbox("Indicateur à cartographier", list(INDICATEURS.keys()))
 col, fmt, cap, plus_mieux = INDICATEURS[libelle]

@@ -1,0 +1,12 @@
+# Environnement Python
+.venv/
+__pycache__/
+*.pyc
+
+# Données brutes volumineuses (on garde les scripts qui les téléchargent)
+data/raw/*
+!data/raw/.gitkeep
+
+# Système
+.DS_Store
+.streamlit/secrets.toml

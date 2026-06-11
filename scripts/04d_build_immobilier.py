@@ -1,12 +1,13 @@
 """
-Étape 5 — Immobilier : prix indicatif au m² sur une short-list de communes.
+Étape 5 — Immobilier : prix au m² par commune (intégration).
 
-⚠️ Les prix de transaction par commune ne sont PAS en open data en Suisse.
-Ces prix au m² sont des ESTIMATIONS INDICATIVES (appartements) collectées via
-recherche web sur des portails (RealAdvisor, Neho, Comparis...), millésime ~2025.
-Source éditable : data/raw/prix_m2_manuel.csv (complète/corrige à volonté).
+Fusionne, par ordre de priorité :
+  1. Prix RÉELS issus des annonces Homegate via Apify (data/processed/prix_m2_immo_vd.csv)
+     -> 147 communes, prix moyen + médian + nb d'annonces (cf. scripts 05/05b)
+  2. Prix indicatifs manuels (data/raw/prix_m2_manuel.csv) en secours pour les
+     communes non couvertes par Apify.
 
-Joint les prix aux communes + contexte (seniors 80+, pouvoir d'achat).
+Joint le tout aux communes + contexte (seniors 80+, pouvoir d'achat).
 Sortie : data/processed/immobilier_vd.csv
 
 Lancer depuis la racine du projet :
@@ -22,7 +23,8 @@ import pandas as pd
 
 ROOT = Path(".")
 GEO = ROOT / "data/processed/communes_vd.geojson"
-PRIX = ROOT / "data/raw/prix_m2_manuel.csv"
+APIFY = ROOT / "data/processed/prix_m2_immo_vd.csv"
+MANUEL = ROOT / "data/raw/prix_m2_manuel.csv"
 DEMO = ROOT / "data/processed/demographie_vd.csv"
 PA = ROOT / "data/processed/pouvoir_achat_vd.csv"
 OUT = ROOT / "data/processed/immobilier_vd.csv"
@@ -36,40 +38,41 @@ def norm(s):
 
 def main():
     geo = json.loads(GEO.read_text(encoding="utf-8"))
-    par_nom = {norm(f["properties"]["nom"]): (f["properties"]["ofs"],
-               f["properties"]["nom"], f["properties"]["district"])
-               for f in geo["features"]}
+    base = pd.DataFrame([{"ofs": f["properties"]["ofs"], "nom": f["properties"]["nom"],
+                          "district": f["properties"]["district"]} for f in geo["features"]])
 
-    prix = pd.read_csv(PRIX)
-    rows, manquants = [], []
-    for _, r in prix.iterrows():
-        cle = norm(r["commune"])
-        if cle not in par_nom:
-            manquants.append(r["commune"])
-            continue
-        ofs, nom, district = par_nom[cle]
-        rows.append({
-            "ofs": ofs, "nom": nom, "district": district,
-            "prix_m2_appart": r["prix_m2_appart"] if pd.notna(r["prix_m2_appart"]) else None,
-            "prix_source": r["source"], "prix_date": r["date"],
-        })
+    # 1. Prix réels Apify (prioritaire) — on retient le prix MOYEN comme demandé
+    apify = pd.read_csv(APIFY, dtype={"ofs": str})
+    apify = apify.rename(columns={"prix_m2_moyen": "prix_m2_appart"})
+    apify["prix_source"] = "Homegate/Apify (annonces réelles)"
+    apify["prix_date"] = 2026
+    apify = apify[["ofs", "prix_m2_appart", "prix_m2_median", "n_annonces",
+                   "fiabilite", "prix_source", "prix_date"]]
 
-    df = pd.DataFrame(rows)
+    # 2. Manuel (secours) pour communes non couvertes par Apify
+    man = pd.read_csv(MANUEL).rename(columns={"date": "prix_date"})
+    par_nom = {norm(f["properties"]["nom"]): f["properties"]["ofs"] for f in geo["features"]}
+    man["ofs"] = man["commune"].map(lambda c: par_nom.get(norm(c)))
+    man = man.dropna(subset=["ofs", "prix_m2_appart"])
+    man = man[~man["ofs"].isin(apify["ofs"])]
+    man = man.assign(prix_m2_median=pd.NA, n_annonces=pd.NA, fiabilite="indicatif (web)",
+                     prix_source="estimations portails (recherche web)")[
+        ["ofs", "prix_m2_appart", "prix_m2_median", "n_annonces", "fiabilite",
+         "prix_source", "prix_date"]]
+
+    prix = pd.concat([apify, man], ignore_index=True)
+
     demo = pd.read_csv(DEMO, dtype={"ofs": str})[["ofs", "pop_80plus", "part_80plus"]]
     pa = pd.read_csv(PA, dtype={"ofs": str})[["ofs", "indice_pouvoir_achat", "revenu_median_est"]]
-    df = df.merge(demo, on="ofs", how="left").merge(pa, on="ofs", how="left")
+    df = (base.merge(prix, on="ofs", how="left")
+              .merge(demo, on="ofs", how="left").merge(pa, on="ofs", how="left"))
     df = df.sort_values("prix_m2_appart", ascending=False, na_position="last")
 
     OUT.write_text(df.to_csv(index=False), encoding="utf-8")
     avec = df["prix_m2_appart"].notna().sum()
-    print(f"✅ {len(df)} communes écrites dans {OUT} ({avec} avec prix)")
-    if manquants:
-        print("⚠️ Non rattachées (nom à corriger dans le CSV) :", manquants)
-    print("\nPrix au m² (appartements, indicatif 2025) :")
-    for _, r in df[df["prix_m2_appart"].notna()].iterrows():
-        print(f"   {r['nom']:24} {r['prix_m2_appart']:>7,.0f} CHF/m²  "
-              f"(80+ : {int(r['pop_80plus'])}, pouvoir d'achat {r['indice_pouvoir_achat']})"
-              .replace(",", "'"))
+    reels = (df["prix_source"] == "Homegate/Apify (annonces réelles)").sum()
+    print(f"✅ {len(df)} communes écrites dans {OUT}")
+    print(f"   Avec prix/m² : {avec} (dont {reels} réels Apify, {avec - reels} indicatifs web)")
 
 
 if __name__ == "__main__":

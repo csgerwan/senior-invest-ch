@@ -21,15 +21,15 @@ GEO = ROOT / "data/processed/communes_vd.geojson"
 IMMO = ROOT / "data/processed/immobilier_vd.csv"
 
 st.set_page_config(page_title="Immobilier VD", page_icon="🏗️", layout="wide")
-st.title("🏗️ Immobilier — prix indicatif au m² (short-list)")
-st.caption("Prix indicatifs appartements ~2025 (portails via recherche web) · "
-           "short-list de communes prioritaires")
+st.title("🏗️ Immobilier — prix au m² par commune")
+st.caption("Prix calculés à partir des annonces réelles Homegate (via Apify, 2026) · "
+           "147 communes couvertes + quelques indicatifs web")
 
 st.warning(
-    "**Prix indicatifs et non officiels.** Les prix de transaction par commune ne sont "
-    "pas en open data en Suisse. Ces valeurs (appartements, ~2025) viennent de portails "
-    "immobiliers via recherche web : à prendre comme **ordre de grandeur**. Pour un pitch "
-    "engageant, faire valider par une source pro (Wüest/FPRE) ou un courtier local."
+    "**Prix issus des annonces (≈ prix demandés), pas de transactions.** Calculés sur "
+    "les annonces d'achat Homegate (surface extraite des descriptions, prix/m² médian/moyen). "
+    "Fiabilité selon le **nombre d'annonces** par commune (colonne dédiée). Les communes "
+    "sans bien en vente n'ont pas de prix. À valider par une source pro (Wüest/FPRE) avant engagement."
 )
 
 
@@ -51,7 +51,7 @@ colmap.caption = "Prix indicatif appartement (CHF/m²)"
 col1, col2 = st.columns([3, 1])
 with col2:
     st.metric("Communes avec prix", len(avec_prix))
-    st.metric("Prix médian (short-list)", f"{avec_prix['prix_m2_appart'].median():,.0f} CHF/m²".replace(",", "'"))
+    st.metric("Prix médian (canton)", f"{avec_prix['prix_m2_appart'].median():,.0f} CHF/m²".replace(",", "'"))
     st.metric("Min / Max", f"{avec_prix['prix_m2_appart'].min():,.0f} / {avec_prix['prix_m2_appart'].max():,.0f}".replace(",", "'"))
     st.caption("💡 Croise prix bas + forte demande seniors + bon pouvoir d'achat "
                "= terrain d'opportunité (ex : Yverdon, Gland, Epalinges).")
@@ -80,12 +80,15 @@ with col1:
     colmap.add_to(m)
     st_folium(m, width=None, height=560, returned_objects=[])
 
-st.subheader("📋 Short-list — prix vs demande vs pouvoir d'achat")
-tab = avec_prix[["nom", "district", "prix_m2_appart", "pop_80plus",
-                 "indice_pouvoir_achat", "revenu_median_est", "prix_date"]].rename(columns={
-    "nom": "Commune", "district": "District", "prix_m2_appart": "Prix CHF/m²",
-    "pop_80plus": "Pop. 80+", "indice_pouvoir_achat": "Pouvoir d'achat",
-    "revenu_median_est": "Revenu médian", "prix_date": "Année prix"})
+st.subheader("📋 Prix au m² par commune — vs demande & pouvoir d'achat")
+cols = ["nom", "district", "prix_m2_appart", "prix_m2_median", "n_annonces",
+        "fiabilite", "pop_80plus", "indice_pouvoir_achat"]
+cols = [c for c in cols if c in avec_prix.columns]
+tab = avec_prix[cols].rename(columns={
+    "nom": "Commune", "district": "District", "prix_m2_appart": "Prix/m² moyen",
+    "prix_m2_median": "Prix/m² médian", "n_annonces": "Nb annonces",
+    "fiabilite": "Fiabilité", "pop_80plus": "Pop. 80+",
+    "indice_pouvoir_achat": "Pouvoir d'achat"})
 st.dataframe(tab, hide_index=True, use_container_width=True)
-st.caption("Pour ajouter/corriger une commune : éditer data/raw/prix_m2_manuel.csv "
-           "puis relancer `python scripts/04d_build_immobilier.py`.")
+st.caption("Prix réels = annonces Homegate via Apify (2026). « Fiabilité » dépend du nombre "
+           "d'annonces (5+ = solide). Rafraîchir : relancer scripts 05 → 05b → 04d.")

@@ -38,15 +38,13 @@ with col1:
 
 with col2:
     st.info(
-        "**Statut du projet**\n\n"
-        "✅ Étape 0 — Setup\n\n"
-        "✅ Étape 1 — Carte des communes VD\n\n"
-        "✅ Étape 2 — Démographie & vieillissement\n\n"
-        "✅ Étape 3 — Concurrence (EMS) — 163 EMS officiels + lits\n\n"
-        "✅ Étape 4 — Pouvoir d'achat (revenu, fiscalité, fortune)\n\n"
-        "✅ Étape 5 — Immobilier (prix/m², 300/300 communes)\n\n"
-        "✅ Étape 6 — Score d'opportunité (interactif)\n\n"
-        "✅ Étape 7 — Fiche pitch (export PDF)"
+        "**Modules — V1**\n\n"
+        "✅ Carte des communes VD\n\n"
+        "✅ Démographie & vieillissement\n\n"
+        "✅ Concurrence (EMS) — 163 EMS officiels + lits\n\n"
+        "✅ Pouvoir d'achat (revenu, fiscalité, fortune)\n\n"
+        "✅ Immobilier — prix/m² (300/300 communes)\n\n"
+        "✅ **Score d'opportunité** (interactif, 4 critères croisés)"
     )
 
 st.divider()

@@ -1,0 +1,9 @@
+# Dépendances pour les scripts de préparation des données (pas l'app déployée).
+# Installer avec : pip install -r requirements-dev.txt
+-r requirements.txt
+geopandas
+shapely
+openpyxl
+xlrd
+pdfplumber
+requests

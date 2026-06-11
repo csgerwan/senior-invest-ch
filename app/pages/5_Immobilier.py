@@ -60,6 +60,21 @@ with col2:
     st.caption("💡 Croise prix bas + forte demande seniors + bon pouvoir d'achat "
                "= terrain d'opportunité (ex : Yverdon, Gland, Epalinges).")
 
+# Style par niveau de fiabilité : (opacité, bordure dash, couleur, épaisseur)
+def tier_de(fiab):
+    if fiab == "estimé (voisinage)":
+        return "voisinage"
+    if fiab == "annonces (surface estimée)":
+        return "surface_estimee"
+    return "annonces"  # solide / indicative
+
+
+STYLE_TIER = {
+    "annonces":        {"opa": 0.88, "dash": None,  "col": "#666", "w": 0.4},
+    "surface_estimee": {"opa": 0.70, "dash": "3,3", "col": "#666", "w": 0.5},
+    "voisinage":       {"opa": 0.38, "dash": "6,5", "col": "#333", "w": 0.9},
+}
+
 with col1:
     m = folium.Map(location=[46.55, 6.6], zoom_start=10, tiles="CartoDB positron")
     for f in geo["features"]:
@@ -69,19 +84,37 @@ with col1:
         f["properties"]["nom_t"] = f["properties"]["nom"]
         f["properties"]["pop80"] = int(inf["pop_80plus"]) if inf.get("pop_80plus") == inf.get("pop_80plus") and inf.get("pop_80plus") is not None else None
         f["properties"]["pa"] = inf.get("indice_pouvoir_achat")
+        f["properties"]["fiab"] = inf.get("fiabilite")
+        f["properties"]["tier"] = tier_de(inf.get("fiabilite"))
+
+    def style(ft):
+        p = ft["properties"]
+        if not p["prix"]:
+            return {"fillColor": "#e8e8e8", "color": "#ccc", "weight": 0.3, "fillOpacity": 0.1}
+        s = STYLE_TIER[p["tier"]]
+        return {"fillColor": colmap(p["prix"]), "color": s["col"], "weight": s["w"],
+                "fillOpacity": s["opa"], "dashArray": s["dash"]}
 
     folium.GeoJson(
-        geo,
-        style_function=lambda ft: {
-            "fillColor": colmap(ft["properties"]["prix"]) if ft["properties"]["prix"] else "#e8e8e8",
-            "color": "#bbb", "weight": 0.4,
-            "fillOpacity": 0.85 if ft["properties"]["prix"] else 0.15,
-        },
+        geo, style_function=style,
+        highlight_function=lambda _: {"weight": 2.5, "color": "black"},
         tooltip=folium.GeoJsonTooltip(
-            fields=["nom_t", "prix", "pop80", "pa"],
-            aliases=["Commune :", "Prix CHF/m² :", "Pop. 80+ :", "Pouvoir d'achat :"]),
+            fields=["nom_t", "prix", "fiab", "pop80", "pa"],
+            aliases=["Commune :", "Prix CHF/m² :", "Fiabilité :", "Pop. 80+ :", "Pouvoir d'achat :"]),
     ).add_to(m)
     colmap.add_to(m)
+
+    # Légende des niveaux de fiabilité
+    legende = """
+    <div style="position: fixed; bottom: 30px; left: 12px; z-index: 9999;
+         background: white; padding: 8px 10px; border: 1px solid #999; border-radius: 6px;
+         font-size: 12px; line-height: 1.5;">
+      <b>Fiabilité du prix</b><br>
+      <span style="opacity:0.9">⬛</span> Annonces réelles<br>
+      <span style="opacity:0.6">⬛</span> Surface estimée (annonces)<br>
+      <span style="opacity:0.35">⬛</span> Estimé (voisinage) — bordure tiretée
+    </div>"""
+    m.get_root().html.add_child(folium.Element(legende))
     st_folium(m, width=None, height=560, returned_objects=[])
 
 st.subheader("📋 Prix au m² par commune — vs demande & pouvoir d'achat")

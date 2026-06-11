@@ -32,15 +32,15 @@ st.caption("EMS : liste officielle LAMal VD 2024 (lits) · Démographie : OFS 20
 
 
 @st.cache_data
-def load(_sig):  # _sig = signature des fichiers (mtime) -> invalide le cache si maj
+def load(sig):  # sig = signature des fichiers (mtime) -> invalide le cache si maj
     geo = json.loads(GEO.read_text(encoding="utf-8"))
     demo = pd.read_csv(DEMO, dtype={"ofs": str})
     ems = pd.read_csv(EMS, dtype={"ofs": str})
     return geo, demo, ems
 
 
-_sig = tuple(p.stat().st_mtime for p in (GEO, DEMO, EMS))
-geo, demo, ems = load(_sig)
+sig = tuple(p.stat().st_mtime for p in (GEO, DEMO, EMS))
+geo, demo, ems = load(sig)
 ems_loc = ems.dropna(subset=["lat", "lon"])
 lits_total = int(ems["lits"].sum())
 lits_localises = int(ems.dropna(subset=["ofs"])["lits"].sum())

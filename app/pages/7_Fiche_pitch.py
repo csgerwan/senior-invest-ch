@@ -24,7 +24,7 @@ st.caption("Tout ce qu'il faut pour présenter une localisation à un investisse
 
 
 @st.cache_data
-def load(_sig):
+def load(sig):
     demo = pd.read_csv(P / "demographie_vd.csv", dtype={"ofs": str})
     ems = pd.read_csv(P / "ems_vd.csv", dtype={"ofs": str})
     pa = pd.read_csv(P / "pouvoir_achat_vd.csv", dtype={"ofs": str})

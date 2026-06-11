@@ -34,7 +34,7 @@ st.warning(
 
 
 @st.cache_data
-def load(_sig):
+def load(sig):
     geo = json.loads(GEO.read_text(encoding="utf-8"))
     df = pd.read_csv(IMMO, dtype={"ofs": str})
     return geo, df

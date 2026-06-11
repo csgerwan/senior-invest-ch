@@ -32,7 +32,7 @@ INDICATEURS = {
 
 
 @st.cache_data
-def load_data(_sig):  # _sig = mtime des fichiers -> rafraîchit le cache si maj
+def load_data(sig):  # sig = mtime des fichiers -> rafraîchit le cache si maj
     geo = json.loads(GEOJSON_PATH.read_text(encoding="utf-8"))
     demo = pd.read_csv(DEMO_PATH, dtype={"ofs": str})
     return geo, demo

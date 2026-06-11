@@ -1,301 +1,301 @@
 ofs,nom,district,prix_m2_appart,prix_m2_median,n_annonces,fiabilite,prix_source,prix_date,pop_80plus,part_80plus,indice_pouvoir_achat,revenu_median_est
-5712,Coppet,Nyon,26533.0,26533.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,194,6.0,69.0,68436
-5607,Puidoux,Lavaux-Oron,24468.0,24468.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,101,3.4,37.7,55030
-5852,Bursinel,Nyon,18889.0,18889.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,18,3.4,59.3,65949
-5601,Chexbres,Lavaux-Oron,18623.0,18623.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,232,10.3,42.9,58334
-5646,Saint-Prex,Morges,17835.0,17835.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,240,4.1,57.0,60549
-5473,Boussens,Gros-de-Vaud,17182.0,17182.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,22,2.2,62.8,71224
-5856,Essertines-sur-Rolle,Nyon,16500.0,16500.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,18,2.3,62.4,73707
-5632,Denges,Morges,16377.0,16377.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,52,2.8,48.3,56571
-5589,Prilly,Ouest lausannois,15274.0,11467.0,4,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,802,6.3,23.7,47688
-5861,Rolle,Nyon,15129.0,11198.0,15,solide (5+),Homegate/Apify (annonces réelles),2026.0,391,6.0,50.5,55535
-5613,Bourg-en-Lavaux,Lavaux-Oron,13908.0,14586.0,6,solide (5+),Homegate/Apify (annonces réelles),2026.0,339,6.2,57.1,64663
-5606,Lutry,Lavaux-Oron,13682.0,13819.0,9,solide (5+),Homegate/Apify (annonces réelles),2026.0,871,8.1,69.4,65281
+5712,Coppet,Nyon,26533.0,26533.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,194,6.0,69.0,68436
+5607,Puidoux,Lavaux-Oron,24468.0,24468.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,101,3.4,37.7,55030
+5855,Dully,Nyon,21429.0,21429.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,27,4.4,79.7,72965
+5729,Tannay,Nyon,19095.0,19095.0,2,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,97,5.6,63.7,67969
+5427,Féchy,Morges,19032.0,19032.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,35,3.8,64.6,72750
+5473,Boussens,Gros-de-Vaud,17182.0,17182.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,22,2.2,62.8,71224
+5632,Denges,Morges,16377.0,16377.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,52,2.8,48.3,56571
+5885,Jongny,Riviera-Pays-d'Enhaut,16071.0,16071.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,88,4.6,51.7,68106
+5851,Allaman,Morges,16036.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,18,4.2,42.6,55184
+5861,Rolle,Nyon,16036.0,14893.0,38,solide (5+),Homegate/Apify (annonces réelles),2026.0,391,6.0,50.5,55535
+5613,Bourg-en-Lavaux,Lavaux-Oron,15509.0,14586.0,10,solide (5+),Homegate/Apify (annonces réelles),2026.0,339,6.2,57.1,64663
+5631,Denens,Morges,15113.0,15113.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,44,5.9,54.6,63052
+5585,Jouxtens-Mézery,Lausanne,14662.0,14662.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,102,6.9,71.1,72500
+5601,Chexbres,Lavaux-Oron,14645.0,12778.0,5,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,232,10.3,42.9,58334
+5852,Bursinel,Nyon,14495.0,14495.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,18,3.4,59.3,65949
+5650,Vaux-sur-Morges,Morges,14471.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,13,7.0,56.5,56667
+5653,Vufflens-le-Château,Morges,14471.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,54,6.5,79.5,81390
+5628,Chigny,Morges,14471.0,14471.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,7,1.7,51.0,58855
+5606,Lutry,Lavaux-Oron,14210.0,13865.0,16,solide (5+),Homegate/Apify (annonces réelles),2026.0,871,8.1,69.4,65281
+5857,Gilly,Nyon,13875.0,11198.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,51,3.5,67.0,73011
+5882,Chardonne,Riviera-Pays-d'Enhaut,13634.0,12034.0,9,solide (5+),Homegate/Apify (annonces réelles),2026.0,244,7.3,46.1,61625
+5702,Arzier-Le Muids,Nyon,13456.0,11278.0,10,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,97,3.3,46.5,57357
+5633,Echandens,Morges,13381.0,13381.0,2,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,216,7.2,56.9,62188
 5590,Pully,Lavaux-Oron,13355.0,12548.0,6,solide (5+),Homegate/Apify (annonces réelles),2026.0,1654,8.5,56.9,62708
-5634,Echichens,Morges,13333.0,13333.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,240,7.4,52.3,64555
-5643,Préverenges,Morges,12895.0,12246.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,326,6.2,48.0,59778
-5702,Arzier-Le Muids,Nyon,12765.0,9050.0,4,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,97,3.3,46.5,57357
-5862,Tartegnin,Nyon,12706.0,12706.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,12,5.1,29.4,60001
-5648,Saint-Sulpice (VD),Ouest lausannois,12595.0,12595.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,303,5.9,75.1,71296
-5642,Morges,Morges,12579.0,11327.0,3,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,1273,7.2,38.1,53661
-5588,Paudex,Lavaux-Oron,12542.0,12542.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,99,6.6,46.4,60088
-5635,Ecublens (VD),Ouest lausannois,12308.0,12308.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,667,5.0,39.9,49986
-5718,Genolier,Nyon,11907.0,14000.0,3,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,109,5.4,82.6,74246
-5552,Bullet,Jura-Nord vaudois,11900.0,11900.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,56,8.2,25.0,51686
-5914,Ependes (VD),Jura-Nord vaudois,11818.0,11818.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,19,5.0,29.8,54077
-5714,Crassier,Nyon,11818.0,11818.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,50,3.9,51.6,62838
-5892,Blonay - Saint-Légier,Riviera-Pays-d'Enhaut,11702.0,10139.0,18,solide (5+),Homegate/Apify (annonces réelles),2026.0,824,6.6,46.2,61142
-5884,Corsier-sur-Vevey,Riviera-Pays-d'Enhaut,11675.0,11675.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,212,6.3,34.9,48030
-5723,Mies,Nyon,11667.0,11667.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,130,6.0,60.3,57599
-5429,Longirod,Nyon,11647.0,11647.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,23,4.1,34.8,62939
-5713,Crans (VD),Nyon,11642.0,11818.0,3,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,140,5.7,73.1,74213
-5859,Mont-sur-Rolle,Nyon,11638.0,11772.0,4,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,136,4.9,52.3,59978
-5414,Villeneuve (VD),Aigle,11516.0,9862.0,3,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,299,5.0,27.8,44288
-5717,Founex,Nyon,11494.0,12104.0,4,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,166,4.4,65.6,65571
-5706,Borex,Nyon,11333.0,11333.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,59,5.1,70.9,70055
-5587,Le Mont-sur-Lausanne,Lausanne,11324.0,11105.0,4,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,501,5.3,39.9,60915
-5882,Chardonne,Riviera-Pays-d'Enhaut,11323.0,11167.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,244,7.3,46.1,61625
-5638,Lonay,Morges,11200.0,,,indicatif (web),estimations portails (recherche web),2025.0,260,9.5,67.0,64417
-5704,Begnins,Nyon,11200.0,,,indicatif (web),estimations portails (recherche web),2025.0,172,8.5,55.9,63637
-5583,Crissier,Ouest lausannois,11056.0,11145.0,3,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,383,3.6,37.4,49004
-5586,Lausanne,Lausanne,11023.0,9769.0,16,solide (5+),Homegate/Apify (annonces réelles),2026.0,6992,4.8,14.8,47070
-5886,Montreux,Riviera-Pays-d'Enhaut,11006.0,10153.0,41,solide (5+),Homegate/Apify (annonces réelles),2026.0,1976,7.3,30.5,44881
-5633,Echandens,Morges,11000.0,,,indicatif (web),estimations portails (recherche web),2025.0,216,7.2,56.9,62188
+5640,Lussy-sur-Morges,Morges,12914.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,58,8.1,67.3,72149
+5652,Villars-sous-Yens,Morges,12914.0,12914.0,2,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,28,4.7,38.6,62091
+5588,Paudex,Lavaux-Oron,12542.0,12542.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,99,6.6,46.4,60088
+5586,Lausanne,Lausanne,12503.0,11278.0,41,solide (5+),Homegate/Apify (annonces réelles),2026.0,6992,4.8,14.8,47070
+5892,Blonay - Saint-Légier,Riviera-Pays-d'Enhaut,12458.0,10902.0,27,solide (5+),Homegate/Apify (annonces réelles),2026.0,824,6.6,46.2,61142
+5648,Saint-Sulpice (VD),Ouest lausannois,12443.0,12595.0,6,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,303,5.9,75.1,71296
+5646,Saint-Prex,Morges,12439.0,11209.0,8,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,240,4.1,57.0,60549
+5856,Essertines-sur-Rolle,Nyon,12244.0,11012.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,18,2.3,62.4,73707
+5717,Founex,Nyon,12190.0,12451.0,9,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,166,4.4,65.6,65571
+5719,Gingins,Nyon,12180.0,12180.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,77,6.1,59.4,63669
+5705,Bogis-Bossey,Nyon,11869.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,32,3.2,50.6,67709
+5714,Crassier,Nyon,11869.0,11869.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,50,3.9,51.6,62838
+5726,La Rippe,Nyon,11869.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,43,3.6,63.3,71053
+5886,Montreux,Riviera-Pays-d'Enhaut,11721.0,10181.0,74,solide (5+),Homegate/Apify (annonces réelles),2026.0,1976,7.3,30.5,44881
+5723,Mies,Nyon,11667.0,11667.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,130,6.0,60.3,57599
+5589,Prilly,Ouest lausannois,11557.0,10338.0,15,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,802,6.3,23.7,47688
+5718,Genolier,Nyon,11518.0,11677.0,8,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,109,5.4,82.6,74246
+5711,Commugny,Nyon,11477.0,11485.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,165,5.5,63.6,65000
+5610,Saint-Saphorin (Lavaux),Lavaux-Oron,11439.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,13,3.4,,53126
+5883,Corseaux,Riviera-Pays-d'Enhaut,11439.0,10895.0,6,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,211,9.1,52.0,66011
+5635,Ecublens (VD),Ouest lausannois,11420.0,12308.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,667,5.0,39.9,49986
+5627,Chavannes-près-Renens,Ouest lausannois,11420.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,272,2.8,16.8,47573
+5643,Préverenges,Morges,11409.0,11318.0,8,solide (5+),Homegate/Apify (annonces réelles),2026.0,326,6.2,48.0,59778
+5587,Le Mont-sur-Lausanne,Lausanne,11343.0,10435.0,10,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,501,5.3,39.9,60915
+5701,Arnex-sur-Nyon,Nyon,11333.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,8,3.0,54.8,66667
+5722,Grens,Nyon,11333.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,21,5.4,60.8,64865
+5706,Borex,Nyon,11333.0,11333.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,59,5.1,70.9,70055
+5709,Chéserex,Nyon,11333.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,65,5.1,70.1,71635
+5649,Tolochenaz,Morges,11185.0,11012.0,3,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,89,4.6,45.2,56190
+5859,Mont-sur-Rolle,Nyon,11155.0,11219.0,5,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,136,4.9,52.3,59978
+5584,Epalinges,Lausanne,11155.0,11365.0,16,solide (5+),Homegate/Apify (annonces réelles),2026.0,566,5.7,50.2,61040
+5854,Burtigny,Nyon,11143.0,11143.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,16,4.0,32.3,57895
+5716,Eysins,Nyon,11124.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,78,4.4,70.6,72692
+5713,Crans (VD),Nyon,11124.0,11818.0,5,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,140,5.7,73.1,74213
+5414,Villeneuve (VD),Aigle,11105.0,9868.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,299,5.0,27.8,44288
+5862,Tartegnin,Nyon,11028.0,11028.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,12,5.1,29.4,60001
 5724,Nyon,Nyon,10987.0,12083.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,1167,5.0,51.3,57968
-5458,Faoug,Broye-Vully,10896.0,10896.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,29,3.2,45.5,57618
-5489,Mex (VD),Gros-de-Vaud,10847.0,10847.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,41,5.1,61.4,64820
-5860,Perroy,Nyon,10769.0,10769.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,67,4.2,56.3,61650
-5711,Commugny,Nyon,10712.0,10712.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,165,5.5,63.6,65000
-5409,Ollon,Aigle,10649.0,8863.0,18,solide (5+),Homegate/Apify (annonces réelles),2026.0,380,4.6,33.8,51178
+5728,Signy-Avenex,Nyon,10987.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,40,6.6,67.8,68527
+5884,Corsier-sur-Vevey,Riviera-Pays-d'Enhaut,10936.0,11561.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,212,6.3,34.9,48030
+5790,Maracon,Lavaux-Oron,10936.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,20,3.5,39.4,63345
+5710,Coinsins,Nyon,10903.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,24,4.6,81.8,70139
+5732,Vich,Nyon,10903.0,10903.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,35,3.0,66.1,72854
+5489,Mex (VD),Gros-de-Vaud,10847.0,10847.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,41,5.1,61.4,64820
+5623,Buchillon,Morges,10769.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,43,6.3,79.3,71468
+5860,Perroy,Nyon,10769.0,10769.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,67,4.2,56.3,61650
 5581,Belmont-sur-Lausanne,Lavaux-Oron,10622.0,10570.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,176,4.5,47.5,67338
-5703,Bassins,Nyon,10593.0,10593.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,55,3.7,44.8,65678
-5639,Lully (VD),Morges,10559.0,10559.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,36,4.3,80.9,79688
-5725,Prangins,Nyon,10411.0,10411.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,242,5.7,66.3,66114
-5889,La Tour-de-Peilz,Riviera-Pays-d'Enhaut,10406.0,10346.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,891,7.0,40.6,52297
+5639,Lully (VD),Morges,10604.0,10311.0,5,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,36,4.3,80.9,79688
+5703,Bassins,Nyon,10593.0,10593.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,55,3.7,44.8,65678
+5583,Crissier,Ouest lausannois,10423.0,10783.0,5,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,383,3.6,37.4,49004
+5611,Savigny,Lavaux-Oron,10422.0,10819.0,6,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,181,5.1,41.5,58818
+5725,Prangins,Nyon,10411.0,10411.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,242,5.7,66.3,66114
+5636,Etoy,Morges,10401.0,10859.0,5,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,151,5.1,45.4,51826
 5933,Valeyres-sous-Montagny,Jura-Nord vaudois,10385.0,7500.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,39,5.5,39.9,59158
-5731,Le Vaud,Nyon,10374.0,10839.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,47,3.4,49.6,65700
-5636,Etoy,Morges,10264.0,10096.0,4,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,151,5.1,45.4,51826
-5732,Vich,Nyon,10179.0,10179.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,35,3.0,66.1,72854
-5405,Gryon,Aigle,10154.0,10154.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,84,5.5,23.1,48334
-5854,Burtigny,Nyon,10151.0,10151.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,16,4.0,32.3,57895
-5883,Corseaux,Riviera-Pays-d'Enhaut,10109.0,10109.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,211,9.1,52.0,66011
-5822,Payerne,Broye-Vully,10061.0,7414.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,502,4.7,24.2,45259
-5707,Chavannes-de-Bogis,Nyon,10000.0,10000.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,44,3.2,78.5,77624
-5853,Bursins,Nyon,10000.0,10000.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,37,4.5,44.9,63983
-5423,Ballens,Morges,9944.0,9944.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,32,5.5,32.2,55515
-5720,Givrins,Nyon,9938.0,9938.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,46,4.3,58.9,73090
-5456,Cudrefin,Broye-Vully,9922.0,10232.0,4,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,81,4.3,58.0,61359
-5624,Bussigny,Ouest lausannois,9857.0,9857.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,371,3.2,48.4,57189
-5561,Grandson,Jura-Nord vaudois,9857.0,9850.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,151,4.5,32.7,51314
-5518,Echallens,Gros-de-Vaud,9807.0,9588.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,297,4.4,32.0,54746
-5484,Gollion,Morges,9800.0,9800.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,39,3.7,40.4,63637
-5530,Pailly,Gros-de-Vaud,9615.0,9615.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,18,3.1,40.9,66331
-5520,Essertines-sur-Yverdon,Gros-de-Vaud,9597.0,9597.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,34,3.0,42.4,63032
-5584,Epalinges,Lausanne,9588.0,9800.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,566,5.7,50.2,61040
-5857,Gilly,Nyon,9574.0,9574.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,51,3.5,67.0,73011
-5890,Vevey,Riviera-Pays-d'Enhaut,9560.0,8788.0,8,solide (5+),Homegate/Apify (annonces réelles),2026.0,982,4.9,17.3,44538
-5675,Lucens,Broye-Vully,9497.0,9497.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,190,4.0,25.9,46103
-5654,Vullierens,Morges,9485.0,9485.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,21,3.8,32.9,59549
-5721,Gland,Nyon,9472.0,9437.0,11,solide (5+),Homegate/Apify (annonces réelles),2026.0,490,3.5,51.9,58504
-5503,Vufflens-la-Ville,Gros-de-Vaud,9379.0,9379.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,63,4.7,54.3,65093
-5651,Villars-Sainte-Croix,Ouest lausannois,9343.0,9343.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,38,4.0,61.4,65991
-5404,Corbeyrier,Aigle,9277.0,9277.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,53,11.7,24.6,50203
-5938,Yverdon-les-Bains,Jura-Nord vaudois,9256.0,9045.0,17,solide (5+),Homegate/Apify (annonces réelles),2026.0,1817,6.0,17.3,45149
-5591,Renens (VD),Ouest lausannois,9023.0,9237.0,4,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,964,4.5,13.6,44275
-5522,Fey,Gros-de-Vaud,8927.0,8927.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,31,3.9,40.2,64625
+5889,La Tour-de-Peilz,Riviera-Pays-d'Enhaut,10340.0,9781.0,11,solide (5+),Homegate/Apify (annonces réelles),2026.0,891,7.0,40.6,52297
+5707,Chavannes-de-Bogis,Nyon,10183.0,10226.0,6,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,44,3.2,78.5,77624
+5434,Saint-George,Nyon,10063.0,10298.0,4,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,43,4.0,46.0,63195
+5731,Le Vaud,Nyon,10025.0,9843.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,47,3.4,49.6,65700
+5430,Marchissy,Nyon,10025.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,12,2.4,33.5,61831
+5909,Cheseaux-Noréaz,Jura-Nord vaudois,10011.0,7543.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,48,6.5,56.8,69576
+5853,Bursins,Nyon,10000.0,10000.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,37,4.5,44.9,63983
+5423,Ballens,Morges,9944.0,9944.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,32,5.5,32.2,55515
+5655,Yens,Morges,9944.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,68,4.5,50.3,65137
+5890,Vevey,Riviera-Pays-d'Enhaut,9939.0,9668.0,16,solide (5+),Homegate/Apify (annonces réelles),2026.0,982,4.9,17.3,44538
+5720,Givrins,Nyon,9938.0,9938.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,46,4.3,58.9,73090
+5629,Clarmont,Morges,9904.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,8,3.5,39.1,60228
+5634,Echichens,Morges,9904.0,8700.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,240,7.4,52.3,64555
+5642,Morges,Morges,9850.0,10458.0,9,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,1273,7.2,38.1,53661
+5503,Vufflens-la-Ville,Gros-de-Vaud,9801.0,10450.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,63,4.7,54.3,65093
+5721,Gland,Nyon,9727.0,9437.0,13,solide (5+),Homegate/Apify (annonces réelles),2026.0,490,3.5,51.9,58504
+5409,Ollon,Aigle,9669.0,8862.0,39,solide (5+),Homegate/Apify (annonces réelles),2026.0,380,4.6,33.8,51178
+5624,Bussigny,Ouest lausannois,9496.0,9496.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,371,3.2,48.4,57189
+5654,Vullierens,Morges,9485.0,9485.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,21,3.8,32.9,59549
+5429,Longirod,Nyon,9400.0,9400.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,23,4.1,34.8,62939
+5863,Vinzel,Nyon,9336.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,9,2.3,57.8,68104
+5704,Begnins,Nyon,9336.0,9398.0,3,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,172,8.5,55.9,63637
+5404,Corbeyrier,Aigle,9277.0,9277.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,53,11.7,24.6,50203
+5530,Pailly,Gros-de-Vaud,9225.0,9225.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,18,3.1,40.9,66331
+5406,Lavey-Morcles,Aigle,9200.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,48,4.7,25.0,47693
+5405,Gryon,Aigle,9200.0,8404.0,10,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,84,5.5,23.1,48334
+5458,Faoug,Broye-Vully,9182.0,9182.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,29,3.2,45.5,57618
+5671,Dompierre (VD),Broye-Vully,9166.0,9166.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,9,3.8,31.1,60313
+5638,Lonay,Morges,9158.0,11233.0,3,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,260,9.5,67.0,64417
+5806,Jorat-Mézières,Lavaux-Oron,9117.0,9117.0,2,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,129,4.0,39.2,59204
+5499,Senarclens,Morges,9052.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,25,5.2,40.2,57144
+5621,Aclens,Morges,9052.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,20,3.4,56.9,61608
+5484,Gollion,Morges,9052.0,9052.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,39,3.7,40.4,63637
+5485,Grancy,Morges,9052.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,22,4.1,47.5,65057
+5552,Bullet,Jura-Nord vaudois,9047.0,9047.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,56,8.2,25.0,51686
+5591,Renens (VD),Ouest lausannois,9023.0,9237.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,964,4.5,13.6,44275
+5914,Ependes (VD),Jura-Nord vaudois,9006.0,9006.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,19,5.0,29.8,54077
+5424,Berolle,Morges,8969.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,13,4.3,27.6,54488
+5425,Bière,Morges,8969.0,8969.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,90,5.4,32.7,51370
+5431,Mollens (VD),Morges,8969.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,14,4.3,26.4,51737
+5651,Villars-Sainte-Croix,Ouest lausannois,8935.0,8935.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,38,4.0,61.4,65991
+5522,Fey,Gros-de-Vaud,8927.0,8927.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,31,3.9,40.2,64625
+5592,Romanel-sur-Lausanne,Lausanne,8924.0,8797.0,3,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,189,4.4,35.9,55814
+5799,Servion,Lavaux-Oron,8845.0,9781.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,90,4.0,45.7,62392
+5435,Saint-Livres,Morges,8839.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,32,4.5,41.0,58399
 5637,Lavigny,Morges,8839.0,7244.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,27,2.5,31.5,54935
-5496,Penthaz,Gros-de-Vaud,8750.0,8750.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,78,4.0,43.9,61464
-5425,Bière,Morges,8742.0,8742.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,90,5.4,32.7,51370
-5799,Servion,Lavaux-Oron,8689.0,9188.0,6,solide (5+),Homegate/Apify (annonces réelles),2026.0,90,4.0,45.7,62392
-5891,Veytaux,Riviera-Pays-d'Enhaut,8617.0,9318.0,3,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,66,6.4,36.9,50324
-5841,Château-d'Oex,Riviera-Pays-d'Enhaut,8396.0,8846.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,269,7.4,9.1,45661
-5571,Tévenon,Jura-Nord vaudois,8385.0,8385.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,56,6.5,37.3,58164
-5656,Hautemorges,Morges,8364.0,8364.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,212,4.8,44.3,60105
-5559,Giez,Jura-Nord vaudois,8333.0,8333.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,28,6.0,47.7,64096
-5715,Duillier,Nyon,8278.0,8278.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,45,3.9,56.7,68308
-5407,Leysin,Aigle,8077.0,8077.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,139,3.8,11.2,43397
-5534,Rueyres,Gros-de-Vaud,8067.0,8067.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,17,5.6,33.3,56466
-5498,La Sarraz,Morges,8042.0,8178.0,3,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,114,4.4,34.9,54359
-5812,Champtauroz,Broye-Vully,8013.0,8013.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,8,4.1,25.7,54606
-5411,Ormont-Dessus,Aigle,7968.0,7968.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,126,8.8,21.3,49706
-5813,Chevroux,Broye-Vully,7882.0,7882.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,21,4.3,35.2,52886
-5428,Gimel,Morges,7726.0,8934.0,3,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,114,4.6,28.3,52184
-5929,Suchy,Jura-Nord vaudois,7704.0,7588.0,4,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,12,1.8,44.8,62821
-5413,Roche (VD),Aigle,7588.0,7588.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,69,3.5,31.2,47168
-5426,Bougy-Villars,Morges,7450.0,7450.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,25,4.9,52.9,60466
-5755,Lignerolle,Jura-Nord vaudois,7420.0,7406.0,4,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,17,3.7,30.2,60097
-5410,Ormont-Dessous,Aigle,7411.0,7411.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,58,4.7,13.0,43824
-5553,Champagne,Jura-Nord vaudois,7383.0,7383.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,32,3.0,47.3,59135
-5902,Belmont-sur-Yverdon,Jura-Nord vaudois,7337.0,7337.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,16,3.6,39.0,57813
-5464,Vully-les-Lacs,Broye-Vully,7212.0,7179.0,6,solide (5+),Homegate/Apify (annonces réelles),2026.0,183,5.0,42.6,57490
-5611,Savigny,Lavaux-Oron,7000.0,7000.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,181,5.1,41.5,58818
-5523,Froideville,Gros-de-Vaud,6946.0,6507.0,4,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,96,3.5,44.0,64429
-5402,Bex,Aigle,6923.0,6864.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,495,5.6,21.7,44282
-5727,Saint-Cergue,Nyon,6909.0,6909.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,104,3.5,41.9,55726
-5730,Trélex,Nyon,6892.0,6892.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,75,5.3,71.8,70834
-5757,Orbe,Jura-Nord vaudois,6890.0,6194.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,398,5.0,23.0,50538
-5493,Orny,Morges,6867.0,6867.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,25,5.0,31.4,54840
-5805,Oron,Lavaux-Oron,6760.0,6793.0,8,solide (5+),Homegate/Apify (annonces réelles),2026.0,308,4.9,32.3,51005
-5422,Aubonne,Morges,6757.0,6945.0,12,solide (5+),Homegate/Apify (annonces réelles),2026.0,217,5.6,40.6,56933
-5804,Jorat-Menthue,Gros-de-Vaud,6737.0,6680.0,6,solide (5+),Homegate/Apify (annonces réelles),2026.0,74,4.7,43.9,62625
-5708,Chavannes-des-Bois,Nyon,6726.0,6726.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,30,3.1,70.3,79840
+5496,Penthaz,Gros-de-Vaud,8750.0,8750.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,78,4.0,43.9,61464
+5511,Assens,Gros-de-Vaud,8750.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,64,3.7,47.7,65292
+5472,Bournens,Gros-de-Vaud,8750.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,20,3.8,56.3,66797
+5540,Montilliez,Gros-de-Vaud,8750.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,65,3.5,41.0,62399
+5518,Echallens,Gros-de-Vaud,8750.0,8615.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,297,4.4,32.0,54746
+5456,Cudrefin,Broye-Vully,8730.0,9124.0,6,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,81,4.3,58.0,61359
+5822,Payerne,Broye-Vully,8688.0,6439.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,502,4.7,24.2,45259
+5891,Veytaux,Riviera-Pays-d'Enhaut,8597.0,9318.0,5,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,66,6.4,36.9,50324
+5656,Hautemorges,Morges,8525.0,8484.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,212,4.8,44.3,60105
+5931,Treycovagnes,Jura-Nord vaudois,8455.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,21,4.1,36.2,58929
+5938,Yverdon-les-Bains,Jura-Nord vaudois,8455.0,8284.0,26,solide (5+),Homegate/Apify (annonces réelles),2026.0,1817,6.0,17.3,45149
+5812,Champtauroz,Broye-Vully,8443.0,8443.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,8,4.1,25.7,54606
+5622,Bremblens,Morges,8346.0,8346.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,23,3.7,55.1,69250
+5559,Giez,Jura-Nord vaudois,8333.0,8333.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,28,6.0,47.7,64096
+5937,Vugelles-La Mothe,Jura-Nord vaudois,8333.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,6,4.1,36.8,56001
+5560,Grandevent,Jura-Nord vaudois,8333.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,11,4.6,51.3,69500
+5564,Novalles,Jura-Nord vaudois,8333.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,5,4.7,38.1,63971
+5715,Duillier,Nyon,8278.0,8278.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,45,3.9,56.7,68308
+5798,Ropraz,Broye-Vully,8276.0,8276.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,19,3.6,28.3,57364
+5692,Vucherens,Broye-Vully,8276.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,28,4.5,35.5,60589
+5520,Essertines-sur-Yverdon,Gros-de-Vaud,8213.0,7895.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,34,3.0,42.4,63032
+5925,Orzens,Jura-Nord vaudois,8213.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,12,5.6,24.0,55436
+5436,Saint-Oyens,Morges,8120.0,8120.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,14,3.1,45.3,71221
+5437,Saubraz,Morges,8120.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,9,2.0,31.2,59303
+5674,Lovatens,Broye-Vully,8077.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,6,4.1,22.1,49250
+5675,Lucens,Broye-Vully,8077.0,6657.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,190,4.0,25.9,46103
+5683,Prévonloup,Broye-Vully,8077.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,12,5.2,35.6,57813
+5923,Oppens,Gros-de-Vaud,8067.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,8,4.0,30.9,61310
+5661,Boulens,Gros-de-Vaud,8067.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,15,4.1,38.3,59001
+5534,Rueyres,Gros-de-Vaud,8067.0,8067.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,17,5.6,33.3,56466
+5512,Bercher,Gros-de-Vaud,8067.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,62,4.6,25.0,56294
+5498,La Sarraz,Morges,8042.0,8178.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,114,4.4,34.9,54359
+5582,Cheseaux-sur-Lausanne,Lausanne,7980.0,7980.0,2,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,265,5.5,37.4,59977
+5521,Etagnières,Gros-de-Vaud,7980.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,52,4.4,40.2,62294
+5562,Mauborget,Jura-Nord vaudois,7977.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,10,6.9,19.5,41251
+5557,Fontaines-sur-Grandson,Jura-Nord vaudois,7977.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,7,3.2,21.2,45000
+5571,Tévenon,Jura-Nord vaudois,7977.0,8195.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,56,6.5,37.3,58164
+5556,Fiez,Jura-Nord vaudois,7977.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,18,4.2,36.0,54168
+5411,Ormont-Dessus,Aigle,7951.0,7981.0,6,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,126,8.8,21.3,49706
+5934,Valeyres-sous-Ursins,Jura-Nord vaudois,7936.0,7936.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,18,7.7,26.2,55001
+5492,Montricher,Morges,7927.0,7927.0,2,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,38,4.0,48.1,58731
+5488,Mauraz,Morges,7927.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,1,1.5,60.8,82144
+5561,Grandson,Jura-Nord vaudois,7923.0,8616.0,9,solide (5+),Homegate/Apify (annonces réelles),2026.0,151,4.5,32.7,51314
+5566,Provence,Jura-Nord vaudois,7905.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,31,7.6,7.9,44055
+5551,Bonvillars,Jura-Nord vaudois,7905.0,7905.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,22,4.3,46.8,61030
+5527,Morrens (VD),Gros-de-Vaud,7895.0,7895.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,60,5.2,36.6,60380
+5813,Chevroux,Broye-Vully,7882.0,7882.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,21,4.3,35.2,52886
+5817,Grandcour,Broye-Vully,7882.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,46,4.7,31.4,53677
+5609,Rivaz,Lavaux-Oron,7857.0,7951.0,3,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,38,11.6,49.0,57144
+5843,Rougemont,Riviera-Pays-d'Enhaut,7828.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,75,9.2,13.0,46072
+5842,Rossinière,Riviera-Pays-d'Enhaut,7828.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,33,6.6,13.6,48929
+5841,Château-d'Oex,Riviera-Pays-d'Enhaut,7828.0,8846.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,269,7.4,9.1,45661
+5481,Dizy,Morges,7759.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,8,3.4,34.7,59936
+5495,Penthalaz,Gros-de-Vaud,7759.0,7759.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,215,6.8,32.6,55245
+5428,Gimel,Morges,7726.0,8934.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,114,4.6,28.3,52184
+5929,Suchy,Jura-Nord vaudois,7704.0,7588.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,12,1.8,44.8,62821
+5785,Corcelles-le-Jorat,Broye-Vully,7567.0,7567.0,2,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,21,4.2,27.2,53572
+5792,Montpreveyres,Lavaux-Oron,7567.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,19,2.9,34.5,59227
+5402,Bex,Aigle,7468.0,7105.0,17,solide (5+),Homegate/Apify (annonces réelles),2026.0,495,5.6,21.7,44282
+5693,Montanaire,Gros-de-Vaud,7459.0,7748.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,112,3.9,36.8,56001
+5426,Bougy-Villars,Morges,7450.0,7450.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,25,4.9,52.9,60466
+5755,Lignerolle,Jura-Nord vaudois,7420.0,7406.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,17,3.7,30.2,60097
+5902,Belmont-sur-Yverdon,Jura-Nord vaudois,7337.0,7337.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,16,3.6,39.0,57813
+5939,Yvonand,Jura-Nord vaudois,7331.0,7331.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,215,6.1,26.9,51008
+5928,Rovray,Jura-Nord vaudois,7331.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,5,2.6,46.8,67917
+5935,Villars-Epeney,Jura-Nord vaudois,7331.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,1,0.9,47.3,67188
+5907,Chavannes-le-Chêne,Jura-Nord vaudois,7331.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,15,4.7,28.0,54269
+5604,Forel (Lavaux),Lavaux-Oron,7274.0,7274.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,96,4.6,43.5,60501
+5537,Villars-le-Terroir,Gros-de-Vaud,7259.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,59,4.5,36.9,62972
+5539,Vuarrens,Gros-de-Vaud,7259.0,7259.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,26,2.3,38.0,61036
+5486,L'Isle,Morges,7239.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,49,4.5,23.6,50482
+5491,Mont-la-Ville,Morges,7239.0,7239.0,2,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,21,4.2,39.5,65196
+5422,Aubonne,Morges,7202.0,7160.0,17,solide (5+),Homegate/Apify (annonces réelles),2026.0,217,5.6,40.6,56933
+5673,Hermenches,Broye-Vully,7118.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,17,4.6,24.2,54450
+5804,Jorat-Menthue,Gros-de-Vaud,7118.0,6693.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,74,4.7,43.9,62625
+5553,Champagne,Jura-Nord vaudois,7097.0,6525.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,32,3.0,47.3,59135
+5555,Corcelles-près-Concise,Jura-Nord vaudois,7075.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,33,7.6,38.6,56373
+5554,Concise,Jura-Nord vaudois,7075.0,7075.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,34,3.3,36.1,53126
+5401,Aigle,Aigle,6970.0,6238.0,16,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,589,5.0,28.7,44524
+5523,Froideville,Gros-de-Vaud,6946.0,6507.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,96,3.5,44.0,64429
+5514,Bottens,Gros-de-Vaud,6946.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,44,3.2,41.2,62577
+5515,Bretigny-sur-Morrens,Gros-de-Vaud,6946.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,22,2.4,36.6,62711
+5730,Trélex,Nyon,6892.0,6892.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,75,5.3,71.8,70834
+5464,Vully-les-Lacs,Broye-Vully,6873.0,6655.0,10,solide (5+),Homegate/Apify (annonces réelles),2026.0,183,5.0,42.6,57490
+5663,Bussy-sur-Moudon,Broye-Vully,6846.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,9,3.4,31.1,60888
+5678,Moudon,Broye-Vully,6846.0,6314.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,271,4.1,20.6,45108
+5750,Les Clées,Jura-Nord vaudois,6832.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,10,5.2,24.2,56772
+5919,Mathod,Jura-Nord vaudois,6832.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,26,3.6,32.0,54168
+5757,Orbe,Jura-Nord vaudois,6832.0,6194.0,9,solide (5+),Homegate/Apify (annonces réelles),2026.0,398,5.0,23.0,50538
+5748,Bretonnières,Jura-Nord vaudois,6832.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,11,4.2,41.5,58872
+5756,Montcherand,Jura-Nord vaudois,6832.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,17,3.5,43.1,63617
+5743,Arnex-sur-Orbe,Jura-Nord vaudois,6832.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,23,3.3,36.2,56633
+5762,Sergey,Jura-Nord vaudois,6832.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,5,3.8,32.7,59376
+5747,Bofflens,Jura-Nord vaudois,6832.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,7,3.5,45.0,61765
+5741,L'Abergement,Jura-Nord vaudois,6832.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,11,4.1,32.4,63750
+5742,Agiez,Jura-Nord vaudois,6832.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,9,2.4,30.3,57378
+5413,Roche (VD),Aigle,6825.0,6380.0,5,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,69,3.5,31.2,47168
+5805,Oron,Lavaux-Oron,6814.0,6793.0,10,solide (5+),Homegate/Apify (annonces réelles),2026.0,308,4.9,32.3,51005
+5708,Chavannes-des-Bois,Nyon,6726.0,6726.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,30,3.1,70.3,79840
 5910,Cronay,Jura-Nord vaudois,6714.0,6772.0,7,solide (5+),Homegate/Apify (annonces réelles),2026.0,19,4.5,35.2,60385
-5913,Donneloye,Jura-Nord vaudois,6551.0,6551.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,40,4.4,31.0,54482
-5415,Yvorne,Aigle,6429.0,6429.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,53,4.8,32.8,54314
-5408,Noville,Aigle,6393.0,6393.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,57,4.7,29.0,55129
-5678,Moudon,Broye-Vully,6382.0,6305.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,271,4.1,20.6,45108
-5764,Vallorbe,Jura-Nord vaudois,6319.0,6319.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,206,4.8,24.2,45303
-5516,Cugy (VD),Gros-de-Vaud,6177.0,6250.0,3,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,143,5.1,34.5,60927
-5831,Valbroye,Broye-Vully,6152.0,6011.0,3,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,180,5.3,28.5,49500
-5827,Trey,Broye-Vully,5949.0,5949.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,11,3.5,29.1,58612
-5669,Curtilles,Broye-Vully,5634.0,5634.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,9,2.9,27.9,49565
-5693,Montanaire,Gros-de-Vaud,5610.0,5610.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,112,3.9,36.8,56001
-5401,Aigle,Aigle,5569.0,5569.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,589,5.0,28.7,44524
-5568,Sainte-Croix,Jura-Nord vaudois,5492.0,4833.0,5,solide (5+),Homegate/Apify (annonces réelles),2026.0,408,7.9,17.6,39632
-5479,Cuarnens,Morges,5350.0,5350.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,18,3.2,32.2,59001
-5565,Onnens (VD),Jura-Nord vaudois,5336.0,5336.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,24,4.7,46.0,58020
-5533,Poliez-Pittet,Gros-de-Vaud,5267.0,5267.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,47,5.5,41.8,63707
-5871,L'Abbaye,Jura-Nord vaudois,5172.0,5172.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,88,5.7,21.1,49560
-5872,Le Chenit,Jura-Nord vaudois,5114.0,5114.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,366,7.7,46.4,50898
-5909,Cheseaux-Noréaz,Jura-Nord vaudois,4967.0,4967.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,48,6.5,56.8,69576
-5858,Luins,Nyon,4805.0,4805.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,20,3.2,69.6,70663
-5665,Chavannes-sur-Moudon,Broye-Vully,4590.0,4590.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,14,6.1,36.0,55289
-5921,Molondin,Jura-Nord vaudois,4322.0,4322.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,10,3.7,16.6,51472
-5480,Daillens,Gros-de-Vaud,4261.0,4261.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,29,2.6,60.8,71764
-5551,Bonvillars,Jura-Nord vaudois,4250.0,4250.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,22,4.3,46.8,61030
-5749,Chavornay,Jura-Nord vaudois,4146.0,4146.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,172,3.2,34.4,54478
-5922,Montagny-près-Yverdon,Jura-Nord vaudois,3967.0,3967.0,2,indicative (2-4),Homegate/Apify (annonces réelles),2026.0,37,4.7,47.9,59135
-5690,Villars-le-Comte,Broye-Vully,3696.0,3696.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,6,4.5,41.1,57354
-5758,La Praz,Jura-Nord vaudois,3692.0,3692.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,7,3.4,18.7,55556
-5541,Goumoëns,Gros-de-Vaud,3667.0,3667.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,67,5.6,40.7,65656
-5816,Corcelles-près-Payerne,Broye-Vully,3077.0,3077.0,1,faible (1),Homegate/Apify (annonces réelles),2026.0,117,3.9,35.5,49107
-5557,Fontaines-sur-Grandson,Jura-Nord vaudois,,,,,,,7,3.2,21.2,45000
-5645,Romanel-sur-Morges,Morges,,,,,,,26,5.7,63.4,62500
-5792,Montpreveyres,Lavaux-Oron,,,,,,,19,2.9,34.5,59227
-5855,Dully,Nyon,,,,,,,27,4.4,79.7,72965
-5726,La Rippe,Nyon,,,,,,,43,3.6,63.3,71053
-5821,Missy,Broye-Vully,,,,,,,21,5.5,29.5,48600
-5434,Saint-George,Nyon,,,,,,,43,4.0,46.0,63195
-5499,Senarclens,Morges,,,,,,,25,5.2,40.2,57144
-5640,Lussy-sur-Morges,Morges,,,,,,,58,8.1,67.3,72149
-5562,Mauborget,Jura-Nord vaudois,,,,,,,10,6.9,19.5,41251
-5564,Novalles,Jura-Nord vaudois,,,,,,,5,4.7,38.1,63971
-5705,Bogis-Bossey,Nyon,,,,,,,32,3.2,50.6,67709
-5742,Agiez,Jura-Nord vaudois,,,,,,,9,2.4,30.3,57378
-5843,Rougemont,Riviera-Pays-d'Enhaut,,,,,,,75,9.2,13.0,46072
-5482,Eclépens,Morges,,,,,,,53,4.4,75.6,61433
-5719,Gingins,Nyon,,,,,,,77,6.1,59.4,63669
-5748,Bretonnières,Jura-Nord vaudois,,,,,,,11,4.2,41.5,58872
-5761,Romainmôtier-Envy,Jura-Nord vaudois,,,,,,,25,4.5,13.1,48462
-5863,Vinzel,Nyon,,,,,,,9,2.3,57.8,68104
-5905,Champvent,Jura-Nord vaudois,,,,,,,28,3.9,37.9,56883
-5497,Pompaples,Morges,,,,,,,37,4.0,38.1,52501
-5537,Villars-le-Terroir,Gros-de-Vaud,,,,,,,59,4.5,36.9,62972
-5924,Orges,Jura-Nord vaudois,,,,,,,12,2.8,33.5,57813
-5476,Chevilly,Morges,,,,,,,10,2.9,53.9,70486
-5481,Dizy,Morges,,,,,,,8,3.4,34.7,59936
-5515,Bretigny-sur-Morrens,Gros-de-Vaud,,,,,,,22,2.4,36.6,62711
-5744,Ballaigues,Jura-Nord vaudois,,,,,,,92,7.6,34.1,47935
-5752,Croy,Jura-Nord vaudois,,,,,,,44,10.9,27.2,52405
-5806,Jorat-Mézières,Lavaux-Oron,,,,,,,129,4.0,39.2,59204
-5631,Denens,Morges,,,,,,,44,5.9,54.6,63052
-5701,Arnex-sur-Nyon,Nyon,,,,,,,8,3.0,54.8,66667
-5709,Chéserex,Nyon,,,,,,,65,5.1,70.1,71635
-5766,Vuiteboeuf,Jura-Nord vaudois,,,,,,,17,2.8,20.9,48229
-5926,Pomy,Jura-Nord vaudois,,,,,,,38,4.3,43.1,62500
-5483,Ferreyres,Morges,,,,,,,8,2.6,43.5,68581
-5650,Vaux-sur-Morges,Morges,,,,,,,13,7.0,56.5,56667
-5817,Grandcour,Broye-Vully,,,,,,,46,4.7,31.4,53677
-5842,Rossinière,Riviera-Pays-d'Enhaut,,,,,,,33,6.6,13.6,48929
-5932,Ursins,Jura-Nord vaudois,,,,,,,13,5.6,33.8,59167
-5680,Ogens,Gros-de-Vaud,,,,,,,11,3.2,28.8,56105
-5908,Chêne-Pâquier,Jura-Nord vaudois,,,,,,,7,4.0,34.2,59559
-5935,Villars-Epeney,Jura-Nord vaudois,,,,,,,1,0.9,47.3,67188
-5495,Penthalaz,Gros-de-Vaud,,,,,,,215,6.8,32.6,55245
-5592,Romanel-sur-Lausanne,Lausanne,,,,,,,189,4.4,35.9,55814
-5716,Eysins,Nyon,,,,,,,78,4.4,70.6,72692
-5830,Villarzel,Broye-Vully,,,,,,,21,4.0,29.6,55617
-5904,Chamblon,Jura-Nord vaudois,,,,,,,19,3.4,51.9,64261
-5435,Saint-Livres,Morges,,,,,,,32,4.5,41.0,58399
-5477,Cossonay,Morges,,,,,,,166,3.4,41.3,55190
-5488,Mauraz,Morges,,,,,,,1,1.5,60.8,82144
-5491,Mont-la-Ville,Morges,,,,,,,21,4.2,39.5,65196
-5492,Montricher,Morges,,,,,,,38,4.0,48.1,58731
-5560,Grandevent,Jura-Nord vaudois,,,,,,,11,4.6,51.3,69500
-5692,Vucherens,Broye-Vully,,,,,,,28,4.5,35.5,60589
-5798,Ropraz,Broye-Vully,,,,,,,19,3.6,28.3,57364
-5406,Lavey-Morcles,Aigle,,,,,,,48,4.7,25.0,47693
-5653,Vufflens-le-Château,Morges,,,,,,,54,6.5,79.5,81390
-5743,Arnex-sur-Orbe,Jura-Nord vaudois,,,,,,,23,3.3,36.2,56633
-5746,Bavois,Jura-Nord vaudois,,,,,,,23,2.2,34.0,55894
-5763,Valeyres-sous-Rances,Jura-Nord vaudois,,,,,,,18,3.1,40.8,60561
-5907,Chavannes-le-Chêne,Jura-Nord vaudois,,,,,,,15,4.7,28.0,54269
-5911,Cuarny,Jura-Nord vaudois,,,,,,,9,3.7,37.1,59678
-5919,Mathod,Jura-Nord vaudois,,,,,,,26,3.6,32.0,54168
-5430,Marchissy,Nyon,,,,,,,12,2.4,33.5,61831
-5728,Signy-Avenex,Nyon,,,,,,,40,6.6,67.8,68527
-5729,Tannay,Nyon,,,,,,,97,5.6,63.7,67969
-5828,Treytorrens (Payerne),Broye-Vully,,,,,,,5,4.6,,55556
-5925,Orzens,Jura-Nord vaudois,,,,,,,12,5.6,24.0,55436
-5610,Saint-Saphorin (Lavaux),Lavaux-Oron,,,,,,,13,3.4,,53126
-5661,Boulens,Gros-de-Vaud,,,,,,,15,4.1,38.3,59001
-5511,Assens,Gros-de-Vaud,,,,,,,64,3.7,47.7,65292
-5529,Oulens-sous-Echallens,Gros-de-Vaud,,,,,,,17,2.8,49.1,67614
-5622,Bremblens,Morges,,,,,,,23,3.7,55.1,69250
-5663,Bussy-sur-Moudon,Broye-Vully,,,,,,,9,3.4,31.1,60888
-5759,Premier,Jura-Nord vaudois,,,,,,,13,5.7,22.4,54688
-5790,Maracon,Lavaux-Oron,,,,,,,20,3.5,39.4,63345
-5722,Grens,Nyon,,,,,,,21,5.4,60.8,64865
-5412,Rennaz,Aigle,,,,,,,40,4.2,35.6,48095
-5431,Mollens (VD),Morges,,,,,,,14,4.3,26.4,51737
-5490,Moiry,Morges,,,,,,,10,3.3,33.4,60001
-5555,Corcelles-près-Concise,Jura-Nord vaudois,,,,,,,33,7.6,38.6,56373
-5585,Jouxtens-Mézery,Lausanne,,,,,,,102,6.9,71.1,72500
-5623,Buchillon,Morges,,,,,,,43,6.3,79.3,71468
-5629,Clarmont,Morges,,,,,,,8,3.5,39.1,60228
-5745,Baulmes,Jura-Nord vaudois,,,,,,,53,4.5,23.1,51811
-5754,Juriens,Jura-Nord vaudois,,,,,,,13,3.7,24.5,55883
-5923,Oppens,Gros-de-Vaud,,,,,,,8,4.0,30.9,61310
-5931,Treycovagnes,Jura-Nord vaudois,,,,,,,21,4.1,36.2,58929
-5937,Vugelles-La Mothe,Jura-Nord vaudois,,,,,,,6,4.1,36.8,56001
-5472,Bournens,Gros-de-Vaud,,,,,,,20,3.8,56.3,66797
-5486,L'Isle,Morges,,,,,,,49,4.5,23.6,50482
-5621,Aclens,Morges,,,,,,,20,3.4,56.9,61608
-5710,Coinsins,Nyon,,,,,,,24,4.6,81.8,70139
-5760,Rances,Jura-Nord vaudois,,,,,,,23,4.5,27.5,55556
-5851,Allaman,Morges,,,,,,,18,4.2,42.6,55184
-5403,Chessel,Aigle,,,,,,,23,4.4,33.0,47000
-5485,Grancy,Morges,,,,,,,22,4.1,47.5,65057
-5628,Chigny,Morges,,,,,,,7,1.7,51.0,58855
-5741,L'Abergement,Jura-Nord vaudois,,,,,,,11,4.1,32.4,63750
-5747,Bofflens,Jura-Nord vaudois,,,,,,,7,3.5,45.0,61765
-5803,Vulliens,Broye-Vully,,,,,,,24,3.8,34.5,58594
-5437,Saubraz,Morges,,,,,,,9,2.0,31.2,59303
-5475,Chavannes-le-Veyron,Morges,,,,,,,1,0.6,39.9,66667
-5514,Bottens,Gros-de-Vaud,,,,,,,44,3.2,41.2,62577
-5554,Concise,Jura-Nord vaudois,,,,,,,34,3.3,36.1,53126
-5655,Yens,Morges,,,,,,,68,4.5,50.3,65137
-5674,Lovatens,Broye-Vully,,,,,,,6,4.1,22.1,49250
-5756,Montcherand,Jura-Nord vaudois,,,,,,,17,3.5,43.1,63617
-5471,Bettens,Gros-de-Vaud,,,,,,,11,1.7,47.4,65030
-5521,Etagnières,Gros-de-Vaud,,,,,,,52,4.4,40.2,62294
-5582,Cheseaux-sur-Lausanne,Lausanne,,,,,,,265,5.5,37.4,59977
-5604,Forel (Lavaux),Lavaux-Oron,,,,,,,96,4.6,43.5,60501
-5652,Villars-sous-Yens,Morges,,,,,,,28,4.7,38.6,62091
-5885,Jongny,Riviera-Pays-d'Enhaut,,,,,,,88,4.6,51.7,68106
-5427,Féchy,Morges,,,,,,,35,3.8,64.6,72750
-5531,Penthéréaz,Gros-de-Vaud,,,,,,,14,3.3,33.3,57599
-5556,Fiez,Jura-Nord vaudois,,,,,,,18,4.2,36.0,54168
-5566,Provence,Jura-Nord vaudois,,,,,,,31,7.6,7.9,44055
-5627,Chavannes-près-Renens,Ouest lausannois,,,,,,,272,2.8,16.8,47573
-5684,Rossenges,Broye-Vully,,,,,,,9,9.9,46.6,58594
-5785,Corcelles-le-Jorat,Broye-Vully,,,,,,,21,4.2,27.2,53572
-5424,Berolle,Morges,,,,,,,13,4.3,27.6,54488
-5609,Rivaz,Lavaux-Oron,,,,,,,38,11.6,49.0,57144
-5873,Le Lieu,Jura-Nord vaudois,,,,,,,60,6.5,32.8,52591
-5930,Suscévaz,Jura-Nord vaudois,,,,,,,10,4.3,37.8,59167
-5934,Valeyres-sous-Ursins,Jura-Nord vaudois,,,,,,,18,7.7,26.2,55001
-5512,Bercher,Gros-de-Vaud,,,,,,,62,4.6,25.0,56294
-5527,Morrens (VD),Gros-de-Vaud,,,,,,,60,5.2,36.6,60380
-5539,Vuarrens,Gros-de-Vaud,,,,,,,26,2.3,38.0,61036
-5671,Dompierre (VD),Broye-Vully,,,,,,,9,3.8,31.1,60313
-5765,Vaulion,Jura-Nord vaudois,,,,,,,13,2.7,13.3,48611
-5912,Démoret,Jura-Nord vaudois,,,,,,,9,5.2,16.8,48182
-5451,Avenches,Broye-Vully,,,,,,,227,4.7,32.8,46865
-5501,Sullens,Gros-de-Vaud,,,,,,,56,4.6,57.7,66867
-5535,Saint-Barthélemy (VD),Gros-de-Vaud,,,,,,,26,3.1,28.0,56563
-5563,Mutrux,Jura-Nord vaudois,,,,,,,8,5.5,11.6,46072
-5683,Prévonloup,Broye-Vully,,,,,,,12,5.2,35.6,57813
-5688,Syens,Broye-Vully,,,,,,,10,6.6,40.6,53501
-5750,Les Clées,Jura-Nord vaudois,,,,,,,10,5.2,24.2,56772
-5436,Saint-Oyens,Morges,,,,,,,14,3.1,45.3,71221
-5649,Tolochenaz,Morges,,,,,,,89,4.6,45.2,56190
-5819,Henniez,Broye-Vully,,,,,,,16,3.4,27.0,46539
-5903,Bioley-Magnoux,Jura-Nord vaudois,,,,,,,13,5.1,27.9,50736
-5928,Rovray,Jura-Nord vaudois,,,,,,,5,2.6,46.8,67917
-5474,La Chaux (Cossonay),Morges,,,,,,,21,4.9,39.1,64859
-5487,Lussery-Villars,Gros-de-Vaud,,,,,,,18,3.8,36.5,61508
-5540,Montilliez,Gros-de-Vaud,,,,,,,65,3.5,41.0,62399
-5673,Hermenches,Broye-Vully,,,,,,,17,4.6,24.2,54450
-5762,Sergey,Jura-Nord vaudois,,,,,,,5,3.8,32.7,59376
-5939,Yvonand,Jura-Nord vaudois,,,,,,,215,6.1,26.9,51008
+5911,Cuarny,Jura-Nord vaudois,6714.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,9,3.7,37.1,59678
+5926,Pomy,Jura-Nord vaudois,6714.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,38,4.3,43.1,62500
+5516,Cugy (VD),Gros-de-Vaud,6709.0,6931.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,143,5.1,34.5,60927
+5412,Rennaz,Aigle,6701.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,40,4.2,35.6,48095
+5403,Chessel,Aigle,6701.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,23,4.4,33.0,47000
+5408,Noville,Aigle,6701.0,6701.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,57,4.7,29.0,55129
+5913,Donneloye,Jura-Nord vaudois,6551.0,6551.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,40,4.4,31.0,54482
+5908,Chêne-Pâquier,Jura-Nord vaudois,6551.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,7,4.0,34.2,59559
+5903,Bioley-Magnoux,Jura-Nord vaudois,6551.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,13,5.1,27.9,50736
+5912,Démoret,Jura-Nord vaudois,6551.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,9,5.2,16.8,48182
+5727,Saint-Cergue,Nyon,6529.0,6424.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,104,3.5,41.9,55726
+5563,Mutrux,Jura-Nord vaudois,6459.0,6459.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,8,5.5,11.6,46072
+5415,Yvorne,Aigle,6429.0,6429.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,53,4.8,32.8,54314
+5407,Leysin,Aigle,6389.0,6165.0,9,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,139,3.8,11.2,43397
+5487,Lussery-Villars,Gros-de-Vaud,6353.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,18,3.8,36.5,61508
+5476,Chevilly,Morges,6353.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,10,2.9,53.9,70486
+5475,Chavannes-le-Veyron,Morges,6353.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,1,0.6,39.9,66667
+5477,Cossonay,Morges,6353.0,6353.0,2,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,166,3.4,41.3,55190
+5474,La Chaux (Cossonay),Morges,6353.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,21,4.9,39.1,64859
+5873,Le Lieu,Jura-Nord vaudois,6253.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,60,6.5,32.8,52591
+5744,Ballaigues,Jura-Nord vaudois,6253.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,92,7.6,34.1,47935
+5765,Vaulion,Jura-Nord vaudois,6253.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,13,2.7,13.3,48611
+5754,Juriens,Jura-Nord vaudois,6253.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,13,3.7,24.5,55883
+5759,Premier,Jura-Nord vaudois,6253.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,13,5.7,22.4,54688
+5764,Vallorbe,Jura-Nord vaudois,6253.0,7077.0,5,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,206,4.8,24.2,45303
+5924,Orges,Jura-Nord vaudois,6213.0,6644.0,3,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,12,2.8,33.5,57813
+5766,Vuiteboeuf,Jura-Nord vaudois,6213.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,17,2.8,20.9,48229
+5501,Sullens,Gros-de-Vaud,6152.0,6152.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,56,4.6,57.7,66867
+5410,Ormont-Dessous,Aigle,6123.0,5353.0,4,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,58,4.7,13.0,43824
+5493,Orny,Morges,6086.0,5752.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,25,5.0,31.4,54840
+5497,Pompaples,Morges,6086.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,37,4.0,38.1,52501
+5483,Ferreyres,Morges,6086.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,8,2.6,43.5,68581
+5482,Eclépens,Morges,6086.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,53,4.4,75.6,61433
+5752,Croy,Jura-Nord vaudois,6086.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,44,10.9,27.2,52405
+5761,Romainmôtier-Envy,Jura-Nord vaudois,6086.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,25,4.5,13.1,48462
+5904,Chamblon,Jura-Nord vaudois,5986.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,19,3.4,51.9,64261
+5905,Champvent,Jura-Nord vaudois,5986.0,5986.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,28,3.9,37.9,56883
+5930,Suscévaz,Jura-Nord vaudois,5986.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,10,4.3,37.8,59167
+5763,Valeyres-sous-Rances,Jura-Nord vaudois,5986.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,18,3.1,40.8,60561
+5819,Henniez,Broye-Vully,5949.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,16,3.4,27.0,46539
+5827,Trey,Broye-Vully,5949.0,5949.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,11,3.5,29.1,58612
+5830,Villarzel,Broye-Vully,5949.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,21,4.0,29.6,55617
+5684,Rossenges,Broye-Vully,5865.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,9,9.9,46.6,58594
+5803,Vulliens,Broye-Vully,5865.0,5865.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,24,3.8,34.5,58594
+5688,Syens,Broye-Vully,5865.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,10,6.6,40.6,53501
+5535,Saint-Barthélemy (VD),Gros-de-Vaud,5690.0,5690.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,26,3.1,28.0,56563
+5471,Bettens,Gros-de-Vaud,5690.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,11,1.7,47.4,65030
+5669,Curtilles,Broye-Vully,5634.0,5634.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,9,2.9,27.9,49565
+5821,Missy,Broye-Vully,5493.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,21,5.5,29.5,48600
+5451,Avenches,Broye-Vully,5493.0,5493.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,227,4.7,32.8,46865
+5871,L'Abbaye,Jura-Nord vaudois,5447.0,5447.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,88,5.7,21.1,49560
+5828,Treytorrens (Payerne),Broye-Vully,5437.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,5,4.6,,55556
+5831,Valbroye,Broye-Vully,5437.0,5380.0,5,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,180,5.3,28.5,49500
+5680,Ogens,Gros-de-Vaud,5367.0,5367.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,11,3.2,28.8,56105
+5490,Moiry,Morges,5350.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,10,3.3,33.4,60001
+5479,Cuarnens,Morges,5350.0,5350.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,18,3.2,32.2,59001
+5565,Onnens (VD),Jura-Nord vaudois,5336.0,5336.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,24,4.7,46.0,58020
+5533,Poliez-Pittet,Gros-de-Vaud,5267.0,5267.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,47,5.5,41.8,63707
+5745,Baulmes,Jura-Nord vaudois,5209.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,53,4.5,23.1,51811
+5568,Sainte-Croix,Jura-Nord vaudois,5209.0,4631.0,8,solide (5+),Homegate/Apify (annonces réelles),2026.0,408,7.9,17.6,39632
+5872,Le Chenit,Jura-Nord vaudois,5190.0,5114.0,3,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,366,7.7,46.4,50898
+5932,Ursins,Jura-Nord vaudois,5106.0,5106.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,13,5.6,33.8,59167
+5645,Romanel-sur-Morges,Morges,4887.0,4887.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,26,5.7,63.4,62500
+5760,Rances,Jura-Nord vaudois,4824.0,4824.0,1,annonces (surface estimée),Homegate/Apify (annonces réelles),2026.0,23,4.5,27.5,55556
+5858,Luins,Nyon,4805.0,4805.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,20,3.2,69.6,70663
+5665,Chavannes-sur-Moudon,Broye-Vully,4590.0,4590.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,14,6.1,36.0,55289
+5921,Molondin,Jura-Nord vaudois,4322.0,4322.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,10,3.7,16.6,51472
+5529,Oulens-sous-Echallens,Gros-de-Vaud,4261.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,17,2.8,49.1,67614
+5480,Daillens,Gros-de-Vaud,4261.0,4261.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,29,2.6,60.8,71764
+5749,Chavornay,Jura-Nord vaudois,4146.0,4146.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,172,3.2,34.4,54478
+5531,Penthéréaz,Gros-de-Vaud,4146.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,14,3.3,33.3,57599
+5746,Bavois,Jura-Nord vaudois,4146.0,,,estimé (voisinage),"estimé (voisinage, communes proches)",,23,2.2,34.0,55894
+5816,Corcelles-près-Payerne,Broye-Vully,4006.0,4006.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,117,3.9,35.5,49107
+5922,Montagny-près-Yverdon,Jura-Nord vaudois,3967.0,3967.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,37,4.7,47.9,59135
+5758,La Praz,Jura-Nord vaudois,3692.0,3692.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,7,3.4,18.7,55556
+5541,Goumoëns,Gros-de-Vaud,3667.0,3667.0,1,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,67,5.6,40.7,65656
+5690,Villars-le-Comte,Broye-Vully,3606.0,3606.0,2,indicative (1-4),Homegate/Apify (annonces réelles),2026.0,6,4.5,41.1,57354

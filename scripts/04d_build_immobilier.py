@@ -19,7 +19,9 @@ import re
 import unicodedata
 from pathlib import Path
 
+import geopandas as gpd
 import pandas as pd
+from shapely.geometry import shape
 
 ROOT = Path(".")
 GEO = ROOT / "data/processed/communes_vd.geojson"
@@ -66,13 +68,37 @@ def main():
     pa = pd.read_csv(PA, dtype={"ofs": str})[["ofs", "indice_pouvoir_achat", "revenu_median_est"]]
     df = (base.merge(prix, on="ofs", how="left")
               .merge(demo, on="ofs", how="left").merge(pa, on="ofs", how="left"))
-    df = df.sort_values("prix_m2_appart", ascending=False, na_position="last")
 
+    # 3. Estimation par voisinage pour les communes sans prix (annonces + manuel)
+    cent = gpd.GeoDataFrame(
+        [{"ofs": f["properties"]["ofs"], "geometry": shape(f["geometry"])}
+         for f in geo["features"]], crs="EPSG:4326").to_crs(2056)
+    cent["x"] = cent.geometry.centroid.x
+    cent["y"] = cent.geometry.centroid.y
+    xy = dict(zip(cent["ofs"], zip(cent["x"], cent["y"])))
+
+    connus = df[df["prix_m2_appart"].notna()][["ofs", "prix_m2_appart"]].copy()
+    connus["x"] = connus["ofs"].map(lambda o: xy[o][0])
+    connus["y"] = connus["ofs"].map(lambda o: xy[o][1])
+
+    K = 3  # nombre de communes proches utilisées pour l'estimation
+    for i in df[df["prix_m2_appart"].isna()].index:
+        ox, oy = xy[df.at[i, "ofs"]]
+        d2 = (connus["x"] - ox) ** 2 + (connus["y"] - oy) ** 2
+        proches = connus.loc[d2.nsmallest(K).index, "prix_m2_appart"]
+        df.at[i, "prix_m2_appart"] = round(proches.median())
+        df.at[i, "prix_source"] = "estimé (voisinage, communes proches)"
+        df.at[i, "fiabilite"] = "estimé (voisinage)"
+
+    df = df.sort_values("prix_m2_appart", ascending=False, na_position="last")
     OUT.write_text(df.to_csv(index=False), encoding="utf-8")
+
     avec = df["prix_m2_appart"].notna().sum()
-    reels = (df["prix_source"] == "Homegate/Apify (annonces réelles)").sum()
+    reels = df["prix_source"].eq("Homegate/Apify (annonces réelles)").sum()
+    estimes = df["prix_source"].eq("estimé (voisinage, communes proches)").sum()
     print(f"✅ {len(df)} communes écrites dans {OUT}")
-    print(f"   Avec prix/m² : {avec} (dont {reels} réels Apify, {avec - reels} indicatifs web)")
+    print(f"   Avec prix/m² : {avec}  (annonces {reels}, voisinage {estimes}, "
+          f"web {avec - reels - estimes})")
 
 
 if __name__ == "__main__":

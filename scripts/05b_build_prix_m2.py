@@ -62,21 +62,32 @@ def main():
           "geometry": shape(f["geometry"])} for f in geo["features"]],
         crs="EPSG:4326")
 
+    # Ratio médian m²/pièce (sur les annonces ayant surface ET pièces) -> imputation
+    ratios = [extraire_surface(it) / it["rooms"]
+              for it in listings
+              if it.get("rooms") and extraire_surface(it)]
+    m2_par_piece = pd.Series(ratios).median() if ratios else 25.0
+    print(f"Ratio médian m²/pièce (imputation) : {m2_par_piece:.1f}")
+
     rows = []
     for it in listings:
         lat, lon, price = it.get("latitude"), it.get("longitude"), it.get("price")
         if not (lat and lon and price):
             continue
         surface = extraire_surface(it)
+        reelle = surface is not None
+        if not surface and it.get("rooms"):           # imputation via nb de pièces
+            surface = it["rooms"] * m2_par_piece
         if not surface:
             continue
         pm2 = price / surface
         if not (PRIX_M2_MIN <= pm2 <= PRIX_M2_MAX):
             continue
-        rows.append({"lat": lat, "lon": lon, "prix_m2": pm2})
+        rows.append({"lat": lat, "lon": lon, "prix_m2": pm2, "reelle": reelle})
 
     df = pd.DataFrame(rows)
-    print(f"Annonces exploitables (prix + surface valides) : {len(df)}")
+    print(f"Annonces exploitables : {len(df)} "
+          f"(surface réelle {df['reelle'].sum()}, imputée {(~df['reelle']).sum()})")
 
     pts = gpd.GeoDataFrame(df, geometry=[Point(xy) for xy in zip(df["lon"], df["lat"])],
                            crs="EPSG:4326")
@@ -86,11 +97,18 @@ def main():
     agg = j.groupby(["ofs", "nom"]).agg(
         prix_m2_moyen=("prix_m2", "mean"),
         prix_m2_median=("prix_m2", "median"),
-        n_annonces=("prix_m2", "size")).reset_index()
+        n_annonces=("prix_m2", "size"),
+        n_reelles=("reelle", "sum")).reset_index()
     agg["prix_m2_moyen"] = agg["prix_m2_moyen"].round(0)
     agg["prix_m2_median"] = agg["prix_m2_median"].round(0)
-    agg["fiabilite"] = pd.cut(agg["n_annonces"], [0, 1, 4, 1e9],
-                              labels=["faible (1)", "indicative (2-4)", "solide (5+)"])
+
+    def fiab(r):
+        if r["n_reelles"] >= 5:
+            return "solide (5+)"
+        if r["n_reelles"] >= 1:
+            return "indicative (1-4)"
+        return "annonces (surface estimée)"
+    agg["fiabilite"] = agg.apply(fiab, axis=1)
     agg = agg.sort_values("n_annonces", ascending=False)
 
     OUT.write_text(agg.to_csv(index=False), encoding="utf-8")

@@ -21,15 +21,19 @@ GEO = ROOT / "data/processed/communes_vd.geojson"
 IMMO = ROOT / "data/processed/immobilier_vd.csv"
 
 st.set_page_config(page_title="Immobilier VD", page_icon="🏗️", layout="wide")
-st.title("🏗️ Immobilier — prix au m² par commune")
-st.caption("Prix calculés à partir des annonces réelles Homegate (via Apify, 2026) · "
-           "147 communes couvertes + quelques indicatifs web")
+st.title("🏗️ Immobilier — prix au m² par commune (300/300)")
+st.caption("Annonces Homegate via Apify (2026), complété par estimation de voisinage · "
+           "couverture totale des 300 communes")
 
 st.warning(
-    "**Prix issus des annonces (≈ prix demandés), pas de transactions.** Calculés sur "
-    "les annonces d'achat Homegate (surface extraite des descriptions, prix/m² médian/moyen). "
-    "Fiabilité selon le **nombre d'annonces** par commune (colonne dédiée). Les communes "
-    "sans bien en vente n'ont pas de prix. À valider par une source pro (Wüest/FPRE) avant engagement."
+    "**Prix issus des annonces (≈ prix demandés), pas de transactions.** Trois niveaux de "
+    "fiabilité (colonne dédiée) :\n"
+    "1. **Réel / indicatif** — calculé sur les annonces d'achat de la commune (surface "
+    "extraite des descriptions) ;\n"
+    "2. **Surface estimée** — annonces sans surface, imputée via le nombre de pièces ;\n"
+    "3. **Estimé (voisinage)** — communes sans bien en vente : médiane des communes les plus "
+    "proches.\n\n"
+    "À valider par une source pro (Wüest/FPRE) avant tout engagement."
 )
 
 

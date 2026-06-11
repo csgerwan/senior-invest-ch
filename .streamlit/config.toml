@@ -3,10 +3,5 @@ base = "light"
 primaryColor = "#2C7BB6"
 font = "sans serif"
 
-[server]
-headless = true
-enableCORS = false
-enableXsrfProtection = true
-
 [browser]
 gatherUsageStats = false

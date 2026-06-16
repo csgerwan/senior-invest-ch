@@ -177,7 +177,8 @@ with cold:
     st.metric("Proximité & saturation EMS", f"{r['note_tension_ems']:.1f} / 5",
               f"EMS le + proche : {r['dist_ems_km']} km · {r['lits_pour_100_district']:.0f} lits/100 (80+) district")
     st.metric("Population senior de la zone", f"{r['note_population']:.1f} / 5",
-              f"{int(r['pop_80plus'])} pers. de 80+ ({r['part_80plus']:.1f}%)")
+              f"{int(r['pop_zone_80plus'])} pers. de 80+ dans ~10 km "
+              f"(commune : {int(r['pop_80plus'])})")
 
     st.markdown("### 🟠 Décote vs marché")
     if note_decote is not None:
@@ -190,7 +191,8 @@ with cold:
 st.divider()
 st.caption("Notes /5. Pouvoir d'achat = indice (revenu+fiscalité+fortune)/20. "
            "Tension EMS = saturation du district (lits/senior) + éloignement. "
-           "Population = nb de 80+ normalisé. Décote = (prix marché − prix bien)/prix marché "
+           "Population = 80+ dans un bassin de 10 km (échelle log). "
+           "Décote = (prix marché − prix bien)/prix marché "
            "(25 %+ → 5/5). Prix de marché = annonces/estimations (voir page Immobilier).")
 
 # ----- Carte interactive + calques -----

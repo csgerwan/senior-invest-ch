@@ -3,7 +3,8 @@ V2 — Données du radar « Évaluation d'un bien » (zone verte : qualification
 
 Calcule, par commune, les 3 notes sur 0-5 de la zone verte du radar investisseur :
   1. Pouvoir d'achat senior      = indice pouvoir d'achat (étape 4) / 20
-  2. Population senior de la zone = nb de 80+ normalisé (min-max canton) -> 0-5
+  2. Population senior de la zone = somme des 80+ dans un BASSIN de RAYON_KM autour
+     de la commune (échelle logarithmique) -> 0-5  [moins sensible aux extrêmes]
   3. Proximité & saturation EMS   = TENSION : zones mal couvertes (saturation du
      district vu la pop. senior, en priorité, + éloignement de l'EMS le plus proche)
 
@@ -14,12 +15,41 @@ Lancer depuis la racine du projet :
     python scripts/07_build_radar.py
 """
 
+import json
 from pathlib import Path
 
+import geopandas as gpd
+import numpy as np
 import pandas as pd
+from shapely.geometry import shape
 
 P = Path("data/processed")
+GEO = P / "communes_vd.geojson"
 OUT = P / "radar_vd.csv"
+RAYON_KM = 10  # rayon du bassin de captation pour la population senior de la zone
+
+
+def minmax(s):
+    lo, hi = s.min(), s.max()
+    return (s - lo) / (hi - lo) * 100 if hi > lo else s * 0 + 50
+
+
+def population_zone(df):
+    """Somme des 80+ dans un rayon RAYON_KM autour du centre de chaque commune."""
+    cent = gpd.GeoDataFrame(
+        [{"ofs": f["properties"]["ofs"], "geometry": shape(f["geometry"])}
+         for f in json.loads(GEO.read_text(encoding="utf-8"))["features"]],
+        crs="EPSG:4326").to_crs(2056)
+    cent["x"], cent["y"] = cent.geometry.centroid.x, cent.geometry.centroid.y
+    cent = cent.merge(df[["ofs", "pop_80plus"]], on="ofs", how="left")
+    xs, ys, pops = cent["x"].values, cent["y"].values, cent["pop_80plus"].fillna(0).values
+    rayon_m = RAYON_KM * 1000
+    zone = []
+    for i in range(len(cent)):
+        d = ((xs - xs[i]) ** 2 + (ys - ys[i]) ** 2) ** 0.5
+        zone.append(pops[d <= rayon_m].sum())
+    cent["pop_zone_80plus"] = zone
+    return df.merge(cent[["ofs", "pop_zone_80plus"]], on="ofs", how="left")
 
 
 def minmax(s):
@@ -29,46 +59,35 @@ def minmax(s):
 
 def main():
     score = pd.read_csv(P / "score_opportunite_vd.csv", dtype={"ofs": str})
-    demo = pd.read_csv(P / "demographie_vd.csv", dtype={"ofs": str})
-    ems = pd.read_csv(P / "ems_vd.csv", dtype={"ofs": str})
 
+    # tension_score et lits_pour_100_district sont déjà calculés par le script 06
     df = score[["ofs", "nom", "district", "dist_ems_km", "pop_80plus",
                 "part_80plus", "indice_pouvoir_achat", "prix_m2_appart",
-                "prix_fiabilite", "eloignement_score"]].copy()
-
-    # --- Saturation EMS au niveau district : lits pour 100 personnes de 80+ ---
-    ofs_district = score[["ofs", "district"]]
-    lits_dist = (ems.dropna(subset=["ofs"]).merge(ofs_district, on="ofs", how="left")
-                 .groupby("district")["lits"].sum())
-    pop80_dist = (demo.merge(ofs_district, on="ofs", how="left")
-                  .groupby("district")["pop_80plus"].sum())
-    lits_pour_100 = (lits_dist / pop80_dist * 100).rename("lits_pour_100_district")
-    df = df.merge(lits_pour_100, on="district", how="left")
-    df["lits_pour_100_district"] = df["lits_pour_100_district"].fillna(0).round(1)
-
-    # saturation : peu de lits/senior => district sous tension => score haut
-    saturation = 100 - minmax(df["lits_pour_100_district"])
+                "prix_fiabilite", "lits_pour_100_district", "tension_score"]].copy()
 
     # --- Notes 0-5 de la zone verte ---
     df["note_pouvoir_achat"] = (df["indice_pouvoir_achat"] / 20).round(2)
-    df["note_population"] = (minmax(df["pop_80plus"]) / 20).round(2)
-    # tension EMS : saturation très prioritaire (75%) + éloignement réduit (25%)
-    POIDS_SATURATION, POIDS_ELOIGNEMENT = 0.75, 0.25
-    tension = POIDS_SATURATION * saturation + POIDS_ELOIGNEMENT * df["eloignement_score"]
-    df["note_tension_ems"] = (tension / 20).round(2)
+    # Population senior DE LA ZONE : bassin de RAYON_KM + échelle log (moins sensible)
+    df = population_zone(df)
+    df["note_population"] = (minmax(np.log1p(df["pop_zone_80plus"])) / 20).round(2)
+    # tension EMS : reprend exactement le sous-score du score (06) -> cohérence
+    df["note_tension_ems"] = (df["tension_score"] / 20).round(2)
 
+    df["pop_zone_80plus"] = df["pop_zone_80plus"].round().astype(int)
     cols = ["ofs", "nom", "district",
             "note_pouvoir_achat", "note_population", "note_tension_ems",
-            "indice_pouvoir_achat", "pop_80plus", "part_80plus",
+            "indice_pouvoir_achat", "pop_80plus", "pop_zone_80plus", "part_80plus",
             "dist_ems_km", "lits_pour_100_district",
             "prix_m2_appart", "prix_fiabilite"]
     df[cols].to_csv(OUT, index=False)
-    print(f"✅ {len(df)} communes écrites dans {OUT}")
-    print("\nExemples (notes /5) :")
-    for _, r in df.sort_values("note_tension_ems", ascending=False).head(6).iterrows():
-        print(f"   {r['nom']:22} PA {r['note_pouvoir_achat']:.1f} | "
-              f"Pop {r['note_population']:.1f} | Tension {r['note_tension_ems']:.1f}  "
-              f"(dist EMS {r['dist_ems_km']} km, lits/100 {r['lits_pour_100_district']})")
+    print(f"✅ {len(df)} communes écrites dans {OUT} (bassin {RAYON_KM} km)")
+    print("\nExemples — note population (bassin) :")
+    for nom in ["Lausanne", "Yverdon-les-Bains", "Nyon", "Morges", "Begnins", "Aigle"]:
+        r = df[df["nom"] == nom]
+        if len(r):
+            r = r.iloc[0]
+            print(f"   {nom:20} commune {int(r['pop_80plus']):>5} 80+ | "
+                  f"zone {int(r['pop_zone_80plus']):>5} 80+ -> note {r['note_population']:.1f}/5")
 
 
 if __name__ == "__main__":

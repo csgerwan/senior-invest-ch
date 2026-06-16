@@ -44,7 +44,8 @@ with col2:
         "✅ Concurrence (EMS) — 163 EMS officiels + lits\n\n"
         "✅ Pouvoir d'achat (revenu, fiscalité, fortune)\n\n"
         "✅ Immobilier — prix/m² (300/300 communes)\n\n"
-        "✅ **Score d'opportunité** (interactif, 4 critères croisés)"
+        "✅ **Score d'opportunité** (interactif, 4 critères croisés)\n\n"
+        "🆕 **Évaluation d'un bien** (adresse → radar investisseur) — V2"
     )
 
 st.divider()

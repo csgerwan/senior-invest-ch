@@ -45,7 +45,8 @@ def main():
     communes["cy"] = communes.geometry.centroid.y
 
     demo = pd.read_csv(DEMO, dtype={"ofs": str})
-    ems = pd.read_csv(EMS, dtype={"ofs": str}).dropna(subset=["lat", "lon"])
+    ems_all = pd.read_csv(EMS, dtype={"ofs": str})           # tous (pour lits/district)
+    ems = ems_all.dropna(subset=["lat", "lon"])              # géolocalisés (pour distance)
     pa = pd.read_csv(PA, dtype={"ofs": str})[["ofs", "indice_pouvoir_achat"]]
     immo = pd.read_csv(IMMO, dtype={"ofs": str})[["ofs", "prix_m2_appart", "fiabilite"]]
 
@@ -64,9 +65,20 @@ def main():
           .merge(immo, on="ofs", how="left")
           .rename(columns={"fiabilite": "prix_fiabilite"}))
 
+    # Saturation EMS au niveau district : lits pour 100 personnes de 80+
+    lits_dist = (ems_all.dropna(subset=["ofs"]).merge(df[["ofs", "district"]], on="ofs", how="left")
+                 .groupby("district")["lits"].sum())
+    pop80_dist = df.groupby("district")["pop_80plus"].sum()
+    lits_pour_100 = (lits_dist / pop80_dist * 100).rename("lits_pour_100_district")
+    df = df.merge(lits_pour_100, on="district", how="left")
+    df["lits_pour_100_district"] = df["lits_pour_100_district"].fillna(0).round(1)
+
     # Sous-scores 0-100
     df["demande_score"] = minmax(df["part_80plus"]).round(1)              # 1. part seniors
-    df["eloignement_score"] = minmax(df["dist_ems_km"]).round(1)         # 2. loin des EMS
+    # 2. TENSION de la zone : saturation district (75%) + éloignement réduit (25%)
+    saturation = 100 - minmax(df["lits_pour_100_district"])
+    eloignement = minmax(df["dist_ems_km"])
+    df["tension_score"] = (0.75 * saturation + 0.25 * eloignement).round(1)
     df["pouvoir_achat_score"] = df["indice_pouvoir_achat"].round(1)      # 3. pouvoir d'achat
     df["prix_bas_score"] = (100 - minmax(df["prix_m2_appart"])).round(1)  # 4. prix bas
 
@@ -74,7 +86,7 @@ def main():
     print(f"✅ {len(df)} communes écrites dans {OUT}")
 
     # Aperçu (poids égaux 25/25/25/25)
-    w = {"demande_score": .25, "eloignement_score": .25,
+    w = {"demande_score": .25, "tension_score": .25,
          "pouvoir_achat_score": .25, "prix_bas_score": .25}
     def sc(r):
         parts = {k: r[k] for k in w if pd.notna(r[k])}

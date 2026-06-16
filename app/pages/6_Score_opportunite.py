@@ -26,7 +26,7 @@ st.caption("Croisement démographie × concurrence EMS × pouvoir d'achat × imm
 # critère -> (colonne sous-score, libellé, poids par défaut)
 CRITERES = {
     "Part de seniors (80+) élevée": ("demande_score", 25),
-    "Éloignement des EMS existants": ("eloignement_score", 25),
+    "Tension de la zone (EMS)": ("tension_score", 25),
     "Pouvoir d'achat élevé": ("pouvoir_achat_score", 25),
     "Prix immobilier bas": ("prix_bas_score", 25),
 }
@@ -94,7 +94,7 @@ with col1:
         f["properties"]["nom_t"] = f["properties"]["nom"]
         f["properties"]["sc"] = inf.get("score")
         f["properties"]["s80"] = inf.get("part_80plus")
-        f["properties"]["dems"] = inf.get("dist_ems_km")
+        f["properties"]["dems"] = inf.get("tension_score")
         f["properties"]["pa"] = inf.get("pouvoir_achat_score")
         f["properties"]["prix"] = inf.get("prix_m2_appart")
     folium.GeoJson(
@@ -107,7 +107,7 @@ with col1:
         highlight_function=lambda _: {"weight": 2.5, "color": "black"},
         tooltip=folium.GeoJsonTooltip(
             fields=["nom_t", "sc", "s80", "dems", "pa", "prix"],
-            aliases=["Commune :", "Score :", "Part 80+ (%) :", "Dist. EMS (km) :",
+            aliases=["Commune :", "Score :", "Part 80+ (%) :", "Tension /100 :",
                      "Pouvoir d'achat :", "Prix CHF/m² :"]),
     ).add_to(m)
     colmap.add_to(m)
@@ -115,13 +115,14 @@ with col1:
 
 st.subheader("🏅 Classement des opportunités")
 det = dff.nsmallest(30, "rang")[[
-    "rang", "nom", "district", "score", "part_80plus", "dist_ems_km",
+    "rang", "nom", "district", "score", "part_80plus", "tension_score",
     "pouvoir_achat_score", "prix_m2_appart", "prix_fiabilite"]].rename(columns={
     "rang": "Rang", "nom": "Commune", "district": "District", "score": "Score",
-    "part_80plus": "Part 80+ (%)", "dist_ems_km": "Dist. EMS (km)",
+    "part_80plus": "Part 80+ (%)", "tension_score": "Tension /100",
     "pouvoir_achat_score": "Pouvoir d'achat", "prix_m2_appart": "Prix CHF/m²",
     "prix_fiabilite": "Fiab. prix"})
 st.dataframe(det, hide_index=True, use_container_width=True)
-st.caption("Outil d'aide à la décision configurable. « Éloignement des EMS » = distance "
-           "du centre de la commune à l'EMS le plus proche (loin = zone mal desservie). "
+st.caption("Outil d'aide à la décision configurable. « Tension de la zone (EMS) » = "
+           "saturation du district (lits par senior, 75 %) + éloignement de l'EMS le plus "
+           "proche (25 %) ; élevée = zone mal couverte. "
            "Prix immobilier indicatif (annonces / estimations) — voir page Immobilier.")

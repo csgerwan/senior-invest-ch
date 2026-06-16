@@ -1,301 +1,301 @@
-ofs,nom,district,dist_ems_km,pop_totale,pop_80plus,part_80plus,indice_pouvoir_achat,prix_m2_appart,prix_fiabilite,demande_score,eloignement_score,pouvoir_achat_score,prix_bas_score
-5401,Aigle,Aigle,0.57,11752,589,5.0,28.7,6970.0,indicative (1-4),39.6,4.0,28.7,85.3
-5404,Corbeyrier,Aigle,3.81,452,53,11.7,24.6,9277.0,indicative (1-4),100.0,32.6,24.6,75.3
-5405,Gryon,Aigle,3.31,1519,84,5.5,23.1,9200.0,indicative (1-4),44.1,28.2,23.1,75.6
-5423,Ballens,Morges,4.02,579,32,5.5,32.2,9944.0,indicative (1-4),44.1,34.4,32.2,72.4
-5557,Fontaines-sur-Grandson,Jura-Nord vaudois,1.63,219,7,3.2,21.2,7977.0,estimé (voisinage),23.4,13.3,21.2,80.9
-5588,Paudex,Lavaux-Oron,3.37,1509,99,6.6,46.4,12542.0,indicative (1-4),54.1,28.7,46.4,61.0
-5645,Romanel-sur-Morges,Morges,3.19,454,26,5.7,63.4,4887.0,annonces (surface estimée),45.9,27.1,63.4,94.4
-5704,Begnins,Nyon,3.34,2035,172,8.5,55.9,9336.0,annonces (surface estimée),71.2,28.4,55.9,75.0
-5717,Founex,Nyon,6.21,3763,166,4.4,65.6,12190.0,indicative (1-4),34.2,53.8,65.6,62.6
-5792,Montpreveyres,Lavaux-Oron,3.15,656,19,2.9,34.5,7567.0,estimé (voisinage),20.7,26.7,34.5,82.7
-5822,Payerne,Broye-Vully,7.31,10758,502,4.7,24.2,8688.0,solide (5+),36.9,63.5,24.2,77.8
-5855,Dully,Nyon,3.07,620,27,4.4,79.7,21429.0,annonces (surface estimée),34.2,26.0,79.7,22.3
-5882,Chardonne,Riviera-Pays-d'Enhaut,1.62,3337,244,7.3,46.1,13634.0,solide (5+),60.4,13.2,46.1,56.3
-5726,La Rippe,Nyon,8.75,1196,43,3.6,63.3,11869.0,estimé (voisinage),27.0,76.2,63.3,64.0
-5812,Champtauroz,Broye-Vully,4.82,196,8,4.1,25.7,8443.0,indicative (1-4),31.5,41.5,25.7,78.9
-5821,Missy,Broye-Vully,5.34,383,21,5.5,29.5,5493.0,estimé (voisinage),44.1,46.1,29.5,91.8
-5434,Saint-George,Nyon,7.62,1081,43,4.0,46.0,10063.0,annonces (surface estimée),30.6,66.2,46.0,71.8
-5499,Senarclens,Morges,2.3,480,25,5.2,40.2,9052.0,estimé (voisinage),41.4,19.2,40.2,76.2
-5640,Lussy-sur-Morges,Morges,4.18,719,58,8.1,67.3,12914.0,estimé (voisinage),67.6,35.8,67.3,59.4
-5656,Hautemorges,Morges,1.23,4383,212,4.8,44.3,8525.0,indicative (1-4),37.8,9.8,44.3,78.5
-5473,Boussens,Gros-de-Vaud,1.67,1006,22,2.2,62.8,17182.0,indicative (1-4),14.4,13.7,62.8,40.8
-5553,Champagne,Jura-Nord vaudois,2.92,1070,32,3.0,47.3,7097.0,indicative (1-4),21.6,24.7,47.3,84.8
-5562,Mauborget,Jura-Nord vaudois,2.11,145,10,6.9,19.5,7977.0,estimé (voisinage),56.8,17.6,19.5,80.9
-5564,Novalles,Jura-Nord vaudois,0.97,106,5,4.7,38.1,8333.0,estimé (voisinage),36.9,7.5,38.1,79.4
-5607,Puidoux,Lavaux-Oron,1.58,2974,101,3.4,37.7,24468.0,indicative (1-4),25.2,12.9,37.7,9.0
-5705,Bogis-Bossey,Nyon,6.01,991,32,3.2,50.6,11869.0,estimé (voisinage),23.4,52.0,50.6,64.0
-5742,Agiez,Jura-Nord vaudois,2.39,372,9,2.4,30.3,6832.0,estimé (voisinage),16.2,20.0,30.3,85.9
-5843,Rougemont,Riviera-Pays-d'Enhaut,6.78,813,75,9.2,13.0,7828.0,estimé (voisinage),77.5,58.8,13.0,81.6
-5852,Bursinel,Nyon,3.44,532,18,3.4,59.3,14495.0,indicative (1-4),25.2,29.3,59.3,52.5
-5858,Luins,Nyon,2.52,633,20,3.2,69.6,4805.0,indicative (1-4),23.4,21.2,69.6,94.8
-5883,Corseaux,Riviera-Pays-d'Enhaut,2.52,2320,211,9.1,52.0,11439.0,indicative (1-4),76.6,21.2,52.0,65.8
-5482,Eclépens,Morges,2.15,1210,53,4.4,75.6,6086.0,estimé (voisinage),34.2,17.9,75.6,89.2
-5565,Onnens (VD),Jura-Nord vaudois,1.35,513,24,4.7,46.0,5336.0,indicative (1-4),36.9,10.9,46.0,92.5
-5601,Chexbres,Lavaux-Oron,0.54,2261,232,10.3,42.9,14645.0,indicative (1-4),87.4,3.7,42.9,51.9
-5633,Echandens,Morges,0.68,2999,216,7.2,56.9,13381.0,annonces (surface estimée),59.5,4.9,56.9,57.4
-5715,Duillier,Nyon,1.88,1140,45,3.9,56.7,8278.0,indicative (1-4),29.7,15.5,56.7,79.6
-5719,Gingins,Nyon,7.92,1256,77,6.1,59.4,12180.0,annonces (surface estimée),49.5,68.8,59.4,62.6
-5748,Bretonnières,Jura-Nord vaudois,5.26,261,11,4.2,41.5,6832.0,estimé (voisinage),32.4,45.4,41.5,85.9
-5761,Romainmôtier-Envy,Jura-Nord vaudois,5.41,560,25,4.5,13.1,6086.0,estimé (voisinage),35.1,46.7,13.1,89.2
-5804,Jorat-Menthue,Gros-de-Vaud,6.02,1574,74,4.7,43.9,7118.0,solide (5+),36.9,52.1,43.9,84.7
-5863,Vinzel,Nyon,3.5,387,9,2.3,57.8,9336.0,estimé (voisinage),15.3,29.8,57.8,75.0
-5905,Champvent,Jura-Nord vaudois,3.69,724,28,3.9,37.9,5986.0,annonces (surface estimée),29.7,31.5,37.9,89.6
-5910,Cronay,Jura-Nord vaudois,3.54,426,19,4.5,35.2,6714.0,solide (5+),35.1,30.2,35.2,86.4
-5497,Pompaples,Morges,2.71,932,37,4.0,38.1,6086.0,estimé (voisinage),30.6,22.9,38.1,89.2
-5516,Cugy (VD),Gros-de-Vaud,2.25,2787,143,5.1,34.5,6709.0,indicative (1-4),40.5,18.8,34.5,86.5
-5537,Villars-le-Terroir,Gros-de-Vaud,1.67,1308,59,4.5,36.9,7259.0,estimé (voisinage),35.1,13.7,36.9,84.1
-5665,Chavannes-sur-Moudon,Broye-Vully,0.96,229,14,6.1,36.0,4590.0,indicative (1-4),49.5,7.4,36.0,95.7
-5713,Crans (VD),Nyon,2.78,2445,140,5.7,73.1,11124.0,indicative (1-4),45.9,23.5,73.1,67.2
-5827,Trey,Broye-Vully,3.24,318,11,3.5,29.1,5949.0,indicative (1-4),26.1,27.5,29.1,89.8
-5857,Gilly,Nyon,1.26,1441,51,3.5,67.0,13875.0,indicative (1-4),26.1,10.1,67.0,55.2
-5886,Montreux,Riviera-Pays-d'Enhaut,1.75,26955,1976,7.3,30.5,11721.0,solide (5+),60.4,14.4,30.5,64.6
-5924,Orges,Jura-Nord vaudois,1.98,424,12,2.8,33.5,6213.0,annonces (surface estimée),19.8,16.4,33.5,88.6
-5413,Roche (VD),Aigle,4.7,1994,69,3.5,31.2,6825.0,indicative (1-4),26.1,40.4,31.2,86.0
-5428,Gimel,Morges,6.93,2457,114,4.6,28.3,7726.0,indicative (1-4),36.0,60.1,28.3,82.0
-5429,Longirod,Nyon,6.38,556,23,4.1,34.8,9400.0,indicative (1-4),31.5,55.3,34.8,74.7
-5456,Cudrefin,Broye-Vully,6.36,1885,81,4.3,58.0,8730.0,indicative (1-4),33.3,55.1,58.0,77.7
-5476,Chevilly,Morges,3.02,346,10,2.9,53.9,6353.0,estimé (voisinage),20.7,25.6,53.9,88.0
-5481,Dizy,Morges,2.47,238,8,3.4,34.7,7759.0,estimé (voisinage),25.2,20.7,34.7,81.9
-5503,Vufflens-la-Ville,Gros-de-Vaud,2.6,1342,63,4.7,54.3,9801.0,indicative (1-4),36.9,21.9,54.3,73.0
-5515,Bretigny-sur-Morrens,Gros-de-Vaud,4.05,899,22,2.4,36.6,6946.0,estimé (voisinage),16.2,34.7,36.6,85.4
-5533,Poliez-Pittet,Gros-de-Vaud,4.65,850,47,5.5,41.8,5267.0,indicative (1-4),44.1,40.0,41.8,92.8
-5552,Bullet,Jura-Nord vaudois,3.86,681,56,8.2,25.0,9047.0,indicative (1-4),68.5,33.0,25.0,76.3
-5584,Epalinges,Lausanne,0.49,9905,566,5.7,50.2,11155.0,solide (5+),45.9,3.3,50.2,67.1
-5606,Lutry,Lavaux-Oron,1.9,10751,871,8.1,69.4,14210.0,solide (5+),67.6,15.7,69.4,53.7
-5643,Préverenges,Morges,3.43,5260,326,6.2,48.0,11409.0,solide (5+),50.5,29.2,48.0,66.0
-5744,Ballaigues,Jura-Nord vaudois,9.94,1218,92,7.6,34.1,6253.0,estimé (voisinage),63.1,86.7,34.1,88.5
-5752,Croy,Jura-Nord vaudois,4.1,403,44,10.9,27.2,6086.0,estimé (voisinage),92.8,35.1,27.2,89.2
-5806,Jorat-Mézières,Lavaux-Oron,1.29,3189,129,4.0,39.2,9117.0,annonces (surface estimée),30.6,10.3,39.2,76.0
-5631,Denens,Morges,3.47,742,44,5.9,54.6,15113.0,annonces (surface estimée),47.7,29.6,54.6,49.8
-5636,Etoy,Morges,6.84,2962,151,5.1,45.4,10401.0,indicative (1-4),40.5,59.3,45.4,70.4
-5693,Montanaire,Gros-de-Vaud,3.82,2860,112,3.9,36.8,7459.0,indicative (1-4),29.7,32.7,36.8,83.2
-5701,Arnex-sur-Nyon,Nyon,3.69,270,8,3.0,54.8,11333.0,estimé (voisinage),21.6,31.5,54.8,66.3
-5709,Chéserex,Nyon,6.55,1279,65,5.1,70.1,11333.0,estimé (voisinage),40.5,56.8,70.1,66.3
-5766,Vuiteboeuf,Jura-Nord vaudois,4.22,608,17,2.8,20.9,6213.0,estimé (voisinage),19.8,36.2,20.9,88.6
-5859,Mont-sur-Rolle,Nyon,1.84,2752,136,4.9,52.3,11155.0,indicative (1-4),38.7,15.2,52.3,67.1
-5860,Perroy,Nyon,4.02,1584,67,4.2,56.3,10769.0,indicative (1-4),32.4,34.4,56.3,68.8
-5926,Pomy,Jura-Nord vaudois,1.77,876,38,4.3,43.1,6714.0,estimé (voisinage),33.3,14.6,43.1,86.4
-5483,Ferreyres,Morges,2.6,309,8,2.6,43.5,6086.0,estimé (voisinage),18.0,21.9,43.5,89.2
-5559,Giez,Jura-Nord vaudois,1.37,464,28,6.0,47.7,8333.0,indicative (1-4),48.6,11.0,47.7,79.4
-5611,Savigny,Lavaux-Oron,3.46,3517,181,5.1,41.5,10422.0,indicative (1-4),40.5,29.5,41.5,70.3
-5650,Vaux-sur-Morges,Morges,3.13,185,13,7.0,56.5,14471.0,estimé (voisinage),57.7,26.6,56.5,52.6
-5817,Grandcour,Broye-Vully,8.53,976,46,4.7,31.4,7882.0,estimé (voisinage),36.9,74.2,31.4,81.3
-5842,Rossinière,Riviera-Pays-d'Enhaut,4.61,499,33,6.6,13.6,7828.0,estimé (voisinage),54.1,39.6,13.6,81.6
-5932,Ursins,Jura-Nord vaudois,4.39,232,13,5.6,33.8,5106.0,annonces (surface estimée),45.0,37.7,33.8,93.5
-5422,Aubonne,Morges,5.17,3856,217,5.6,40.6,7202.0,solide (5+),45.0,44.6,40.6,84.3
-5458,Faoug,Broye-Vully,2.17,895,29,3.2,45.5,9182.0,indicative (1-4),23.4,18.1,45.5,75.7
-5586,Lausanne,Lausanne,0.31,144873,6992,4.8,14.8,12503.0,solide (5+),37.8,1.7,14.8,61.2
-5587,Le Mont-sur-Lausanne,Lausanne,0.81,9531,501,5.3,39.9,11343.0,indicative (1-4),42.3,6.1,39.9,66.3
-5632,Denges,Morges,1.62,1830,52,2.8,48.3,16377.0,indicative (1-4),19.8,13.2,48.3,44.3
-5642,Morges,Morges,2.43,17701,1273,7.2,38.1,9850.0,indicative (1-4),59.5,20.4,38.1,72.8
-5675,Lucens,Broye-Vully,0.45,4736,190,4.0,25.9,8077.0,indicative (1-4),30.6,2.9,25.9,80.5
-5680,Ogens,Gros-de-Vaud,2.64,341,11,3.2,28.8,5367.0,annonces (surface estimée),23.4,22.2,28.8,92.3
-5706,Borex,Nyon,4.01,1146,59,5.1,70.9,11333.0,indicative (1-4),40.5,34.3,70.9,66.3
-5720,Givrins,Nyon,5.14,1068,46,4.3,58.9,9938.0,indicative (1-4),33.3,44.3,58.9,72.4
-5908,Chêne-Pâquier,Jura-Nord vaudois,3.54,173,7,4.0,34.2,6551.0,estimé (voisinage),30.6,30.2,34.2,87.2
-5935,Villars-Epeney,Jura-Nord vaudois,2.9,108,1,0.9,47.3,7331.0,estimé (voisinage),2.7,24.5,47.3,83.8
-5425,Bière,Morges,8.68,1669,90,5.4,32.7,8969.0,indicative (1-4),43.2,75.6,32.7,76.6
-5484,Gollion,Morges,0.41,1066,39,3.7,40.4,9052.0,indicative (1-4),27.9,2.6,40.4,76.2
-5495,Penthalaz,Gros-de-Vaud,0.47,3169,215,6.8,32.6,7759.0,annonces (surface estimée),55.9,3.1,32.6,81.9
-5522,Fey,Gros-de-Vaud,2.62,789,31,3.9,40.2,8927.0,indicative (1-4),29.7,22.1,40.2,76.8
-5592,Romanel-sur-Lausanne,Lausanne,0.56,4321,189,4.4,35.9,8924.0,annonces (surface estimée),34.2,3.9,35.9,76.8
-5637,Lavigny,Morges,6.25,1099,27,2.5,31.5,8839.0,solide (5+),17.1,54.1,31.5,77.2
-5646,Saint-Prex,Morges,5.8,5865,240,4.1,57.0,12439.0,indicative (1-4),31.5,50.1,57.0,61.5
-5716,Eysins,Nyon,2.21,1774,78,4.4,70.6,11124.0,estimé (voisinage),34.2,18.4,70.6,67.2
-5830,Villarzel,Broye-Vully,3.48,523,21,4.0,29.6,5949.0,estimé (voisinage),30.6,29.7,29.6,89.8
-5854,Burtigny,Nyon,3.9,401,16,4.0,32.3,11143.0,indicative (1-4),30.6,33.4,32.3,67.1
-5904,Chamblon,Jura-Nord vaudois,2.53,554,19,3.4,51.9,5986.0,estimé (voisinage),25.2,21.3,51.9,89.6
-5913,Donneloye,Jura-Nord vaudois,5.45,916,40,4.4,31.0,6551.0,indicative (1-4),34.2,47.0,31.0,87.2
-5921,Molondin,Jura-Nord vaudois,3.5,269,10,3.7,16.6,4322.0,indicative (1-4),27.9,29.8,16.6,96.9
-5435,Saint-Livres,Morges,5.6,715,32,4.5,41.0,8839.0,estimé (voisinage),35.1,48.4,41.0,77.2
-5477,Cossonay,Morges,1.65,4893,166,3.4,41.3,6353.0,annonces (surface estimée),25.2,13.5,41.3,88.0
-5488,Mauraz,Morges,2.06,67,1,1.5,60.8,7927.0,estimé (voisinage),8.1,17.1,60.8,81.2
-5491,Mont-la-Ville,Morges,4.01,496,21,4.2,39.5,7239.0,annonces (surface estimée),32.4,34.3,39.5,84.2
-5492,Montricher,Morges,3.97,943,38,4.0,48.1,7927.0,annonces (surface estimée),30.6,34.0,48.1,81.2
-5493,Orny,Morges,1.42,497,25,5.0,31.4,6086.0,indicative (1-4),39.6,11.5,31.4,89.2
-5498,La Sarraz,Morges,0.56,2615,114,4.4,34.9,8042.0,indicative (1-4),34.2,3.9,34.9,80.7
-5560,Grandevent,Jura-Nord vaudois,1.73,241,11,4.6,51.3,8333.0,estimé (voisinage),36.0,14.2,51.3,79.4
-5624,Bussigny,Ouest lausannois,1.77,11632,371,3.2,48.4,9496.0,indicative (1-4),23.4,14.6,48.4,74.3
-5638,Lonay,Morges,1.05,2734,260,9.5,67.0,9158.0,annonces (surface estimée),80.2,8.2,67.0,75.8
-5690,Villars-le-Comte,Broye-Vully,2.95,132,6,4.5,41.1,3606.0,indicative (1-4),35.1,25.0,41.1,100.0
-5692,Vucherens,Broye-Vully,4.15,621,28,4.5,35.5,8276.0,estimé (voisinage),35.1,35.6,35.5,79.6
-5707,Chavannes-de-Bogis,Nyon,7.95,1384,44,3.2,78.5,10183.0,indicative (1-4),23.4,69.1,78.5,71.3
-5798,Ropraz,Broye-Vully,3.34,530,19,3.6,28.3,8276.0,annonces (surface estimée),27.0,28.4,28.3,79.6
-5853,Bursins,Nyon,2.8,814,37,4.5,44.9,10000.0,indicative (1-4),35.1,23.7,44.9,72.1
-5406,Lavey-Morcles,Aigle,2.89,1015,48,4.7,25.0,9200.0,estimé (voisinage),36.9,24.4,25.0,75.6
-5590,Pully,Lavaux-Oron,1.95,19538,1654,8.5,56.9,13355.0,solide (5+),71.2,16.2,56.9,57.5
-5653,Vufflens-le-Château,Morges,2.62,837,54,6.5,79.5,14471.0,estimé (voisinage),53.2,22.1,79.5,52.6
-5743,Arnex-sur-Orbe,Jura-Nord vaudois,3.81,694,23,3.3,36.2,6832.0,estimé (voisinage),24.3,32.6,36.2,85.9
-5746,Bavois,Jura-Nord vaudois,1.48,1041,23,2.2,34.0,4146.0,estimé (voisinage),14.4,12.0,34.0,97.6
-5763,Valeyres-sous-Rances,Jura-Nord vaudois,3.07,578,18,3.1,40.8,5986.0,estimé (voisinage),22.5,26.0,40.8,89.6
-5872,Le Chenit,Jura-Nord vaudois,3.57,4753,366,7.7,46.4,5190.0,indicative (1-4),64.0,30.5,46.4,93.1
-5892,Blonay - Saint-Légier,Riviera-Pays-d'Enhaut,1.39,12464,824,6.6,46.2,12458.0,solide (5+),54.1,11.2,46.2,61.4
-5907,Chavannes-le-Chêne,Jura-Nord vaudois,2.85,322,15,4.7,28.0,7331.0,estimé (voisinage),36.9,24.1,28.0,83.8
-5911,Cuarny,Jura-Nord vaudois,2.16,241,9,3.7,37.1,6714.0,estimé (voisinage),27.9,18.0,37.1,86.4
-5919,Mathod,Jura-Nord vaudois,4.77,725,26,3.6,32.0,6832.0,estimé (voisinage),27.0,41.0,32.0,85.9
-5430,Marchissy,Nyon,7.7,508,12,2.4,33.5,10025.0,estimé (voisinage),16.2,66.9,33.5,72.0
-5496,Penthaz,Gros-de-Vaud,1.78,1945,78,4.0,43.9,8750.0,indicative (1-4),30.6,14.7,43.9,77.6
-5728,Signy-Avenex,Nyon,1.89,608,40,6.6,67.8,10987.0,estimé (voisinage),54.1,15.6,67.8,67.8
-5729,Tannay,Nyon,6.18,1746,97,5.6,63.7,19095.0,annonces (surface estimée),45.0,53.5,63.7,32.4
-5805,Oron,Lavaux-Oron,4.51,6341,308,4.9,32.3,6814.0,solide (5+),38.7,38.7,32.3,86.0
-5828,Treytorrens (Payerne),Broye-Vully,4.56,108,5,4.6,,5437.0,estimé (voisinage),36.0,39.2,,92.0
-5831,Valbroye,Broye-Vully,2.17,3425,180,5.3,28.5,5437.0,indicative (1-4),42.3,18.1,28.5,92.0
-5841,Château-d'Oex,Riviera-Pays-d'Enhaut,3.28,3653,269,7.4,9.1,7828.0,solide (5+),61.3,27.9,9.1,81.6
-5862,Tartegnin,Nyon,0.43,235,12,5.1,29.4,11028.0,indicative (1-4),40.5,2.7,29.4,67.6
-5871,L'Abbaye,Jura-Nord vaudois,6.25,1541,88,5.7,21.1,5447.0,indicative (1-4),45.9,54.1,21.1,92.0
-5891,Veytaux,Riviera-Pays-d'Enhaut,1.7,1038,66,6.4,36.9,8597.0,indicative (1-4),52.3,13.9,36.9,78.2
-5925,Orzens,Jura-Nord vaudois,4.48,214,12,5.6,24.0,8213.0,estimé (voisinage),45.0,38.5,24.0,79.9
-5408,Noville,Aigle,3.57,1215,57,4.7,29.0,6701.0,indicative (1-4),36.9,30.5,29.0,86.5
-5480,Daillens,Gros-de-Vaud,2.83,1097,29,2.6,60.8,4261.0,indicative (1-4),18.0,23.9,60.8,97.1
-5489,Mex (VD),Gros-de-Vaud,2.81,807,41,5.1,61.4,10847.0,indicative (1-4),40.5,23.7,61.4,68.4
-5523,Froideville,Gros-de-Vaud,5.53,2729,96,3.5,44.0,6946.0,indicative (1-4),26.1,47.7,44.0,85.4
-5610,Saint-Saphorin (Lavaux),Lavaux-Oron,2.47,387,13,3.4,,11439.0,estimé (voisinage),25.2,20.7,,65.8
-5661,Boulens,Gros-de-Vaud,1.5,368,15,4.1,38.3,8067.0,estimé (voisinage),31.5,12.2,38.3,80.5
-5723,Mies,Nyon,5.55,2180,130,6.0,60.3,11667.0,indicative (1-4),48.6,47.9,60.3,64.8
-5732,Vich,Nyon,1.88,1182,35,3.0,66.1,10903.0,indicative (1-4),21.6,15.5,66.1,68.2
-5764,Vallorbe,Jura-Nord vaudois,10.13,4319,206,4.8,24.2,6253.0,indicative (1-4),37.8,88.3,24.2,88.5
-5511,Assens,Gros-de-Vaud,2.82,1717,64,3.7,47.7,8750.0,estimé (voisinage),27.9,23.8,47.7,77.6
-5529,Oulens-sous-Echallens,Gros-de-Vaud,2.66,603,17,2.8,49.1,4261.0,estimé (voisinage),19.8,22.4,49.1,97.1
-5622,Bremblens,Morges,2.37,614,23,3.7,55.1,8346.0,annonces (surface estimée),27.9,19.9,55.1,79.3
-5663,Bussy-sur-Moudon,Broye-Vully,2.47,262,9,3.4,31.1,6846.0,estimé (voisinage),25.2,20.7,31.1,85.9
-5678,Moudon,Broye-Vully,0.57,6646,271,4.1,20.6,6846.0,solide (5+),31.5,4.0,20.6,85.9
-5708,Chavannes-des-Bois,Nyon,8.71,983,30,3.1,70.3,6726.0,indicative (1-4),22.5,75.8,70.3,86.4
-5731,Le Vaud,Nyon,6.4,1367,47,3.4,49.6,10025.0,solide (5+),25.2,55.4,49.6,72.0
-5758,La Praz,Jura-Nord vaudois,5.76,207,7,3.4,18.7,3692.0,indicative (1-4),25.2,49.8,18.7,99.6
-5759,Premier,Jura-Nord vaudois,7.52,228,13,5.7,22.4,6253.0,estimé (voisinage),45.9,65.3,22.4,88.5
-5790,Maracon,Lavaux-Oron,4.02,569,20,3.5,39.4,10936.0,estimé (voisinage),26.1,34.4,39.4,68.0
-5861,Rolle,Nyon,2.57,6540,391,6.0,50.5,16036.0,solide (5+),48.6,21.6,50.5,45.8
-5541,Goumoëns,Gros-de-Vaud,0.12,1206,67,5.6,40.7,3667.0,indicative (1-4),45.0,0.0,40.7,99.7
-5591,Renens (VD),Ouest lausannois,0.47,21541,964,4.5,13.6,9023.0,indicative (1-4),35.1,3.1,13.6,76.4
-5639,Lully (VD),Morges,2.82,836,36,4.3,80.9,10604.0,indicative (1-4),33.3,23.8,80.9,69.5
-5718,Genolier,Nyon,4.27,2012,109,5.4,82.6,11518.0,indicative (1-4),43.2,36.6,82.6,65.5
-5722,Grens,Nyon,2.88,391,21,5.4,60.8,11333.0,estimé (voisinage),43.2,24.4,60.8,66.3
-5856,Essertines-sur-Rolle,Nyon,1.86,785,18,2.3,62.4,12244.0,indicative (1-4),15.3,15.4,62.4,62.3
-5412,Rennaz,Aigle,3.0,949,40,4.2,35.6,6701.0,estimé (voisinage),32.4,25.4,35.6,86.5
-5431,Mollens (VD),Morges,5.93,324,14,4.3,26.4,8969.0,estimé (voisinage),33.3,51.3,26.4,76.6
-5464,Vully-les-Lacs,Broye-Vully,3.96,3627,183,5.0,42.6,6873.0,solide (5+),39.6,33.9,42.6,85.8
-5415,Yvorne,Aigle,2.83,1109,53,4.8,32.8,6429.0,indicative (1-4),37.8,23.9,32.8,87.7
-5490,Moiry,Morges,4.53,300,10,3.3,33.4,5350.0,estimé (voisinage),24.3,38.9,33.4,92.4
-5518,Echallens,Gros-de-Vaud,0.33,6719,297,4.4,32.0,8750.0,solide (5+),34.2,1.9,32.0,77.6
-5520,Essertines-sur-Yverdon,Gros-de-Vaud,5.62,1142,34,3.0,42.4,8213.0,indicative (1-4),21.6,48.5,42.4,79.9
-5555,Corcelles-près-Concise,Jura-Nord vaudois,0.44,434,33,7.6,38.6,7075.0,estimé (voisinage),63.1,2.8,38.6,84.9
-5585,Jouxtens-Mézery,Lausanne,1.11,1478,102,6.9,71.1,14662.0,annonces (surface estimée),56.8,8.7,71.1,51.8
-5623,Buchillon,Morges,8.23,686,43,6.3,79.3,10769.0,estimé (voisinage),51.4,71.6,79.3,68.8
-5629,Clarmont,Morges,1.62,228,8,3.5,39.1,9904.0,estimé (voisinage),26.1,13.2,39.1,72.5
-5634,Echichens,Morges,3.26,3222,240,7.4,52.3,9904.0,indicative (1-4),61.3,27.7,52.3,72.5
-5714,Crassier,Nyon,5.0,1275,50,3.9,51.6,11869.0,indicative (1-4),29.7,43.1,51.6,64.0
-5745,Baulmes,Jura-Nord vaudois,3.59,1165,53,4.5,23.1,5209.0,estimé (voisinage),35.1,30.6,23.1,93.0
-5754,Juriens,Jura-Nord vaudois,7.07,348,13,3.7,24.5,6253.0,estimé (voisinage),27.9,61.3,24.5,88.5
-5816,Corcelles-près-Payerne,Broye-Vully,7.27,2982,117,3.9,35.5,4006.0,indicative (1-4),29.7,63.1,35.5,98.3
-5889,La Tour-de-Peilz,Riviera-Pays-d'Enhaut,1.27,12812,891,7.0,40.6,10340.0,solide (5+),57.7,10.2,40.6,70.6
-5923,Oppens,Gros-de-Vaud,3.03,202,8,4.0,30.9,8067.0,estimé (voisinage),30.6,25.7,30.9,80.5
-5931,Treycovagnes,Jura-Nord vaudois,2.6,515,21,4.1,36.2,8455.0,estimé (voisinage),31.5,21.9,36.2,78.9
-5937,Vugelles-La Mothe,Jura-Nord vaudois,2.06,146,6,4.1,36.8,8333.0,estimé (voisinage),31.5,17.1,36.8,79.4
-5938,Yverdon-les-Bains,Jura-Nord vaudois,0.89,30292,1817,6.0,17.3,8455.0,solide (5+),48.6,6.8,17.3,78.9
-5409,Ollon,Aigle,1.25,8221,380,4.6,33.8,9669.0,solide (5+),36.0,10.0,33.8,73.6
-5472,Bournens,Gros-de-Vaud,0.71,531,20,3.8,56.3,8750.0,estimé (voisinage),28.8,5.2,56.3,77.6
-5486,L'Isle,Morges,1.04,1094,49,4.5,23.6,7239.0,estimé (voisinage),35.1,8.1,23.6,84.2
-5621,Aclens,Morges,1.91,585,20,3.4,56.9,9052.0,estimé (voisinage),25.2,15.8,56.9,76.2
-5669,Curtilles,Broye-Vully,1.06,308,9,2.9,27.9,5634.0,indicative (1-4),20.7,8.3,27.9,91.2
-5710,Coinsins,Nyon,2.56,519,24,4.6,81.8,10903.0,estimé (voisinage),36.0,21.5,81.8,68.2
-5711,Commugny,Nyon,8.42,2973,165,5.5,63.6,11477.0,indicative (1-4),44.1,73.3,63.6,65.7
-5721,Gland,Nyon,1.44,13987,490,3.5,51.9,9727.0,solide (5+),26.1,11.7,51.9,73.3
-5760,Rances,Jura-Nord vaudois,5.55,509,23,4.5,27.5,4824.0,annonces (surface estimée),35.1,47.9,27.5,94.7
-5851,Allaman,Morges,6.06,430,18,4.2,42.6,16036.0,estimé (voisinage),32.4,52.4,42.6,45.8
-5890,Vevey,Riviera-Pays-d'Enhaut,1.5,20142,982,4.9,17.3,9939.0,solide (5+),38.7,12.2,17.3,72.4
-5403,Chessel,Aigle,3.9,527,23,4.4,33.0,6701.0,estimé (voisinage),34.2,33.4,33.0,86.5
-5485,Grancy,Morges,1.53,538,22,4.1,47.5,9052.0,estimé (voisinage),31.5,12.4,47.5,76.2
-5551,Bonvillars,Jura-Nord vaudois,2.68,517,22,4.3,46.8,7905.0,indicative (1-4),33.3,22.6,46.8,81.2
-5561,Grandson,Jura-Nord vaudois,3.49,3390,151,4.5,32.7,7923.0,solide (5+),35.1,29.7,32.7,81.2
-5568,Sainte-Croix,Jura-Nord vaudois,0.63,5139,408,7.9,17.6,5209.0,solide (5+),65.8,4.5,17.6,93.0
-5589,Prilly,Ouest lausannois,0.6,12758,802,6.3,23.7,11557.0,indicative (1-4),51.4,4.2,23.7,65.3
-5628,Chigny,Morges,1.63,420,7,1.7,51.0,14471.0,annonces (surface estimée),9.9,13.3,51.0,52.6
-5741,L'Abergement,Jura-Nord vaudois,6.47,270,11,4.1,32.4,6832.0,estimé (voisinage),31.5,56.0,32.4,85.9
-5747,Bofflens,Jura-Nord vaudois,3.83,200,7,3.5,45.0,6832.0,estimé (voisinage),26.1,32.7,45.0,85.9
-5803,Vulliens,Broye-Vully,3.99,628,24,3.8,34.5,5865.0,annonces (surface estimée),28.8,34.2,34.5,90.1
-5407,Leysin,Aigle,1.21,3659,139,3.8,11.2,6389.0,indicative (1-4),28.8,9.6,11.2,87.9
-5437,Saubraz,Morges,5.77,447,9,2.0,31.2,8120.0,estimé (voisinage),12.6,49.9,31.2,80.3
-5475,Chavannes-le-Veyron,Morges,0.5,160,1,0.6,39.9,6353.0,estimé (voisinage),0.0,3.4,39.9,88.0
-5514,Bottens,Gros-de-Vaud,3.63,1354,44,3.2,41.2,6946.0,estimé (voisinage),23.4,31.0,41.2,85.4
-5554,Concise,Jura-Nord vaudois,2.37,1025,34,3.3,36.1,7075.0,annonces (surface estimée),24.3,19.9,36.1,84.9
-5571,Tévenon,Jura-Nord vaudois,2.08,862,56,6.5,37.3,7977.0,indicative (1-4),53.2,17.3,37.3,80.9
-5655,Yens,Morges,3.57,1498,68,4.5,50.3,9944.0,estimé (voisinage),35.1,30.5,50.3,72.4
-5674,Lovatens,Broye-Vully,2.52,146,6,4.1,22.1,8077.0,estimé (voisinage),31.5,21.2,22.1,80.5
-5756,Montcherand,Jura-Nord vaudois,2.6,489,17,3.5,43.1,6832.0,estimé (voisinage),26.1,21.9,43.1,85.9
-5933,Valeyres-sous-Montagny,Jura-Nord vaudois,0.61,707,39,5.5,39.9,10385.0,solide (5+),44.1,4.3,39.9,70.4
-5471,Bettens,Gros-de-Vaud,2.54,646,11,1.7,47.4,5690.0,estimé (voisinage),9.9,21.4,47.4,90.9
-5479,Cuarnens,Morges,2.69,561,18,3.2,32.2,5350.0,indicative (1-4),23.4,22.7,32.2,92.4
-5521,Etagnières,Gros-de-Vaud,2.63,1191,52,4.4,40.2,7980.0,estimé (voisinage),34.2,22.2,40.2,80.9
-5582,Cheseaux-sur-Lausanne,Lausanne,0.94,4847,265,5.5,37.4,7980.0,annonces (surface estimée),44.1,7.2,37.4,80.9
-5604,Forel (Lavaux),Lavaux-Oron,0.73,2087,96,4.6,43.5,7274.0,annonces (surface estimée),36.0,5.4,43.5,84.0
-5651,Villars-Sainte-Croix,Ouest lausannois,2.72,953,38,4.0,61.4,8935.0,indicative (1-4),30.6,22.9,61.4,76.8
-5652,Villars-sous-Yens,Morges,5.3,602,28,4.7,38.6,12914.0,annonces (surface estimée),36.9,45.7,38.6,59.4
-5712,Coppet,Nyon,6.9,3232,194,6.0,69.0,26533.0,indicative (1-4),48.6,59.8,69.0,0.0
-5724,Nyon,Nyon,0.31,23351,1167,5.0,51.3,10987.0,solide (5+),39.6,1.7,51.3,67.8
-5725,Prangins,Nyon,2.09,4271,242,5.7,66.3,10411.0,indicative (1-4),45.9,17.4,66.3,70.3
-5755,Lignerolle,Jura-Nord vaudois,7.57,461,17,3.7,30.2,7420.0,indicative (1-4),27.9,65.8,30.2,83.4
-5757,Orbe,Jura-Nord vaudois,0.77,7978,398,5.0,23.0,6832.0,solide (5+),39.6,5.7,23.0,85.9
-5885,Jongny,Riviera-Pays-d'Enhaut,0.37,1928,88,4.6,51.7,16071.0,annonces (surface estimée),36.0,2.2,51.7,45.6
-5914,Ependes (VD),Jura-Nord vaudois,4.76,379,19,5.0,29.8,9006.0,indicative (1-4),39.6,41.0,29.8,76.4
-5427,Féchy,Morges,4.55,923,35,3.8,64.6,19032.0,annonces (surface estimée),28.8,39.1,64.6,32.7
-5531,Penthéréaz,Gros-de-Vaud,2.68,430,14,3.3,33.3,4146.0,estimé (voisinage),24.3,22.6,33.3,97.6
-5556,Fiez,Jura-Nord vaudois,3.11,432,18,4.2,36.0,7977.0,estimé (voisinage),32.4,26.4,36.0,80.9
-5566,Provence,Jura-Nord vaudois,4.59,409,31,7.6,7.9,7905.0,estimé (voisinage),63.1,39.5,7.9,81.2
-5613,Bourg-en-Lavaux,Lavaux-Oron,1.14,5464,339,6.2,57.1,15509.0,solide (5+),50.5,9.0,57.1,48.1
-5627,Chavannes-près-Renens,Ouest lausannois,0.85,9774,272,2.8,16.8,11420.0,estimé (voisinage),19.8,6.4,16.8,65.9
-5684,Rossenges,Broye-Vully,2.45,91,9,9.9,46.6,5865.0,estimé (voisinage),83.8,20.6,46.6,90.1
-5785,Corcelles-le-Jorat,Broye-Vully,3.69,499,21,4.2,27.2,7567.0,annonces (surface estimée),32.4,31.5,27.2,82.7
-5929,Suchy,Jura-Nord vaudois,5.07,663,12,1.8,44.8,7704.0,indicative (1-4),10.8,43.7,44.8,82.1
-5402,Bex,Aigle,5.44,8841,495,5.6,21.7,7468.0,solide (5+),45.0,47.0,21.7,83.2
-5424,Berolle,Morges,7.95,303,13,4.3,27.6,8969.0,estimé (voisinage),33.3,69.1,27.6,76.6
-5426,Bougy-Villars,Morges,3.27,514,25,4.9,52.9,7450.0,indicative (1-4),38.7,27.8,52.9,83.2
-5609,Rivaz,Lavaux-Oron,2.45,329,38,11.6,49.0,7857.0,annonces (surface estimée),99.1,20.6,49.0,81.5
-5702,Arzier-Le Muids,Nyon,11.45,2968,97,3.3,46.5,13456.0,indicative (1-4),24.3,100.0,46.5,57.0
-5730,Trélex,Nyon,3.85,1426,75,5.3,71.8,6892.0,indicative (1-4),42.3,32.9,71.8,85.7
-5873,Le Lieu,Jura-Nord vaudois,7.1,918,60,6.5,32.8,6253.0,estimé (voisinage),53.2,61.6,32.8,88.5
-5930,Suscévaz,Jura-Nord vaudois,4.33,234,10,4.3,37.8,5986.0,estimé (voisinage),33.3,37.2,37.8,89.6
-5934,Valeyres-sous-Ursins,Jura-Nord vaudois,3.27,235,18,7.7,26.2,7936.0,annonces (surface estimée),64.0,27.8,26.2,81.1
-5512,Bercher,Gros-de-Vaud,0.31,1344,62,4.6,25.0,8067.0,estimé (voisinage),36.0,1.7,25.0,80.5
-5527,Morrens (VD),Gros-de-Vaud,2.41,1155,60,5.2,36.6,7895.0,annonces (surface estimée),41.4,20.2,36.6,81.3
-5530,Pailly,Gros-de-Vaud,2.7,575,18,3.1,40.9,9225.0,indicative (1-4),22.5,22.8,40.9,75.5
-5534,Rueyres,Gros-de-Vaud,1.28,304,17,5.6,33.3,8067.0,indicative (1-4),45.0,10.2,33.3,80.5
-5539,Vuarrens,Gros-de-Vaud,4.35,1119,26,2.3,38.0,7259.0,annonces (surface estimée),15.3,37.3,38.0,84.1
-5671,Dompierre (VD),Broye-Vully,3.37,240,9,3.8,31.1,9166.0,annonces (surface estimée),28.8,28.7,31.1,75.7
-5765,Vaulion,Jura-Nord vaudois,7.55,488,13,2.7,13.3,6253.0,estimé (voisinage),18.9,65.6,13.3,88.5
-5799,Servion,Lavaux-Oron,1.14,2228,90,4.0,45.7,8845.0,solide (5+),30.6,9.0,45.7,77.1
-5884,Corsier-sur-Vevey,Riviera-Pays-d'Enhaut,2.1,3385,212,6.3,34.9,10936.0,indicative (1-4),51.4,17.5,34.9,68.0
-5912,Démoret,Jura-Nord vaudois,5.22,173,9,5.2,16.8,6551.0,estimé (voisinage),41.4,45.0,16.8,87.2
-5922,Montagny-près-Yverdon,Jura-Nord vaudois,0.96,780,37,4.7,47.9,3967.0,indicative (1-4),36.9,7.4,47.9,98.4
-5414,Villeneuve (VD),Aigle,3.15,6039,299,5.0,27.8,11105.0,indicative (1-4),39.6,26.7,27.8,67.3
-5451,Avenches,Broye-Vully,0.28,4875,227,4.7,32.8,5493.0,annonces (surface estimée),36.9,1.4,32.8,91.8
-5501,Sullens,Gros-de-Vaud,1.29,1226,56,4.6,57.7,6152.0,annonces (surface estimée),36.0,10.3,57.7,88.9
-5535,Saint-Barthélemy (VD),Gros-de-Vaud,2.51,834,26,3.1,28.0,5690.0,annonces (surface estimée),22.5,21.1,28.0,90.9
-5563,Mutrux,Jura-Nord vaudois,4.14,145,8,5.5,11.6,6459.0,annonces (surface estimée),44.1,35.5,11.6,87.6
-5581,Belmont-sur-Lausanne,Lavaux-Oron,2.05,3915,176,4.5,47.5,10622.0,solide (5+),35.1,17.0,47.5,69.4
-5648,Saint-Sulpice (VD),Ouest lausannois,4.17,5155,303,5.9,75.1,12443.0,indicative (1-4),47.7,35.7,75.1,61.5
-5654,Vullierens,Morges,2.38,547,21,3.8,32.9,9485.0,indicative (1-4),28.8,19.9,32.9,74.4
-5683,Prévonloup,Broye-Vully,3.52,230,12,5.2,35.6,8077.0,estimé (voisinage),41.4,30.0,35.6,80.5
-5688,Syens,Broye-Vully,2.78,151,10,6.6,40.6,5865.0,estimé (voisinage),54.1,23.5,40.6,90.1
-5727,Saint-Cergue,Nyon,10.2,3009,104,3.5,41.9,6529.0,indicative (1-4),26.1,89.0,41.9,87.3
-5750,Les Clées,Jura-Nord vaudois,5.33,193,10,5.2,24.2,6832.0,estimé (voisinage),41.4,46.0,24.2,85.9
-5813,Chevroux,Broye-Vully,8.99,494,21,4.3,35.2,7882.0,indicative (1-4),33.3,78.3,35.2,81.3
-5410,Ormont-Dessous,Aigle,6.41,1242,58,4.7,13.0,6123.0,indicative (1-4),36.9,55.5,13.0,89.0
-5411,Ormont-Dessus,Aigle,0.85,1433,126,8.8,21.3,7951.0,indicative (1-4),73.9,6.4,21.3,81.0
-5436,Saint-Oyens,Morges,3.38,457,14,3.1,45.3,8120.0,annonces (surface estimée),22.5,28.8,45.3,80.3
-5583,Crissier,Ouest lausannois,1.34,10676,383,3.6,37.4,10423.0,indicative (1-4),27.0,10.8,37.4,70.3
-5649,Tolochenaz,Morges,3.5,1934,89,4.6,45.2,11185.0,annonces (surface estimée),36.0,29.8,45.2,66.9
-5749,Chavornay,Jura-Nord vaudois,3.47,5440,172,3.2,34.4,4146.0,indicative (1-4),23.4,29.6,34.4,97.6
-5819,Henniez,Broye-Vully,2.28,469,16,3.4,27.0,5949.0,estimé (voisinage),25.2,19.1,27.0,89.8
-5903,Bioley-Magnoux,Jura-Nord vaudois,4.25,257,13,5.1,27.9,6551.0,estimé (voisinage),40.5,36.5,27.9,87.2
-5909,Cheseaux-Noréaz,Jura-Nord vaudois,3.17,736,48,6.5,56.8,10011.0,indicative (1-4),53.2,26.9,56.8,72.1
-5928,Rovray,Jura-Nord vaudois,1.41,194,5,2.6,46.8,7331.0,estimé (voisinage),18.0,11.4,46.8,83.8
-5474,La Chaux (Cossonay),Morges,2.27,432,21,4.9,39.1,6353.0,estimé (voisinage),38.7,19.0,39.1,88.0
-5487,Lussery-Villars,Gros-de-Vaud,2.5,470,18,3.8,36.5,6353.0,estimé (voisinage),28.8,21.0,36.5,88.0
-5540,Montilliez,Gros-de-Vaud,3.24,1872,65,3.5,41.0,8750.0,estimé (voisinage),26.1,27.5,41.0,77.6
-5635,Ecublens (VD),Ouest lausannois,0.33,13364,667,5.0,39.9,11420.0,indicative (1-4),39.6,1.9,39.9,65.9
-5673,Hermenches,Broye-Vully,4.64,373,17,4.6,24.2,7118.0,estimé (voisinage),36.0,39.9,24.2,84.7
-5703,Bassins,Nyon,9.31,1483,55,3.7,44.8,10593.0,indicative (1-4),27.9,81.1,44.8,69.5
-5762,Sergey,Jura-Nord vaudois,4.44,133,5,3.8,32.7,6832.0,estimé (voisinage),28.8,38.1,32.7,85.9
-5902,Belmont-sur-Yverdon,Jura-Nord vaudois,4.68,445,16,3.6,39.0,7337.0,indicative (1-4),27.0,40.2,39.0,83.7
-5939,Yvonand,Jura-Nord vaudois,1.13,3524,215,6.1,26.9,7331.0,annonces (surface estimée),49.5,8.9,26.9,83.8
+ofs,nom,district,dist_ems_km,pop_totale,pop_80plus,part_80plus,indice_pouvoir_achat,prix_m2_appart,prix_fiabilite,lits_pour_100_district,demande_score,tension_score,pouvoir_achat_score,prix_bas_score
+5401,Aigle,Aigle,0.57,11752,589,5.0,28.7,6970.0,indicative (1-4),23.7,39.6,1.0,28.7,85.3
+5404,Corbeyrier,Aigle,3.81,452,53,11.7,24.6,9277.0,indicative (1-4),23.7,100.0,8.1,24.6,75.3
+5405,Gryon,Aigle,3.31,1519,84,5.5,23.1,9200.0,indicative (1-4),23.7,44.1,7.0,23.1,75.6
+5423,Ballens,Morges,4.02,579,32,5.5,32.2,9944.0,indicative (1-4),8.8,44.1,83.6,32.2,72.4
+5557,Fontaines-sur-Grandson,Jura-Nord vaudois,1.63,219,7,3.2,21.2,7977.0,estimé (voisinage),17.0,23.4,37.1,21.2,80.9
+5588,Paudex,Lavaux-Oron,3.37,1509,99,6.6,46.4,12542.0,indicative (1-4),9.3,54.1,79.7,46.4,61.0
+5645,Romanel-sur-Morges,Morges,3.19,454,26,5.7,63.4,4887.0,annonces (surface estimée),8.8,45.9,81.8,63.4,94.4
+5704,Begnins,Nyon,3.34,2035,172,8.5,55.9,9336.0,annonces (surface estimée),11.0,71.2,71.0,55.9,75.0
+5717,Founex,Nyon,6.21,3763,166,4.4,65.6,12190.0,indicative (1-4),11.0,34.2,77.4,65.6,62.6
+5792,Montpreveyres,Lavaux-Oron,3.15,656,19,2.9,34.5,7567.0,estimé (voisinage),9.3,20.7,79.2,34.5,82.7
+5822,Payerne,Broye-Vully,7.31,10758,502,4.7,24.2,8688.0,solide (5+),17.0,36.9,49.6,24.2,77.8
+5855,Dully,Nyon,3.07,620,27,4.4,79.7,21429.0,annonces (surface estimée),11.0,34.2,70.4,79.7,22.3
+5882,Chardonne,Riviera-Pays-d'Enhaut,1.62,3337,244,7.3,46.1,13634.0,solide (5+),17.4,60.4,35.0,46.1,56.3
+5726,La Rippe,Nyon,8.75,1196,43,3.6,63.3,11869.0,estimé (voisinage),11.0,27.0,83.0,63.3,64.0
+5812,Champtauroz,Broye-Vully,4.82,196,8,4.1,25.7,8443.0,indicative (1-4),17.0,31.5,44.1,25.7,78.9
+5821,Missy,Broye-Vully,5.34,383,21,5.5,29.5,5493.0,estimé (voisinage),17.0,44.1,45.2,29.5,91.8
+5434,Saint-George,Nyon,7.62,1081,43,4.0,46.0,10063.0,annonces (surface estimée),11.0,30.6,80.5,46.0,71.8
+5499,Senarclens,Morges,2.3,480,25,5.2,40.2,9052.0,estimé (voisinage),8.8,41.4,79.8,40.2,76.2
+5640,Lussy-sur-Morges,Morges,4.18,719,58,8.1,67.3,12914.0,estimé (voisinage),8.8,67.6,84.0,67.3,59.4
+5656,Hautemorges,Morges,1.23,4383,212,4.8,44.3,8525.0,indicative (1-4),8.8,37.8,77.4,44.3,78.5
+5473,Boussens,Gros-de-Vaud,1.67,1006,22,2.2,62.8,17182.0,indicative (1-4),14.0,14.4,52.2,62.8,40.8
+5553,Champagne,Jura-Nord vaudois,2.92,1070,32,3.0,47.3,7097.0,indicative (1-4),17.0,21.6,39.9,47.3,84.8
+5562,Mauborget,Jura-Nord vaudois,2.11,145,10,6.9,19.5,7977.0,estimé (voisinage),17.0,56.8,38.1,19.5,80.9
+5564,Novalles,Jura-Nord vaudois,0.97,106,5,4.7,38.1,8333.0,estimé (voisinage),17.0,36.9,35.6,38.1,79.4
+5607,Puidoux,Lavaux-Oron,1.58,2974,101,3.4,37.7,24468.0,indicative (1-4),9.3,25.2,75.7,37.7,9.0
+5705,Bogis-Bossey,Nyon,6.01,991,32,3.2,50.6,11869.0,estimé (voisinage),11.0,23.4,76.9,50.6,64.0
+5742,Agiez,Jura-Nord vaudois,2.39,372,9,2.4,30.3,6832.0,estimé (voisinage),17.0,16.2,38.7,30.3,85.9
+5843,Rougemont,Riviera-Pays-d'Enhaut,6.78,813,75,9.2,13.0,7828.0,estimé (voisinage),17.4,77.5,46.4,13.0,81.6
+5852,Bursinel,Nyon,3.44,532,18,3.4,59.3,14495.0,indicative (1-4),11.0,25.2,71.3,59.3,52.5
+5858,Luins,Nyon,2.52,633,20,3.2,69.6,4805.0,indicative (1-4),11.0,23.4,69.2,69.6,94.8
+5883,Corseaux,Riviera-Pays-d'Enhaut,2.52,2320,211,9.1,52.0,11439.0,indicative (1-4),17.4,76.6,37.0,52.0,65.8
+5482,Eclépens,Morges,2.15,1210,53,4.4,75.6,6086.0,estimé (voisinage),8.8,34.2,79.5,75.6,89.2
+5565,Onnens (VD),Jura-Nord vaudois,1.35,513,24,4.7,46.0,5336.0,indicative (1-4),17.0,36.9,36.4,46.0,92.5
+5601,Chexbres,Lavaux-Oron,0.54,2261,232,10.3,42.9,14645.0,indicative (1-4),9.3,87.4,73.4,42.9,51.9
+5633,Echandens,Morges,0.68,2999,216,7.2,56.9,13381.0,annonces (surface estimée),8.8,59.5,76.2,56.9,57.4
+5715,Duillier,Nyon,1.88,1140,45,3.9,56.7,8278.0,indicative (1-4),11.0,29.7,67.8,56.7,79.6
+5719,Gingins,Nyon,7.92,1256,77,6.1,59.4,12180.0,annonces (surface estimée),11.0,49.5,81.1,59.4,62.6
+5748,Bretonnières,Jura-Nord vaudois,5.26,261,11,4.2,41.5,6832.0,estimé (voisinage),17.0,32.4,45.1,41.5,85.9
+5761,Romainmôtier-Envy,Jura-Nord vaudois,5.41,560,25,4.5,13.1,6086.0,estimé (voisinage),17.0,35.1,45.4,13.1,89.2
+5804,Jorat-Menthue,Gros-de-Vaud,6.02,1574,74,4.7,43.9,7118.0,solide (5+),14.0,36.9,61.8,43.9,84.7
+5863,Vinzel,Nyon,3.5,387,9,2.3,57.8,9336.0,estimé (voisinage),11.0,15.3,71.4,57.8,75.0
+5905,Champvent,Jura-Nord vaudois,3.69,724,28,3.9,37.9,5986.0,annonces (surface estimée),17.0,29.7,41.6,37.9,89.6
+5910,Cronay,Jura-Nord vaudois,3.54,426,19,4.5,35.2,6714.0,solide (5+),17.0,35.1,41.3,35.2,86.4
+5497,Pompaples,Morges,2.71,932,37,4.0,38.1,6086.0,estimé (voisinage),8.8,30.6,80.7,38.1,89.2
+5516,Cugy (VD),Gros-de-Vaud,2.25,2787,143,5.1,34.5,6709.0,indicative (1-4),14.0,40.5,53.5,34.5,86.5
+5537,Villars-le-Terroir,Gros-de-Vaud,1.67,1308,59,4.5,36.9,7259.0,estimé (voisinage),14.0,35.1,52.2,36.9,84.1
+5665,Chavannes-sur-Moudon,Broye-Vully,0.96,229,14,6.1,36.0,4590.0,indicative (1-4),17.0,49.5,35.6,36.0,95.7
+5713,Crans (VD),Nyon,2.78,2445,140,5.7,73.1,11124.0,indicative (1-4),11.0,45.9,69.8,73.1,67.2
+5827,Trey,Broye-Vully,3.24,318,11,3.5,29.1,5949.0,indicative (1-4),17.0,26.1,40.6,29.1,89.8
+5857,Gilly,Nyon,1.26,1441,51,3.5,67.0,13875.0,indicative (1-4),11.0,26.1,66.4,67.0,55.2
+5886,Montreux,Riviera-Pays-d'Enhaut,1.75,26955,1976,7.3,30.5,11721.0,solide (5+),17.4,60.4,35.3,30.5,64.6
+5924,Orges,Jura-Nord vaudois,1.98,424,12,2.8,33.5,6213.0,annonces (surface estimée),17.0,19.8,37.8,33.5,88.6
+5413,Roche (VD),Aigle,4.7,1994,69,3.5,31.2,6825.0,indicative (1-4),23.7,26.1,10.1,31.2,86.0
+5428,Gimel,Morges,6.93,2457,114,4.6,28.3,7726.0,indicative (1-4),8.8,36.0,90.0,28.3,82.0
+5429,Longirod,Nyon,6.38,556,23,4.1,34.8,9400.0,indicative (1-4),11.0,31.5,77.7,34.8,74.7
+5456,Cudrefin,Broye-Vully,6.36,1885,81,4.3,58.0,8730.0,indicative (1-4),17.0,33.3,47.5,58.0,77.7
+5476,Chevilly,Morges,3.02,346,10,2.9,53.9,6353.0,estimé (voisinage),8.8,20.7,81.4,53.9,88.0
+5481,Dizy,Morges,2.47,238,8,3.4,34.7,7759.0,estimé (voisinage),8.8,25.2,80.2,34.7,81.9
+5503,Vufflens-la-Ville,Gros-de-Vaud,2.6,1342,63,4.7,54.3,9801.0,indicative (1-4),14.0,36.9,54.3,54.3,73.0
+5515,Bretigny-sur-Morrens,Gros-de-Vaud,4.05,899,22,2.4,36.6,6946.0,estimé (voisinage),14.0,16.2,57.5,36.6,85.4
+5533,Poliez-Pittet,Gros-de-Vaud,4.65,850,47,5.5,41.8,5267.0,indicative (1-4),14.0,44.1,58.8,41.8,92.8
+5552,Bullet,Jura-Nord vaudois,3.86,681,56,8.2,25.0,9047.0,indicative (1-4),17.0,68.5,42.0,25.0,76.3
+5584,Epalinges,Lausanne,0.49,9905,566,5.7,50.2,11155.0,solide (5+),15.6,45.9,41.6,50.2,67.1
+5606,Lutry,Lavaux-Oron,1.9,10751,871,8.1,69.4,14210.0,solide (5+),9.3,67.6,76.4,69.4,53.7
+5643,Préverenges,Morges,3.43,5260,326,6.2,48.0,11409.0,solide (5+),8.8,50.5,82.3,48.0,66.0
+5744,Ballaigues,Jura-Nord vaudois,9.94,1218,92,7.6,34.1,6253.0,estimé (voisinage),17.0,63.1,55.4,34.1,88.5
+5752,Croy,Jura-Nord vaudois,4.1,403,44,10.9,27.2,6086.0,estimé (voisinage),17.0,92.8,42.5,27.2,89.2
+5806,Jorat-Mézières,Lavaux-Oron,1.29,3189,129,4.0,39.2,9117.0,annonces (surface estimée),9.3,30.6,75.1,39.2,76.0
+5631,Denens,Morges,3.47,742,44,5.9,54.6,15113.0,annonces (surface estimée),8.8,47.7,82.4,54.6,49.8
+5636,Etoy,Morges,6.84,2962,151,5.1,45.4,10401.0,indicative (1-4),8.8,40.5,89.8,45.4,70.4
+5693,Montanaire,Gros-de-Vaud,3.82,2860,112,3.9,36.8,7459.0,indicative (1-4),14.0,29.7,57.0,36.8,83.2
+5701,Arnex-sur-Nyon,Nyon,3.69,270,8,3.0,54.8,11333.0,estimé (voisinage),11.0,21.6,71.8,54.8,66.3
+5709,Chéserex,Nyon,6.55,1279,65,5.1,70.1,11333.0,estimé (voisinage),11.0,40.5,78.1,70.1,66.3
+5766,Vuiteboeuf,Jura-Nord vaudois,4.22,608,17,2.8,20.9,6213.0,estimé (voisinage),17.0,19.8,42.8,20.9,88.6
+5859,Mont-sur-Rolle,Nyon,1.84,2752,136,4.9,52.3,11155.0,indicative (1-4),11.0,38.7,67.7,52.3,67.1
+5860,Perroy,Nyon,4.02,1584,67,4.2,56.3,10769.0,indicative (1-4),11.0,32.4,72.5,56.3,68.8
+5926,Pomy,Jura-Nord vaudois,1.77,876,38,4.3,43.1,6714.0,estimé (voisinage),17.0,33.3,37.4,43.1,86.4
+5483,Ferreyres,Morges,2.6,309,8,2.6,43.5,6086.0,estimé (voisinage),8.8,18.0,80.5,43.5,89.2
+5559,Giez,Jura-Nord vaudois,1.37,464,28,6.0,47.7,8333.0,indicative (1-4),17.0,48.6,36.5,47.7,79.4
+5611,Savigny,Lavaux-Oron,3.46,3517,181,5.1,41.5,10422.0,indicative (1-4),9.3,40.5,79.9,41.5,70.3
+5650,Vaux-sur-Morges,Morges,3.13,185,13,7.0,56.5,14471.0,estimé (voisinage),8.8,57.7,81.6,56.5,52.6
+5817,Grandcour,Broye-Vully,8.53,976,46,4.7,31.4,7882.0,estimé (voisinage),17.0,36.9,52.3,31.4,81.3
+5842,Rossinière,Riviera-Pays-d'Enhaut,4.61,499,33,6.6,13.6,7828.0,estimé (voisinage),17.4,54.1,41.6,13.6,81.6
+5932,Ursins,Jura-Nord vaudois,4.39,232,13,5.6,33.8,5106.0,annonces (surface estimée),17.0,45.0,43.1,33.8,93.5
+5422,Aubonne,Morges,5.17,3856,217,5.6,40.6,7202.0,solide (5+),8.8,45.0,86.1,40.6,84.3
+5458,Faoug,Broye-Vully,2.17,895,29,3.2,45.5,9182.0,indicative (1-4),17.0,23.4,38.2,45.5,75.7
+5586,Lausanne,Lausanne,0.31,144873,6992,4.8,14.8,12503.0,solide (5+),15.6,37.8,41.2,14.8,61.2
+5587,Le Mont-sur-Lausanne,Lausanne,0.81,9531,501,5.3,39.9,11343.0,indicative (1-4),15.6,42.3,42.3,39.9,66.3
+5632,Denges,Morges,1.62,1830,52,2.8,48.3,16377.0,indicative (1-4),8.8,19.8,78.3,48.3,44.3
+5642,Morges,Morges,2.43,17701,1273,7.2,38.1,9850.0,indicative (1-4),8.8,59.5,80.1,38.1,72.8
+5675,Lucens,Broye-Vully,0.45,4736,190,4.0,25.9,8077.0,indicative (1-4),17.0,30.6,34.5,25.9,80.5
+5680,Ogens,Gros-de-Vaud,2.64,341,11,3.2,28.8,5367.0,annonces (surface estimée),14.0,23.4,54.4,28.8,92.3
+5706,Borex,Nyon,4.01,1146,59,5.1,70.9,11333.0,indicative (1-4),11.0,40.5,72.5,70.9,66.3
+5720,Givrins,Nyon,5.14,1068,46,4.3,58.9,9938.0,indicative (1-4),11.0,33.3,75.0,58.9,72.4
+5908,Chêne-Pâquier,Jura-Nord vaudois,3.54,173,7,4.0,34.2,6551.0,estimé (voisinage),17.0,30.6,41.3,34.2,87.2
+5935,Villars-Epeney,Jura-Nord vaudois,2.9,108,1,0.9,47.3,7331.0,estimé (voisinage),17.0,2.7,39.9,47.3,83.8
+5425,Bière,Morges,8.68,1669,90,5.4,32.7,8969.0,indicative (1-4),8.8,43.2,93.9,32.7,76.6
+5484,Gollion,Morges,0.41,1066,39,3.7,40.4,9052.0,indicative (1-4),8.8,27.9,75.6,40.4,76.2
+5495,Penthalaz,Gros-de-Vaud,0.47,3169,215,6.8,32.6,7759.0,annonces (surface estimée),14.0,55.9,49.6,32.6,81.9
+5522,Fey,Gros-de-Vaud,2.62,789,31,3.9,40.2,8927.0,indicative (1-4),14.0,29.7,54.3,40.2,76.8
+5592,Romanel-sur-Lausanne,Lausanne,0.56,4321,189,4.4,35.9,8924.0,annonces (surface estimée),15.6,34.2,41.7,35.9,76.8
+5637,Lavigny,Morges,6.25,1099,27,2.5,31.5,8839.0,solide (5+),8.8,17.1,88.5,31.5,77.2
+5646,Saint-Prex,Morges,5.8,5865,240,4.1,57.0,12439.0,indicative (1-4),8.8,31.5,87.5,57.0,61.5
+5716,Eysins,Nyon,2.21,1774,78,4.4,70.6,11124.0,estimé (voisinage),11.0,34.2,68.5,70.6,67.2
+5830,Villarzel,Broye-Vully,3.48,523,21,4.0,29.6,5949.0,estimé (voisinage),17.0,30.6,41.1,29.6,89.8
+5854,Burtigny,Nyon,3.9,401,16,4.0,32.3,11143.0,indicative (1-4),11.0,30.6,72.3,32.3,67.1
+5904,Chamblon,Jura-Nord vaudois,2.53,554,19,3.4,51.9,5986.0,estimé (voisinage),17.0,25.2,39.0,51.9,89.6
+5913,Donneloye,Jura-Nord vaudois,5.45,916,40,4.4,31.0,6551.0,indicative (1-4),17.0,34.2,45.5,31.0,87.2
+5921,Molondin,Jura-Nord vaudois,3.5,269,10,3.7,16.6,4322.0,indicative (1-4),17.0,27.9,41.2,16.6,96.9
+5435,Saint-Livres,Morges,5.6,715,32,4.5,41.0,8839.0,estimé (voisinage),8.8,35.1,87.1,41.0,77.2
+5477,Cossonay,Morges,1.65,4893,166,3.4,41.3,6353.0,annonces (surface estimée),8.8,25.2,78.4,41.3,88.0
+5488,Mauraz,Morges,2.06,67,1,1.5,60.8,7927.0,estimé (voisinage),8.8,8.1,79.3,60.8,81.2
+5491,Mont-la-Ville,Morges,4.01,496,21,4.2,39.5,7239.0,annonces (surface estimée),8.8,32.4,83.6,39.5,84.2
+5492,Montricher,Morges,3.97,943,38,4.0,48.1,7927.0,annonces (surface estimée),8.8,30.6,83.5,48.1,81.2
+5493,Orny,Morges,1.42,497,25,5.0,31.4,6086.0,indicative (1-4),8.8,39.6,77.9,31.4,89.2
+5498,La Sarraz,Morges,0.56,2615,114,4.4,34.9,8042.0,indicative (1-4),8.8,34.2,76.0,34.9,80.7
+5560,Grandevent,Jura-Nord vaudois,1.73,241,11,4.6,51.3,8333.0,estimé (voisinage),17.0,36.0,37.3,51.3,79.4
+5624,Bussigny,Ouest lausannois,1.77,11632,371,3.2,48.4,9496.0,indicative (1-4),18.1,23.4,31.8,48.4,74.3
+5638,Lonay,Morges,1.05,2734,260,9.5,67.0,9158.0,annonces (surface estimée),8.8,80.2,77.1,67.0,75.8
+5690,Villars-le-Comte,Broye-Vully,2.95,132,6,4.5,41.1,3606.0,indicative (1-4),17.0,35.1,40.0,41.1,100.0
+5692,Vucherens,Broye-Vully,4.15,621,28,4.5,35.5,8276.0,estimé (voisinage),17.0,35.1,42.6,35.5,79.6
+5707,Chavannes-de-Bogis,Nyon,7.95,1384,44,3.2,78.5,10183.0,indicative (1-4),11.0,23.4,81.2,78.5,71.3
+5798,Ropraz,Broye-Vully,3.34,530,19,3.6,28.3,8276.0,annonces (surface estimée),17.0,27.0,40.8,28.3,79.6
+5853,Bursins,Nyon,2.8,814,37,4.5,44.9,10000.0,indicative (1-4),11.0,35.1,69.8,44.9,72.1
+5406,Lavey-Morcles,Aigle,2.89,1015,48,4.7,25.0,9200.0,estimé (voisinage),23.7,36.9,6.1,25.0,75.6
+5590,Pully,Lavaux-Oron,1.95,19538,1654,8.5,56.9,13355.0,solide (5+),9.3,71.2,76.5,56.9,57.5
+5653,Vufflens-le-Château,Morges,2.62,837,54,6.5,79.5,14471.0,estimé (voisinage),8.8,53.2,80.5,79.5,52.6
+5743,Arnex-sur-Orbe,Jura-Nord vaudois,3.81,694,23,3.3,36.2,6832.0,estimé (voisinage),17.0,24.3,41.9,36.2,85.9
+5746,Bavois,Jura-Nord vaudois,1.48,1041,23,2.2,34.0,4146.0,estimé (voisinage),17.0,14.4,36.7,34.0,97.6
+5763,Valeyres-sous-Rances,Jura-Nord vaudois,3.07,578,18,3.1,40.8,5986.0,estimé (voisinage),17.0,22.5,40.2,40.8,89.6
+5872,Le Chenit,Jura-Nord vaudois,3.57,4753,366,7.7,46.4,5190.0,indicative (1-4),17.0,64.0,41.3,46.4,93.1
+5892,Blonay - Saint-Légier,Riviera-Pays-d'Enhaut,1.39,12464,824,6.6,46.2,12458.0,solide (5+),17.4,54.1,34.5,46.2,61.4
+5907,Chavannes-le-Chêne,Jura-Nord vaudois,2.85,322,15,4.7,28.0,7331.0,estimé (voisinage),17.0,36.9,39.7,28.0,83.8
+5911,Cuarny,Jura-Nord vaudois,2.16,241,9,3.7,37.1,6714.0,estimé (voisinage),17.0,27.9,38.2,37.1,86.4
+5919,Mathod,Jura-Nord vaudois,4.77,725,26,3.6,32.0,6832.0,estimé (voisinage),17.0,27.0,44.0,32.0,85.9
+5430,Marchissy,Nyon,7.7,508,12,2.4,33.5,10025.0,estimé (voisinage),11.0,16.2,80.7,33.5,72.0
+5496,Penthaz,Gros-de-Vaud,1.78,1945,78,4.0,43.9,8750.0,indicative (1-4),14.0,30.6,52.5,43.9,77.6
+5728,Signy-Avenex,Nyon,1.89,608,40,6.6,67.8,10987.0,estimé (voisinage),11.0,54.1,67.8,67.8,67.8
+5729,Tannay,Nyon,6.18,1746,97,5.6,63.7,19095.0,annonces (surface estimée),11.0,45.0,77.3,63.7,32.4
+5805,Oron,Lavaux-Oron,4.51,6341,308,4.9,32.3,6814.0,solide (5+),9.3,38.7,82.2,32.3,86.0
+5828,Treytorrens (Payerne),Broye-Vully,4.56,108,5,4.6,,5437.0,estimé (voisinage),17.0,36.0,43.5,,92.0
+5831,Valbroye,Broye-Vully,2.17,3425,180,5.3,28.5,5437.0,indicative (1-4),17.0,42.3,38.2,28.5,92.0
+5841,Château-d'Oex,Riviera-Pays-d'Enhaut,3.28,3653,269,7.4,9.1,7828.0,solide (5+),17.4,61.3,38.7,9.1,81.6
+5862,Tartegnin,Nyon,0.43,235,12,5.1,29.4,11028.0,indicative (1-4),11.0,40.5,64.6,29.4,67.6
+5871,L'Abbaye,Jura-Nord vaudois,6.25,1541,88,5.7,21.1,5447.0,indicative (1-4),17.0,45.9,47.3,21.1,92.0
+5891,Veytaux,Riviera-Pays-d'Enhaut,1.7,1038,66,6.4,36.9,8597.0,indicative (1-4),17.4,52.3,35.2,36.9,78.2
+5925,Orzens,Jura-Nord vaudois,4.48,214,12,5.6,24.0,8213.0,estimé (voisinage),17.0,45.0,43.3,24.0,79.9
+5408,Noville,Aigle,3.57,1215,57,4.7,29.0,6701.0,indicative (1-4),23.7,36.9,7.6,29.0,86.5
+5480,Daillens,Gros-de-Vaud,2.83,1097,29,2.6,60.8,4261.0,indicative (1-4),14.0,18.0,54.8,60.8,97.1
+5489,Mex (VD),Gros-de-Vaud,2.81,807,41,5.1,61.4,10847.0,indicative (1-4),14.0,40.5,54.8,61.4,68.4
+5523,Froideville,Gros-de-Vaud,5.53,2729,96,3.5,44.0,6946.0,indicative (1-4),14.0,26.1,60.8,44.0,85.4
+5610,Saint-Saphorin (Lavaux),Lavaux-Oron,2.47,387,13,3.4,,11439.0,estimé (voisinage),9.3,25.2,77.7,,65.8
+5661,Boulens,Gros-de-Vaud,1.5,368,15,4.1,38.3,8067.0,estimé (voisinage),14.0,31.5,51.9,38.3,80.5
+5723,Mies,Nyon,5.55,2180,130,6.0,60.3,11667.0,indicative (1-4),11.0,48.6,75.9,60.3,64.8
+5732,Vich,Nyon,1.88,1182,35,3.0,66.1,10903.0,indicative (1-4),11.0,21.6,67.8,66.1,68.2
+5764,Vallorbe,Jura-Nord vaudois,10.13,4319,206,4.8,24.2,6253.0,indicative (1-4),17.0,37.8,55.8,24.2,88.5
+5511,Assens,Gros-de-Vaud,2.82,1717,64,3.7,47.7,8750.0,estimé (voisinage),14.0,27.9,54.8,47.7,77.6
+5529,Oulens-sous-Echallens,Gros-de-Vaud,2.66,603,17,2.8,49.1,4261.0,estimé (voisinage),14.0,19.8,54.4,49.1,97.1
+5622,Bremblens,Morges,2.37,614,23,3.7,55.1,8346.0,annonces (surface estimée),8.8,27.9,80.0,55.1,79.3
+5663,Bussy-sur-Moudon,Broye-Vully,2.47,262,9,3.4,31.1,6846.0,estimé (voisinage),17.0,25.2,38.9,31.1,85.9
+5678,Moudon,Broye-Vully,0.57,6646,271,4.1,20.6,6846.0,solide (5+),17.0,31.5,34.7,20.6,85.9
+5708,Chavannes-des-Bois,Nyon,8.71,983,30,3.1,70.3,6726.0,indicative (1-4),11.0,22.5,82.9,70.3,86.4
+5731,Le Vaud,Nyon,6.4,1367,47,3.4,49.6,10025.0,solide (5+),11.0,25.2,77.8,49.6,72.0
+5758,La Praz,Jura-Nord vaudois,5.76,207,7,3.4,18.7,3692.0,indicative (1-4),17.0,25.2,46.2,18.7,99.6
+5759,Premier,Jura-Nord vaudois,7.52,228,13,5.7,22.4,6253.0,estimé (voisinage),17.0,45.9,50.1,22.4,88.5
+5790,Maracon,Lavaux-Oron,4.02,569,20,3.5,39.4,10936.0,estimé (voisinage),9.3,26.1,81.1,39.4,68.0
+5861,Rolle,Nyon,2.57,6540,391,6.0,50.5,16036.0,solide (5+),11.0,48.6,69.3,50.5,45.8
+5541,Goumoëns,Gros-de-Vaud,0.12,1206,67,5.6,40.7,3667.0,indicative (1-4),14.0,45.0,48.8,40.7,99.7
+5591,Renens (VD),Ouest lausannois,0.47,21541,964,4.5,13.6,9023.0,indicative (1-4),18.1,35.1,29.0,13.6,76.4
+5639,Lully (VD),Morges,2.82,836,36,4.3,80.9,10604.0,indicative (1-4),8.8,33.3,81.0,80.9,69.5
+5718,Genolier,Nyon,4.27,2012,109,5.4,82.6,11518.0,indicative (1-4),11.0,43.2,73.1,82.6,65.5
+5722,Grens,Nyon,2.88,391,21,5.4,60.8,11333.0,estimé (voisinage),11.0,43.2,70.0,60.8,66.3
+5856,Essertines-sur-Rolle,Nyon,1.86,785,18,2.3,62.4,12244.0,indicative (1-4),11.0,15.3,67.8,62.4,62.3
+5412,Rennaz,Aigle,3.0,949,40,4.2,35.6,6701.0,estimé (voisinage),23.7,32.4,6.4,35.6,86.5
+5431,Mollens (VD),Morges,5.93,324,14,4.3,26.4,8969.0,estimé (voisinage),8.8,33.3,87.8,26.4,76.6
+5464,Vully-les-Lacs,Broye-Vully,3.96,3627,183,5.0,42.6,6873.0,solide (5+),17.0,39.6,42.2,42.6,85.8
+5415,Yvorne,Aigle,2.83,1109,53,4.8,32.8,6429.0,indicative (1-4),23.7,37.8,6.0,32.8,87.7
+5490,Moiry,Morges,4.53,300,10,3.3,33.4,5350.0,estimé (voisinage),8.8,24.3,84.7,33.4,92.4
+5518,Echallens,Gros-de-Vaud,0.33,6719,297,4.4,32.0,8750.0,solide (5+),14.0,34.2,49.3,32.0,77.6
+5520,Essertines-sur-Yverdon,Gros-de-Vaud,5.62,1142,34,3.0,42.4,8213.0,indicative (1-4),14.0,21.6,61.0,42.4,79.9
+5555,Corcelles-près-Concise,Jura-Nord vaudois,0.44,434,33,7.6,38.6,7075.0,estimé (voisinage),17.0,63.1,34.4,38.6,84.9
+5585,Jouxtens-Mézery,Lausanne,1.11,1478,102,6.9,71.1,14662.0,annonces (surface estimée),15.6,56.8,43.0,71.1,51.8
+5623,Buchillon,Morges,8.23,686,43,6.3,79.3,10769.0,estimé (voisinage),8.8,51.4,92.9,79.3,68.8
+5629,Clarmont,Morges,1.62,228,8,3.5,39.1,9904.0,estimé (voisinage),8.8,26.1,78.3,39.1,72.5
+5634,Echichens,Morges,3.26,3222,240,7.4,52.3,9904.0,indicative (1-4),8.8,61.3,81.9,52.3,72.5
+5714,Crassier,Nyon,5.0,1275,50,3.9,51.6,11869.0,indicative (1-4),11.0,29.7,74.7,51.6,64.0
+5745,Baulmes,Jura-Nord vaudois,3.59,1165,53,4.5,23.1,5209.0,estimé (voisinage),17.0,35.1,41.4,23.1,93.0
+5754,Juriens,Jura-Nord vaudois,7.07,348,13,3.7,24.5,6253.0,estimé (voisinage),17.0,27.9,49.1,24.5,88.5
+5816,Corcelles-près-Payerne,Broye-Vully,7.27,2982,117,3.9,35.5,4006.0,indicative (1-4),17.0,29.7,49.5,35.5,98.3
+5889,La Tour-de-Peilz,Riviera-Pays-d'Enhaut,1.27,12812,891,7.0,40.6,10340.0,solide (5+),17.4,57.7,34.2,40.6,70.6
+5923,Oppens,Gros-de-Vaud,3.03,202,8,4.0,30.9,8067.0,estimé (voisinage),14.0,30.6,55.2,30.9,80.5
+5931,Treycovagnes,Jura-Nord vaudois,2.6,515,21,4.1,36.2,8455.0,estimé (voisinage),17.0,31.5,39.2,36.2,78.9
+5937,Vugelles-La Mothe,Jura-Nord vaudois,2.06,146,6,4.1,36.8,8333.0,estimé (voisinage),17.0,31.5,38.0,36.8,79.4
+5938,Yverdon-les-Bains,Jura-Nord vaudois,0.89,30292,1817,6.0,17.3,8455.0,solide (5+),17.0,48.6,35.4,17.3,78.9
+5409,Ollon,Aigle,1.25,8221,380,4.6,33.8,9669.0,solide (5+),23.7,36.0,2.5,33.8,73.6
+5472,Bournens,Gros-de-Vaud,0.71,531,20,3.8,56.3,8750.0,estimé (voisinage),14.0,28.8,50.1,56.3,77.6
+5486,L'Isle,Morges,1.04,1094,49,4.5,23.6,7239.0,estimé (voisinage),8.8,35.1,77.0,23.6,84.2
+5621,Aclens,Morges,1.91,585,20,3.4,56.9,9052.0,estimé (voisinage),8.8,25.2,78.9,56.9,76.2
+5669,Curtilles,Broye-Vully,1.06,308,9,2.9,27.9,5634.0,indicative (1-4),17.0,20.7,35.8,27.9,91.2
+5710,Coinsins,Nyon,2.56,519,24,4.6,81.8,10903.0,estimé (voisinage),11.0,36.0,69.3,81.8,68.2
+5711,Commugny,Nyon,8.42,2973,165,5.5,63.6,11477.0,indicative (1-4),11.0,44.1,82.2,63.6,65.7
+5721,Gland,Nyon,1.44,13987,490,3.5,51.9,9727.0,solide (5+),11.0,26.1,66.8,51.9,73.3
+5760,Rances,Jura-Nord vaudois,5.55,509,23,4.5,27.5,4824.0,annonces (surface estimée),17.0,35.1,45.7,27.5,94.7
+5851,Allaman,Morges,6.06,430,18,4.2,42.6,16036.0,estimé (voisinage),8.8,32.4,88.1,42.6,45.8
+5890,Vevey,Riviera-Pays-d'Enhaut,1.5,20142,982,4.9,17.3,9939.0,solide (5+),17.4,38.7,34.8,17.3,72.4
+5403,Chessel,Aigle,3.9,527,23,4.4,33.0,6701.0,estimé (voisinage),23.7,34.2,8.3,33.0,86.5
+5485,Grancy,Morges,1.53,538,22,4.1,47.5,9052.0,estimé (voisinage),8.8,31.5,78.1,47.5,76.2
+5551,Bonvillars,Jura-Nord vaudois,2.68,517,22,4.3,46.8,7905.0,indicative (1-4),17.0,33.3,39.4,46.8,81.2
+5561,Grandson,Jura-Nord vaudois,3.49,3390,151,4.5,32.7,7923.0,solide (5+),17.0,35.1,41.2,32.7,81.2
+5568,Sainte-Croix,Jura-Nord vaudois,0.63,5139,408,7.9,17.6,5209.0,solide (5+),17.0,65.8,34.9,17.6,93.0
+5589,Prilly,Ouest lausannois,0.6,12758,802,6.3,23.7,11557.0,indicative (1-4),18.1,51.4,29.2,23.7,65.3
+5628,Chigny,Morges,1.63,420,7,1.7,51.0,14471.0,annonces (surface estimée),8.8,9.9,78.3,51.0,52.6
+5741,L'Abergement,Jura-Nord vaudois,6.47,270,11,4.1,32.4,6832.0,estimé (voisinage),17.0,31.5,47.7,32.4,85.9
+5747,Bofflens,Jura-Nord vaudois,3.83,200,7,3.5,45.0,6832.0,estimé (voisinage),17.0,26.1,41.9,45.0,85.9
+5803,Vulliens,Broye-Vully,3.99,628,24,3.8,34.5,5865.0,annonces (surface estimée),17.0,28.8,42.3,34.5,90.1
+5407,Leysin,Aigle,1.21,3659,139,3.8,11.2,6389.0,indicative (1-4),23.7,28.8,2.4,11.2,87.9
+5437,Saubraz,Morges,5.77,447,9,2.0,31.2,8120.0,estimé (voisinage),8.8,12.6,87.5,31.2,80.3
+5475,Chavannes-le-Veyron,Morges,0.5,160,1,0.6,39.9,6353.0,estimé (voisinage),8.8,0.0,75.8,39.9,88.0
+5514,Bottens,Gros-de-Vaud,3.63,1354,44,3.2,41.2,6946.0,estimé (voisinage),14.0,23.4,56.6,41.2,85.4
+5554,Concise,Jura-Nord vaudois,2.37,1025,34,3.3,36.1,7075.0,annonces (surface estimée),17.0,24.3,38.7,36.1,84.9
+5571,Tévenon,Jura-Nord vaudois,2.08,862,56,6.5,37.3,7977.0,indicative (1-4),17.0,53.2,38.0,37.3,80.9
+5655,Yens,Morges,3.57,1498,68,4.5,50.3,9944.0,estimé (voisinage),8.8,35.1,82.6,50.3,72.4
+5674,Lovatens,Broye-Vully,2.52,146,6,4.1,22.1,8077.0,estimé (voisinage),17.0,31.5,39.0,22.1,80.5
+5756,Montcherand,Jura-Nord vaudois,2.6,489,17,3.5,43.1,6832.0,estimé (voisinage),17.0,26.1,39.2,43.1,85.9
+5933,Valeyres-sous-Montagny,Jura-Nord vaudois,0.61,707,39,5.5,39.9,10385.0,solide (5+),17.0,44.1,34.8,39.9,70.4
+5471,Bettens,Gros-de-Vaud,2.54,646,11,1.7,47.4,5690.0,estimé (voisinage),14.0,9.9,54.2,47.4,90.9
+5479,Cuarnens,Morges,2.69,561,18,3.2,32.2,5350.0,indicative (1-4),8.8,23.4,80.7,32.2,92.4
+5521,Etagnières,Gros-de-Vaud,2.63,1191,52,4.4,40.2,7980.0,estimé (voisinage),14.0,34.2,54.4,40.2,80.9
+5582,Cheseaux-sur-Lausanne,Lausanne,0.94,4847,265,5.5,37.4,7980.0,annonces (surface estimée),15.6,44.1,42.6,37.4,80.9
+5604,Forel (Lavaux),Lavaux-Oron,0.73,2087,96,4.6,43.5,7274.0,annonces (surface estimée),9.3,36.0,73.8,43.5,84.0
+5651,Villars-Sainte-Croix,Ouest lausannois,2.72,953,38,4.0,61.4,8935.0,indicative (1-4),18.1,30.6,33.9,61.4,76.8
+5652,Villars-sous-Yens,Morges,5.3,602,28,4.7,38.6,12914.0,annonces (surface estimée),8.8,36.9,86.4,38.6,59.4
+5712,Coppet,Nyon,6.9,3232,194,6.0,69.0,26533.0,indicative (1-4),11.0,48.6,78.9,69.0,0.0
+5724,Nyon,Nyon,0.31,23351,1167,5.0,51.3,10987.0,solide (5+),11.0,39.6,64.3,51.3,67.8
+5725,Prangins,Nyon,2.09,4271,242,5.7,66.3,10411.0,indicative (1-4),11.0,45.9,68.3,66.3,70.3
+5755,Lignerolle,Jura-Nord vaudois,7.57,461,17,3.7,30.2,7420.0,indicative (1-4),17.0,27.9,50.2,30.2,83.4
+5757,Orbe,Jura-Nord vaudois,0.77,7978,398,5.0,23.0,6832.0,solide (5+),17.0,39.6,35.2,23.0,85.9
+5885,Jongny,Riviera-Pays-d'Enhaut,0.37,1928,88,4.6,51.7,16071.0,annonces (surface estimée),17.4,36.0,32.3,51.7,45.6
+5914,Ependes (VD),Jura-Nord vaudois,4.76,379,19,5.0,29.8,9006.0,indicative (1-4),17.0,39.6,44.0,29.8,76.4
+5427,Féchy,Morges,4.55,923,35,3.8,64.6,19032.0,annonces (surface estimée),8.8,28.8,84.8,64.6,32.7
+5531,Penthéréaz,Gros-de-Vaud,2.68,430,14,3.3,33.3,4146.0,estimé (voisinage),14.0,24.3,54.5,33.3,97.6
+5556,Fiez,Jura-Nord vaudois,3.11,432,18,4.2,36.0,7977.0,estimé (voisinage),17.0,32.4,40.3,36.0,80.9
+5566,Provence,Jura-Nord vaudois,4.59,409,31,7.6,7.9,7905.0,estimé (voisinage),17.0,63.1,43.6,7.9,81.2
+5613,Bourg-en-Lavaux,Lavaux-Oron,1.14,5464,339,6.2,57.1,15509.0,solide (5+),9.3,50.5,74.7,57.1,48.1
+5627,Chavannes-près-Renens,Ouest lausannois,0.85,9774,272,2.8,16.8,11420.0,estimé (voisinage),18.1,19.8,29.8,16.8,65.9
+5684,Rossenges,Broye-Vully,2.45,91,9,9.9,46.6,5865.0,estimé (voisinage),17.0,83.8,38.9,46.6,90.1
+5785,Corcelles-le-Jorat,Broye-Vully,3.69,499,21,4.2,27.2,7567.0,annonces (surface estimée),17.0,32.4,41.6,27.2,82.7
+5929,Suchy,Jura-Nord vaudois,5.07,663,12,1.8,44.8,7704.0,indicative (1-4),17.0,10.8,44.6,44.8,82.1
+5402,Bex,Aigle,5.44,8841,495,5.6,21.7,7468.0,solide (5+),23.7,45.0,11.7,21.7,83.2
+5424,Berolle,Morges,7.95,303,13,4.3,27.6,8969.0,estimé (voisinage),8.8,33.3,92.3,27.6,76.6
+5426,Bougy-Villars,Morges,3.27,514,25,4.9,52.9,7450.0,indicative (1-4),8.8,38.7,82.0,52.9,83.2
+5609,Rivaz,Lavaux-Oron,2.45,329,38,11.6,49.0,7857.0,annonces (surface estimée),9.3,99.1,77.6,49.0,81.5
+5702,Arzier-Le Muids,Nyon,11.45,2968,97,3.3,46.5,13456.0,indicative (1-4),11.0,24.3,88.9,46.5,57.0
+5730,Trélex,Nyon,3.85,1426,75,5.3,71.8,6892.0,indicative (1-4),11.0,42.3,72.2,71.8,85.7
+5873,Le Lieu,Jura-Nord vaudois,7.1,918,60,6.5,32.8,6253.0,estimé (voisinage),17.0,53.2,49.1,32.8,88.5
+5930,Suscévaz,Jura-Nord vaudois,4.33,234,10,4.3,37.8,5986.0,estimé (voisinage),17.0,33.3,43.0,37.8,89.6
+5934,Valeyres-sous-Ursins,Jura-Nord vaudois,3.27,235,18,7.7,26.2,7936.0,annonces (surface estimée),17.0,64.0,40.7,26.2,81.1
+5512,Bercher,Gros-de-Vaud,0.31,1344,62,4.6,25.0,8067.0,estimé (voisinage),14.0,36.0,49.2,25.0,80.5
+5527,Morrens (VD),Gros-de-Vaud,2.41,1155,60,5.2,36.6,7895.0,annonces (surface estimée),14.0,41.4,53.9,36.6,81.3
+5530,Pailly,Gros-de-Vaud,2.7,575,18,3.1,40.9,9225.0,indicative (1-4),14.0,22.5,54.5,40.9,75.5
+5534,Rueyres,Gros-de-Vaud,1.28,304,17,5.6,33.3,8067.0,indicative (1-4),14.0,45.0,51.4,33.3,80.5
+5539,Vuarrens,Gros-de-Vaud,4.35,1119,26,2.3,38.0,7259.0,annonces (surface estimée),14.0,15.3,58.2,38.0,84.1
+5671,Dompierre (VD),Broye-Vully,3.37,240,9,3.8,31.1,9166.0,annonces (surface estimée),17.0,28.8,40.9,31.1,75.7
+5765,Vaulion,Jura-Nord vaudois,7.55,488,13,2.7,13.3,6253.0,estimé (voisinage),17.0,18.9,50.1,13.3,88.5
+5799,Servion,Lavaux-Oron,1.14,2228,90,4.0,45.7,8845.0,solide (5+),9.3,30.6,74.7,45.7,77.1
+5884,Corsier-sur-Vevey,Riviera-Pays-d'Enhaut,2.1,3385,212,6.3,34.9,10936.0,indicative (1-4),17.4,51.4,36.1,34.9,68.0
+5912,Démoret,Jura-Nord vaudois,5.22,173,9,5.2,16.8,6551.0,estimé (voisinage),17.0,41.4,45.0,16.8,87.2
+5922,Montagny-près-Yverdon,Jura-Nord vaudois,0.96,780,37,4.7,47.9,3967.0,indicative (1-4),17.0,36.9,35.6,47.9,98.4
+5414,Villeneuve (VD),Aigle,3.15,6039,299,5.0,27.8,11105.0,indicative (1-4),23.7,39.6,6.7,27.8,67.3
+5451,Avenches,Broye-Vully,0.28,4875,227,4.7,32.8,5493.0,annonces (surface estimée),17.0,36.9,34.1,32.8,91.8
+5501,Sullens,Gros-de-Vaud,1.29,1226,56,4.6,57.7,6152.0,annonces (surface estimée),14.0,36.0,51.4,57.7,88.9
+5535,Saint-Barthélemy (VD),Gros-de-Vaud,2.51,834,26,3.1,28.0,5690.0,annonces (surface estimée),14.0,22.5,54.1,28.0,90.9
+5563,Mutrux,Jura-Nord vaudois,4.14,145,8,5.5,11.6,6459.0,annonces (surface estimée),17.0,44.1,42.6,11.6,87.6
+5581,Belmont-sur-Lausanne,Lavaux-Oron,2.05,3915,176,4.5,47.5,10622.0,solide (5+),9.3,35.1,76.7,47.5,69.4
+5648,Saint-Sulpice (VD),Ouest lausannois,4.17,5155,303,5.9,75.1,12443.0,indicative (1-4),18.1,47.7,37.1,75.1,61.5
+5654,Vullierens,Morges,2.38,547,21,3.8,32.9,9485.0,indicative (1-4),8.8,28.8,80.0,32.9,74.4
+5683,Prévonloup,Broye-Vully,3.52,230,12,5.2,35.6,8077.0,estimé (voisinage),17.0,41.4,41.2,35.6,80.5
+5688,Syens,Broye-Vully,2.78,151,10,6.6,40.6,5865.0,estimé (voisinage),17.0,54.1,39.6,40.6,90.1
+5727,Saint-Cergue,Nyon,10.2,3009,104,3.5,41.9,6529.0,indicative (1-4),11.0,26.1,86.2,41.9,87.3
+5750,Les Clées,Jura-Nord vaudois,5.33,193,10,5.2,24.2,6832.0,estimé (voisinage),17.0,41.4,45.2,24.2,85.9
+5813,Chevroux,Broye-Vully,8.99,494,21,4.3,35.2,7882.0,indicative (1-4),17.0,33.3,53.3,35.2,81.3
+5410,Ormont-Dessous,Aigle,6.41,1242,58,4.7,13.0,6123.0,indicative (1-4),23.7,36.9,13.9,13.0,89.0
+5411,Ormont-Dessus,Aigle,0.85,1433,126,8.8,21.3,7951.0,indicative (1-4),23.7,73.9,1.6,21.3,81.0
+5436,Saint-Oyens,Morges,3.38,457,14,3.1,45.3,8120.0,annonces (surface estimée),8.8,22.5,82.2,45.3,80.3
+5583,Crissier,Ouest lausannois,1.34,10676,383,3.6,37.4,10423.0,indicative (1-4),18.1,27.0,30.9,37.4,70.3
+5649,Tolochenaz,Morges,3.5,1934,89,4.6,45.2,11185.0,annonces (surface estimée),8.8,36.0,82.5,45.2,66.9
+5749,Chavornay,Jura-Nord vaudois,3.47,5440,172,3.2,34.4,4146.0,indicative (1-4),17.0,23.4,41.1,34.4,97.6
+5819,Henniez,Broye-Vully,2.28,469,16,3.4,27.0,5949.0,estimé (voisinage),17.0,25.2,38.5,27.0,89.8
+5903,Bioley-Magnoux,Jura-Nord vaudois,4.25,257,13,5.1,27.9,6551.0,estimé (voisinage),17.0,40.5,42.8,27.9,87.2
+5909,Cheseaux-Noréaz,Jura-Nord vaudois,3.17,736,48,6.5,56.8,10011.0,indicative (1-4),17.0,53.2,40.5,56.8,72.1
+5928,Rovray,Jura-Nord vaudois,1.41,194,5,2.6,46.8,7331.0,estimé (voisinage),17.0,18.0,36.6,46.8,83.8
+5474,La Chaux (Cossonay),Morges,2.27,432,21,4.9,39.1,6353.0,estimé (voisinage),8.8,38.7,79.7,39.1,88.0
+5487,Lussery-Villars,Gros-de-Vaud,2.5,470,18,3.8,36.5,6353.0,estimé (voisinage),14.0,28.8,54.1,36.5,88.0
+5540,Montilliez,Gros-de-Vaud,3.24,1872,65,3.5,41.0,8750.0,estimé (voisinage),14.0,26.1,55.7,41.0,77.6
+5635,Ecublens (VD),Ouest lausannois,0.33,13364,667,5.0,39.9,11420.0,indicative (1-4),18.1,39.6,28.7,39.9,65.9
+5673,Hermenches,Broye-Vully,4.64,373,17,4.6,24.2,7118.0,estimé (voisinage),17.0,36.0,43.7,24.2,84.7
+5703,Bassins,Nyon,9.31,1483,55,3.7,44.8,10593.0,indicative (1-4),11.0,27.9,84.2,44.8,69.5
+5762,Sergey,Jura-Nord vaudois,4.44,133,5,3.8,32.7,6832.0,estimé (voisinage),17.0,28.8,43.3,32.7,85.9
+5902,Belmont-sur-Yverdon,Jura-Nord vaudois,4.68,445,16,3.6,39.0,7337.0,indicative (1-4),17.0,27.0,43.8,39.0,83.7
+5939,Yvonand,Jura-Nord vaudois,1.13,3524,215,6.1,26.9,7331.0,annonces (surface estimée),17.0,49.5,36.0,26.9,83.8

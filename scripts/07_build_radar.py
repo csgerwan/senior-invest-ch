@@ -52,8 +52,9 @@ def main():
     # --- Notes 0-5 de la zone verte ---
     df["note_pouvoir_achat"] = (df["indice_pouvoir_achat"] / 20).round(2)
     df["note_population"] = (minmax(df["pop_80plus"]) / 20).round(2)
-    # tension EMS : saturation prioritaire (60%) + éloignement (40%)
-    tension = 0.6 * saturation + 0.4 * df["eloignement_score"]
+    # tension EMS : saturation très prioritaire (75%) + éloignement réduit (25%)
+    POIDS_SATURATION, POIDS_ELOIGNEMENT = 0.75, 0.25
+    tension = POIDS_SATURATION * saturation + POIDS_ELOIGNEMENT * df["eloignement_score"]
     df["note_tension_ems"] = (tension / 20).round(2)
 
     cols = ["ofs", "nom", "district",

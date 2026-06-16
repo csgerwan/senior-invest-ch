@@ -1,7 +1,7 @@
 """
 Étape 3 — Concurrence : les EMS face à la demande senior.
 
-Données EMS : liste officielle LAMal 2024 du canton (163 établissements + lits),
+Données EMS : liste officielle LAMal 2025 du canton (165 établissements + lits),
 géolocalisée (cf. scripts 03a et 03). Superpose l'offre (EMS) sur la demande
 (part de 80+) et calcule un PROXY DE TENSION par commune :
     tension = personnes de 80+ / lits d'EMS de la commune
@@ -27,7 +27,7 @@ VD_TAUX_OCCUPATION = 98  # %
 
 st.set_page_config(page_title="Concurrence EMS", page_icon="🏥", layout="wide")
 st.title("🏥 Concurrence — EMS face à la demande senior")
-st.caption("EMS : liste officielle LAMal VD 2024 (lits) · Démographie : OFS 2024 · "
+st.caption("EMS : liste officielle LAMal VD 2025 (lits) · Démographie : OFS 2024 · "
            "Occupation canton : INFOSAN/DGS Vaud 2024")
 
 
@@ -129,9 +129,10 @@ with col1:
 # --- Tableaux ---
 t1, t2 = st.tabs(["🎯 Communes les plus tendues", "📋 Liste des EMS (officielle)"])
 with t1:
+    n_non_loc = int(ems["ofs"].isna().sum())
     st.caption("Communes avec le plus de 80+ par lit d'EMS local (offre sous pression). "
                "Hors communes sans lit recensé. ⚠️ Biais possible : une commune dont "
-               "des EMS ne sont pas encore géolocalisés (42/163) peut apparaître "
+               f"des EMS ne sont pas encore géolocalisés ({n_non_loc}/{len(ems)}) peut apparaître "
                "artificiellement « tendue » (lits sous-comptés). À vérifier avant un pitch.")
     cibles = d_aff.dropna(subset=["tension"]).nlargest(15, "tension")
     st.dataframe(cibles[["nom", "pop_totale", "pop_80plus", "lits_commune",
@@ -140,7 +141,7 @@ with t1:
         "lits_commune": "Lits", "nb_ems": "Nb EMS", "tension": "80+/lit"}),
         hide_index=True, use_container_width=True)
 with t2:
-    st.caption(f"{len(ems)} établissements (EMS + EPSM), source liste LAMal VD 2024.")
+    st.caption(f"{len(ems)} établissements (EMS + EPSM), source liste LAMal VD 2025.")
     st.dataframe(ems[["nom_clean", "type", "lits", "commune", "geo_source"]].rename(columns={
         "nom_clean": "Établissement", "type": "Type", "lits": "Lits",
         "commune": "Commune", "geo_source": "Géoloc."}).sort_values("Lits", ascending=False),

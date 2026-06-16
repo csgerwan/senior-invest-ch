@@ -20,7 +20,7 @@ from pathlib import Path
 import pandas as pd
 import pdfplumber
 
-PDF = Path("data/raw/liste_lamal_ems_vd_2024.pdf")
+PDF = Path("data/raw/liste_lamal_ems_vd_2025.pdf")  # millésime 2025 (mandat 2025)
 OUT = Path("data/raw/ems_vd_source.csv")
 
 

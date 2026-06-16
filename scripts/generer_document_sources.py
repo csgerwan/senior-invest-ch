@@ -107,10 +107,11 @@ def main():
             ("Géoportail fédéral", "https://www.geo.admin.ch")])
 
     para(doc, "Concurrence — EMS (établissements médico-sociaux)", bold=True, size=12, space_after=2)
-    source(doc, "Liste officielle des EMS vaudois et nombre de lits (2024)",
-           "Canton de Vaud — Liste LAMal des EMS et divisions C (mandat 2024).",
+    source(doc, "Liste officielle des EMS vaudois et nombre de lits (2025)",
+           "Canton de Vaud — Liste LAMal des EMS et divisions C (mandat 2025) : "
+           "165 établissements, 7 654 lits.",
            [("PDF officiel vd.ch",
-             "https://www.vd.ch/fileadmin/user_upload/themes/social/EMS/Professionnel/Tarifs_soho/Liste_LAMal_2024.pdf")])
+             "https://www.vd.ch/fileadmin/user_upload/themes/sante_social/ems/fichiers_pdf/Liste_des_%C3%A9tablissements_LAMal_2025_VF.pdf")])
     source(doc, "Nombre de lits cantonal & taux d'occupation",
            "INFOSAN — chiffres-clés de la santé vaudoise (6 986 lits ; occupation ~98 %).",
            [("INFOSAN — EMS, lits", "https://infosan.vd.ch/chiffres-cles/ems-lits")])

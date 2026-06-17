@@ -219,10 +219,10 @@ sc["score_eq"] = sc[["demande_score", "tension_score",
 # calque -> (colonne, légende, palette, plus c'est haut = mieux)
 CALQUES = {
     "Score d'opportunité": ("score_eq", "Score (poids égaux)", "RdYlGn", True),
-    "Part de seniors 80+ (%)": ("part_80plus", "Part 80+ (%)", "BuGn", True),
-    "Tension EMS (district)": ("tension_score", "Tension /100", "BuGn", True),
+    "Part de seniors 80+ (%)": ("part_80plus", "Part 80+ (%)", "YlOrRd", True),
+    "Tension EMS (district)": ("tension_score", "Tension /100", "YlOrRd", True),
     "Pouvoir d'achat": ("pouvoir_achat_score", "Pouvoir d'achat /100", "RdYlGn", True),
-    "Prix immobilier (CHF/m²)": ("prix_m2_appart", "Prix CHF/m²", "BuGn", True),
+    "Prix immobilier (CHF/m²)": ("prix_m2_appart", "Prix CHF/m²", "YlOrRd", True),
     "EMS à proximité": (None, "", None, True),
 }
 calque = st.selectbox("Calque à afficher", list(CALQUES),

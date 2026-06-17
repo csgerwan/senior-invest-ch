@@ -12,14 +12,16 @@ import branca.colormap as cm
 import folium
 import pandas as pd
 import streamlit as st
+
+import brand
 from streamlit_folium import st_folium
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 GEOJSON_PATH = PROJECT_ROOT / "data" / "processed" / "communes_vd.geojson"
 DEMO_PATH = PROJECT_ROOT / "data" / "processed" / "demographie_vd.csv"
 
-st.title("📊 Démographie & vieillissement — Canton de Vaud")
-st.caption("Source : OFS / STAT-TAB (px-x-0102010000_103), population résidante permanente 2024")
+brand.page_header("📊", "Démographie & vieillissement",
+                  "Population des 65+ et 80+, par commune.", "OFS · 2024")
 
 # Indicateurs proposés : (libellé, colonne, unité)
 INDICATEURS = {

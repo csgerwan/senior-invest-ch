@@ -11,17 +11,22 @@ from pathlib import Path
 
 import streamlit as st
 
+import brand
+
 ASSETS = Path(__file__).parent / "assets"
 
 st.set_page_config(
     page_title="Helvina · Senior Invest",
-    page_icon="🏛️",
+    page_icon=str(ASSETS / "helvina_mark.svg"),
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
-# Logo Helvina en haut de la barre latérale
-st.logo(str(ASSETS / "helvina_logo.svg"), size="large")
+brand.inject_css()
+
+# Logo Helvina (barre latérale) + monogramme en icône réduite
+st.logo(str(ASSETS / "helvina_logo.svg"), size="large",
+        icon_image=str(ASSETS / "helvina_mark.svg"))
 
 # Bandeau d'en-tête navy (marque Helvina) — affiché sur chaque page
 st.markdown(
@@ -29,10 +34,10 @@ st.markdown(
     <div style="background:#0E1E2E;border-radius:10px;padding:12px 20px;margin-bottom:14px;
                 display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
       <span style="color:#ffffff;font-size:26px;font-weight:700;letter-spacing:.5px;
-                   font-family:'Trebuchet MS','Segoe UI',sans-serif;">Helvina</span>
-      <span style="color:#9fb3c8;font-size:13px;border-left:1px solid #33485e;
-                   padding-left:16px;">Senior Invest · aide à la décision d'investissement
-                   en hébergement senior · canton de Vaud</span>
+                   font-family:'Inter','Trebuchet MS',sans-serif;">Helvina</span>
+      <span style="color:#7FD8C4;font-size:13px;font-weight:500;border-left:1px solid #33485e;
+                   padding-left:16px;">L'investissement senior, éclairé par la donnée</span>
+      <span style="color:#9fb3c8;font-size:12px;margin-left:auto;">Canton de Vaud</span>
     </div>
     """,
     unsafe_allow_html=True,
@@ -53,3 +58,5 @@ pg = st.navigation({
     "Explorer le marché": [carte, demographie, ems, pouvoir_achat, immobilier, score],
 })
 pg.run()
+
+brand.footer()

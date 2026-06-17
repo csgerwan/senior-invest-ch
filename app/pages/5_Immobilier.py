@@ -14,15 +14,17 @@ import branca.colormap as cm
 import folium
 import pandas as pd
 import streamlit as st
+
+import brand
 from streamlit_folium import st_folium
 
 ROOT = Path(__file__).resolve().parents[2]
 GEO = ROOT / "data/processed/communes_vd.geojson"
 IMMO = ROOT / "data/processed/immobilier_vd.csv"
 
-st.title("🏗️ Immobilier — prix au m² par commune (300/300)")
-st.caption("Annonces Homegate via Apify (2026), complété par estimation de voisinage · "
-           "couverture totale des 300 communes")
+brand.page_header("🏗️", "Immobilier — prix au m²",
+                  "Prix indicatifs (annonces Homegate) · couverture 300/300 communes.",
+                  "Homegate · 2026")
 
 st.warning(
     "**Prix issus des annonces (≈ prix demandés), pas de transactions.** Trois niveaux de "

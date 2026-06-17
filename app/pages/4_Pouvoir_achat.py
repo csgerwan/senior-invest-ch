@@ -13,16 +13,17 @@ import branca.colormap as cm
 import folium
 import pandas as pd
 import streamlit as st
+
+import brand
 from streamlit_folium import st_folium
 
 ROOT = Path(__file__).resolve().parents[2]
 GEO = ROOT / "data/processed/communes_vd.geojson"
 PA = ROOT / "data/processed/pouvoir_achat_vd.csv"
 
-st.title("💰 Pouvoir d'achat — Canton de Vaud")
-st.caption("Revenu : impôt fédéral direct ESTV 2022 (par commune) · "
-           "Charge fiscale : coefficient communal 2026 · "
-           "Fortune : StatVD 2022 (par district)")
+brand.page_header("💰", "Pouvoir d'achat",
+                  "Revenu, charge fiscale communale et fortune (district).",
+                  "ESTV 2022 · fisc. 2026")
 
 # (libellé, colonne, format, légende, plus c'est haut = mieux ?)
 INDICATEURS = {

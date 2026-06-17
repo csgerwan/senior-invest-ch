@@ -11,14 +11,16 @@ from pathlib import Path
 
 import folium
 import streamlit as st
+
+import brand
 from streamlit_folium import st_folium
 
 # Chemin robuste : remonte à la racine du projet depuis ce fichier
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 GEOJSON_PATH = PROJECT_ROOT / "data" / "processed" / "communes_vd.geojson"
 
-st.title("🗺️ Carte des communes — Canton de Vaud")
-st.caption("Limites officielles · Source : OFS / geo.admin (Opendatasoft), millésime 2025")
+brand.page_header("🗺️", "Carte des communes",
+                  "Les 300 communes vaudoises et leurs limites officielles.", "OFS · 2025")
 
 
 @st.cache_data

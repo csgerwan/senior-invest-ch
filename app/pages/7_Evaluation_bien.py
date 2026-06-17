@@ -18,6 +18,8 @@ import folium
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
+
+import brand
 from streamlit_folium import st_folium
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -27,9 +29,10 @@ SCORE = ROOT / "data/processed/score_opportunite_vd.csv"
 EMS = ROOT / "data/processed/ems_vd.csv"
 UA = {"User-Agent": "senior-invest-ch/1.0"}
 
-st.title("🏠 Évaluation d'un bien — radar investisseur")
-st.caption("Entre une adresse : la zone verte (qualification de la demande) se remplit "
-           "automatiquement. Ajoute le prix pour la décote vs marché.")
+brand.page_header("🏠", "Évaluer un bien",
+                  "Saisis une adresse : la zone verte du radar (qualification de la demande) "
+                  "se remplit automatiquement. Ajoute le prix pour la décote vs marché.",
+                  "Radar investisseur")
 
 # Axes du radar (ordre = image de référence). Zone verte + décote = automatiques.
 AXES = [
@@ -111,7 +114,17 @@ surface = c3.number_input("Surface (m²)", min_value=0, value=0, step=10,
                           help="Optionnel — pour la décote vs marché")
 
 if not adresse:
-    st.info("👆 Entre une adresse pour lancer l'évaluation.")
+    st.info("👆 Entre une adresse (rue, NPA, commune) pour générer automatiquement "
+            "le radar de qualification de la demande.")
+    st.markdown("##### …ou explore le marché par commune")
+    g1, g2, g3 = st.columns(3)
+    g1.page_link("pages/6_Score_opportunite.py", label="Score d'opportunité", icon="🎯")
+    g1.page_link("pages/1_Carte_des_communes.py", label="Carte des communes", icon="🗺️")
+    g2.page_link("pages/2_Demographie.py", label="Démographie", icon="📊")
+    g2.page_link("pages/3_Concurrence_EMS.py", label="Concurrence EMS", icon="🏥")
+    g3.page_link("pages/4_Pouvoir_achat.py", label="Pouvoir d'achat", icon="💰")
+    g3.page_link("pages/5_Immobilier.py", label="Immobilier", icon="🏗️")
+    brand.footer()
     st.stop()
 
 lat, lon, label = geocoder(adresse)
@@ -206,10 +219,10 @@ sc["score_eq"] = sc[["demande_score", "tension_score",
 # calque -> (colonne, légende, palette, plus c'est haut = mieux)
 CALQUES = {
     "Score d'opportunité": ("score_eq", "Score (poids égaux)", "RdYlGn", True),
-    "Part de seniors 80+ (%)": ("part_80plus", "Part 80+ (%)", "YlOrRd", True),
-    "Tension EMS (district)": ("tension_score", "Tension /100", "YlOrRd", True),
+    "Part de seniors 80+ (%)": ("part_80plus", "Part 80+ (%)", "BuGn", True),
+    "Tension EMS (district)": ("tension_score", "Tension /100", "BuGn", True),
     "Pouvoir d'achat": ("pouvoir_achat_score", "Pouvoir d'achat /100", "RdYlGn", True),
-    "Prix immobilier (CHF/m²)": ("prix_m2_appart", "Prix CHF/m²", "YlOrRd", True),
+    "Prix immobilier (CHF/m²)": ("prix_m2_appart", "Prix CHF/m²", "BuGn", True),
     "EMS à proximité": (None, "", None, True),
 }
 calque = st.selectbox("Calque à afficher", list(CALQUES),

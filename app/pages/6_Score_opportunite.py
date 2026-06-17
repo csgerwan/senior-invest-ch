@@ -13,14 +13,17 @@ import branca.colormap as cm
 import folium
 import pandas as pd
 import streamlit as st
+
+import brand
 from streamlit_folium import st_folium
 
 ROOT = Path(__file__).resolve().parents[2]
 GEO = ROOT / "data/processed/communes_vd.geojson"
 SCORE = ROOT / "data/processed/score_opportunite_vd.csv"
 
-st.title("🎯 Score d'opportunité d'investissement")
-st.caption("Croisement démographie × concurrence EMS × pouvoir d'achat × immobilier")
+brand.page_header("🎯", "Score d'opportunité",
+                  "Classement des communes — 4 critères croisés, pondérables en direct.",
+                  "Synthèse")
 
 # critère -> (colonne sous-score, libellé, poids par défaut)
 CRITERES = {

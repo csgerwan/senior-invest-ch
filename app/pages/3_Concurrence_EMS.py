@@ -15,6 +15,8 @@ import branca.colormap as cm
 import folium
 import pandas as pd
 import streamlit as st
+
+import brand
 from streamlit_folium import st_folium
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -25,9 +27,9 @@ EMS = ROOT / "data/processed/ems_vd.csv"
 # Repères officiels cantonaux (INFOSAN / DGS Vaud, 2024)
 VD_TAUX_OCCUPATION = 98  # %
 
-st.title("🏥 Concurrence — EMS face à la demande senior")
-st.caption("EMS : liste officielle LAMal VD 2025 (lits) · Démographie : OFS 2024 · "
-           "Occupation canton : INFOSAN/DGS Vaud 2024")
+brand.page_header("🏥", "Concurrence — EMS",
+                  "L'offre d'EMS (lits) face à la demande senior · occupation cantonale ~98 %.",
+                  "LAMal VD · 2025")
 
 
 @st.cache_data

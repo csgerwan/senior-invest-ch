@@ -17,7 +17,6 @@ from streamlit_folium import st_folium
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 GEOJSON_PATH = PROJECT_ROOT / "data" / "processed" / "communes_vd.geojson"
 
-st.set_page_config(page_title="Carte des communes VD", page_icon="🗺️", layout="wide")
 st.title("🗺️ Carte des communes — Canton de Vaud")
 st.caption("Limites officielles · Source : OFS / geo.admin (Opendatasoft), millésime 2025")
 

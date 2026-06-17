@@ -19,7 +19,6 @@ ROOT = Path(__file__).resolve().parents[2]
 GEO = ROOT / "data/processed/communes_vd.geojson"
 PA = ROOT / "data/processed/pouvoir_achat_vd.csv"
 
-st.set_page_config(page_title="Pouvoir d'achat VD", page_icon="💰", layout="wide")
 st.title("💰 Pouvoir d'achat — Canton de Vaud")
 st.caption("Revenu : impôt fédéral direct ESTV 2022 (par commune) · "
            "Charge fiscale : coefficient communal 2026 · "

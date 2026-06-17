@@ -19,7 +19,6 @@ ROOT = Path(__file__).resolve().parents[2]
 GEO = ROOT / "data/processed/communes_vd.geojson"
 SCORE = ROOT / "data/processed/score_opportunite_vd.csv"
 
-st.set_page_config(page_title="Score d'opportunité", page_icon="🎯", layout="wide")
 st.title("🎯 Score d'opportunité d'investissement")
 st.caption("Croisement démographie × concurrence EMS × pouvoir d'achat × immobilier")
 

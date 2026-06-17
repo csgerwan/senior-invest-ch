@@ -27,7 +27,6 @@ SCORE = ROOT / "data/processed/score_opportunite_vd.csv"
 EMS = ROOT / "data/processed/ems_vd.csv"
 UA = {"User-Agent": "senior-invest-ch/1.0"}
 
-st.set_page_config(page_title="Évaluation d'un bien", page_icon="🏠", layout="wide")
 st.title("🏠 Évaluation d'un bien — radar investisseur")
 st.caption("Entre une adresse : la zone verte (qualification de la demande) se remplit "
            "automatiquement. Ajoute le prix pour la décote vs marché.")

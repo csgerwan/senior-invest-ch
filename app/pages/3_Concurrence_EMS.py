@@ -25,7 +25,6 @@ EMS = ROOT / "data/processed/ems_vd.csv"
 # Repères officiels cantonaux (INFOSAN / DGS Vaud, 2024)
 VD_TAUX_OCCUPATION = 98  # %
 
-st.set_page_config(page_title="Concurrence EMS", page_icon="🏥", layout="wide")
 st.title("🏥 Concurrence — EMS face à la demande senior")
 st.caption("EMS : liste officielle LAMal VD 2025 (lits) · Démographie : OFS 2024 · "
            "Occupation canton : INFOSAN/DGS Vaud 2024")

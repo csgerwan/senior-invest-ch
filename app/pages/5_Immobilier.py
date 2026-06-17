@@ -20,7 +20,6 @@ ROOT = Path(__file__).resolve().parents[2]
 GEO = ROOT / "data/processed/communes_vd.geojson"
 IMMO = ROOT / "data/processed/immobilier_vd.csv"
 
-st.set_page_config(page_title="Immobilier VD", page_icon="🏗️", layout="wide")
 st.title("🏗️ Immobilier — prix au m² par commune (300/300)")
 st.caption("Annonces Homegate via Apify (2026), complété par estimation de voisinage · "
            "couverture totale des 300 communes")

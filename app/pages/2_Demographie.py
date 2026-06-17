@@ -18,7 +18,6 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 GEOJSON_PATH = PROJECT_ROOT / "data" / "processed" / "communes_vd.geojson"
 DEMO_PATH = PROJECT_ROOT / "data" / "processed" / "demographie_vd.csv"
 
-st.set_page_config(page_title="Démographie VD", page_icon="📊", layout="wide")
 st.title("📊 Démographie & vieillissement — Canton de Vaud")
 st.caption("Source : OFS / STAT-TAB (px-x-0102010000_103), population résidante permanente 2024")
 

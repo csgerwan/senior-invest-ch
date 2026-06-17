@@ -1,55 +1,33 @@
 """
-Senior Invest CH — Espace data d'aide à la décision
-Dashboard pour repérer des opportunités d'investissement en hébergement senior
-en Suisse romande (pilote : canton de Vaud).
+Senior Invest CH — point d'entrée & navigation (V2).
+
+Navigation groupée (st.navigation) :
+  • « Évaluer un bien » (accueil par défaut : adresse → radar investisseur)
+  • « Explorer le marché » (carte, démographie, EMS, pouvoir d'achat, immobilier, score)
+La config de page est centralisée ici (les pages n'appellent plus set_page_config).
 """
 
 import streamlit as st
 
-# --- Configuration de la page ---
 st.set_page_config(
     page_title="Senior Invest CH",
     page_icon="🏛️",
     layout="wide",
+    initial_sidebar_state="expanded",
 )
 
-# --- En-tête ---
-st.title("🏛️ Senior Invest CH")
-st.subheader("Espace data — opportunités d'investissement en hébergement senior")
-st.caption("Pilote : canton de Vaud · Données publiques sourcées et datées")
+# --- Pages (chemins relatifs à app/) ---
+evaluation = st.Page("pages/7_Evaluation_bien.py", title="Évaluer un bien",
+                     icon="🏠", default=True)
+carte = st.Page("pages/1_Carte_des_communes.py", title="Carte des communes", icon="🗺️")
+demographie = st.Page("pages/2_Demographie.py", title="Démographie", icon="📊")
+ems = st.Page("pages/3_Concurrence_EMS.py", title="Concurrence EMS", icon="🏥")
+pouvoir_achat = st.Page("pages/4_Pouvoir_achat.py", title="Pouvoir d'achat", icon="💰")
+immobilier = st.Page("pages/5_Immobilier.py", title="Immobilier", icon="🏗️")
+score = st.Page("pages/6_Score_opportunite.py", title="Score d'opportunité", icon="🎯")
 
-st.divider()
-
-# --- Présentation ---
-col1, col2 = st.columns([2, 1])
-
-with col1:
-    st.markdown(
-        """
-        ### Bienvenue 👋
-        Cet espace regroupe des **données fiables et géolocalisées** pour :
-        - 🔍 **Repérer des opportunités** : où la demande senior va croître et où l'offre manque
-        - 📊 **Préparer des pitchs investisseurs** : des chiffres crédibles, sourcés et datés
-        - 🗺️ **Analyser une localisation précise** : démographie, concurrence, immobilier
-
-        Utilise le menu de gauche pour naviguer entre les modules.
-        """
-    )
-
-with col2:
-    st.info(
-        "**Modules — V1**\n\n"
-        "✅ Carte des communes VD\n\n"
-        "✅ Démographie & vieillissement\n\n"
-        "✅ Concurrence (EMS) — 163 EMS officiels + lits\n\n"
-        "✅ Pouvoir d'achat (revenu, fiscalité, fortune)\n\n"
-        "✅ Immobilier — prix/m² (300/300 communes)\n\n"
-        "✅ **Score d'opportunité** (interactif, 4 critères croisés)\n\n"
-        "🆕 **Évaluation d'un bien** (adresse → radar investisseur) — V2"
-    )
-
-st.divider()
-st.caption(
-    "⚠️ Chaque chiffre affiché dans l'app sera accompagné de sa source et de sa date. "
-    "La fiabilité prime sur la fraîcheur : on indique toujours l'année de référence."
-)
+pg = st.navigation({
+    "Évaluer un bien": [evaluation],
+    "Explorer le marché": [carte, demographie, ems, pouvoir_achat, immobilier, score],
+})
+pg.run()

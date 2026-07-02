@@ -22,8 +22,9 @@ ROOT = Path(__file__).resolve().parents[2]
 GEO = ROOT / "data/processed/communes_vd.geojson"
 IMMO = ROOT / "data/processed/immobilier_vd.csv"
 
-brand.page_header("🏗️", "Immobilier — prix au m²",
-                  "Prix indicatifs (annonces Homegate) · couverture 300/300 communes.",
+brand.page_header("🏗️", "Immobilier — prix au m² (Vaud)",
+                  "Prix indicatifs (annonces Homegate) · 300/300 communes vaudoises. "
+                  "Genève et Fribourg à venir.",
                   "Homegate · 2026")
 
 st.warning(

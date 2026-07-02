@@ -22,6 +22,11 @@ def inject_css():
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     html, body, [class*="css"], [class*="st-"] {{ font-family:'Inter',sans-serif; }}
+    /* Ne PAS écraser la police des icônes Material (sinon la ligature « expand_more »
+       s'affiche en toutes lettres dans la navigation) */
+    [data-testid="stIconMaterial"], span[class*="material-symbols"], span[class*="material-icons"] {{
+        font-family:'Material Symbols Rounded','Material Symbols Outlined','Material Icons' !important;
+    }}
 
     /* Barre latérale navy */
     section[data-testid="stSidebar"] {{ background-color:{NAVY}; }}

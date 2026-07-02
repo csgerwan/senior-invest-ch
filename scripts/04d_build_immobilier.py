@@ -26,6 +26,7 @@ from shapely.geometry import shape
 ROOT = Path(".")
 GEO = ROOT / "data/processed/communes_vd.geojson"
 APIFY = ROOT / "data/processed/prix_m2_immo_vd.csv"
+APIFY_GE = ROOT / "data/processed/prix_m2_immo_ge.csv"
 MANUEL = ROOT / "data/raw/prix_m2_manuel.csv"
 DEMO = ROOT / "data/processed/demographie_vd.csv"
 PA = ROOT / "data/processed/pouvoir_achat_vd.csv"
@@ -41,10 +42,14 @@ def norm(s):
 def main():
     geo = json.loads(GEO.read_text(encoding="utf-8"))
     base = pd.DataFrame([{"ofs": f["properties"]["ofs"], "nom": f["properties"]["nom"],
+                          "canton": f["properties"]["canton"],
                           "district": f["properties"]["district"]} for f in geo["features"]])
 
-    # 1. Prix réels Apify (prioritaire) — on retient le prix MOYEN comme demandé
-    apify = pd.read_csv(APIFY, dtype={"ofs": str})
+    # 1. Prix réels Apify (prioritaire) — VD + GE, on retient le prix MOYEN
+    parts = [pd.read_csv(APIFY, dtype={"ofs": str})]
+    if APIFY_GE.exists():
+        parts.append(pd.read_csv(APIFY_GE, dtype={"ofs": str}))
+    apify = pd.concat(parts, ignore_index=True)
     apify = apify.rename(columns={"prix_m2_moyen": "prix_m2_appart"})
     apify["prix_source"] = "Homegate/Apify (annonces réelles)"
     apify["prix_date"] = 2026
@@ -77,15 +82,20 @@ def main():
     cent["y"] = cent.geometry.centroid.y
     xy = dict(zip(cent["ofs"], zip(cent["x"], cent["y"])))
 
-    connus = df[df["prix_m2_appart"].notna()][["ofs", "prix_m2_appart"]].copy()
+    connus = df[df["prix_m2_appart"].notna()][["ofs", "canton", "prix_m2_appart"]].copy()
     connus["x"] = connus["ofs"].map(lambda o: xy[o][0])
     connus["y"] = connus["ofs"].map(lambda o: xy[o][1])
 
+    # Estimation par voisinage LIMITÉE AU MÊME CANTON (les prix ne sont pas
+    # comparables d'un canton à l'autre ; un canton non couvert reste sans prix).
     K = 3  # nombre de communes proches utilisées pour l'estimation
     for i in df[df["prix_m2_appart"].isna()].index:
+        meme_canton = connus[connus["canton"] == df.at[i, "canton"]]
+        if meme_canton.empty:
+            continue
         ox, oy = xy[df.at[i, "ofs"]]
-        d2 = (connus["x"] - ox) ** 2 + (connus["y"] - oy) ** 2
-        proches = connus.loc[d2.nsmallest(K).index, "prix_m2_appart"]
+        d2 = (meme_canton["x"] - ox) ** 2 + (meme_canton["y"] - oy) ** 2
+        proches = meme_canton.loc[d2.nsmallest(K).index, "prix_m2_appart"]
         df.at[i, "prix_m2_appart"] = round(proches.median())
         df.at[i, "prix_source"] = "estimé (voisinage, communes proches)"
         df.at[i, "fiabilite"] = "estimé (voisinage)"

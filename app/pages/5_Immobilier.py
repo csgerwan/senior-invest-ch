@@ -22,9 +22,9 @@ ROOT = Path(__file__).resolve().parents[2]
 GEO = ROOT / "data/processed/communes_vd.geojson"
 IMMO = ROOT / "data/processed/immobilier_vd.csv"
 
-brand.page_header("🏗️", "Immobilier — prix au m² (Vaud)",
-                  "Prix indicatifs (annonces Homegate) · 300/300 communes vaudoises. "
-                  "Genève et Fribourg à venir.",
+brand.page_header("🏗️", "Immobilier — prix au m² (Vaud + Genève)",
+                  "Prix indicatifs (annonces Homegate) · Vaud + Genève couverts. "
+                  "Fribourg à venir.",
                   "Homegate · 2026")
 
 st.warning(
@@ -57,7 +57,7 @@ colmap.caption = "Prix indicatif appartement (CHF/m²)"
 col1, col2 = st.columns([3, 1])
 with col2:
     st.metric("Communes avec prix", len(avec_prix))
-    st.metric("Prix médian (canton)", f"{avec_prix['prix_m2_appart'].median():,.0f} CHF/m²".replace(",", "'"))
+    st.metric("Prix médian (VD+GE)", f"{avec_prix['prix_m2_appart'].median():,.0f} CHF/m²".replace(",", "'"))
     st.metric("Min / Max", f"{avec_prix['prix_m2_appart'].min():,.0f} / {avec_prix['prix_m2_appart'].max():,.0f}".replace(",", "'"))
     st.caption("💡 Croise prix bas + forte demande seniors + bon pouvoir d'achat "
                "= terrain d'opportunité (ex : Yverdon, Gland, Epalinges).")
@@ -78,7 +78,7 @@ STYLE_TIER = {
 }
 
 with col1:
-    m = folium.Map(location=[46.55, 6.6], zoom_start=10, tiles="CartoDB positron")
+    m = folium.Map(location=[46.45, 6.5], zoom_start=9, tiles="CartoDB positron")
     for f in geo["features"]:
         o = f["properties"]["ofs"]
         inf = infos.get(o, {})
@@ -120,11 +120,11 @@ with col1:
     st_folium(m, width=None, height=560, returned_objects=[])
 
 st.subheader("📋 Prix au m² par commune — vs demande & pouvoir d'achat")
-cols = ["nom", "district", "prix_m2_appart", "prix_m2_median", "n_annonces",
+cols = ["nom", "canton", "district", "prix_m2_appart", "prix_m2_median", "n_annonces",
         "fiabilite", "pop_80plus", "indice_pouvoir_achat"]
 cols = [c for c in cols if c in avec_prix.columns]
 tab = avec_prix[cols].rename(columns={
-    "nom": "Commune", "district": "District", "prix_m2_appart": "Prix/m² moyen",
+    "nom": "Commune", "canton": "Canton", "district": "District", "prix_m2_appart": "Prix/m² moyen",
     "prix_m2_median": "Prix/m² médian", "n_annonces": "Nb annonces",
     "fiabilite": "Fiabilité", "pop_80plus": "Pop. 80+",
     "indice_pouvoir_achat": "Pouvoir d'achat"})

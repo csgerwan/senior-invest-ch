@@ -28,18 +28,18 @@ brand.inject_css()
 st.logo(str(ASSETS / "helvina_logo.svg"), size="large",
         icon_image=str(ASSETS / "helvina_mark.svg"))
 
-# Bandeau d'en-tête navy (marque Helvina) — affiché sur chaque page
+# Bandeau d'en-tête navy (marque Helvina) — affiché sur chaque page.
+# ⚠️ HTML sur une seule ligne, sans indentation : sinon Streamlit interprète les
+# lignes indentées (4 espaces) comme un bloc de code et affiche le HTML brut.
 st.markdown(
-    """
-    <div style="background:#0E1E2E;border-radius:10px;padding:12px 20px;margin-bottom:14px;
-                display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-      <span style="color:#ffffff;font-size:26px;font-weight:700;letter-spacing:.5px;
-                   font-family:'Inter','Trebuchet MS',sans-serif;">Helvina</span>
-      <span style="color:#7FD8C4;font-size:13px;font-weight:500;border-left:1px solid #33485e;
-                   padding-left:16px;">L'investissement senior, éclairé par la donnée</span>
-      <span style="color:#9fb3c8;font-size:12px;margin-left:auto;">Suisse romande · VD · GE · FR</span>
-    </div>
-    """,
+    '<div style="background:#0E1E2E;border-radius:10px;padding:12px 20px;margin-bottom:14px;'
+    'display:flex;align-items:center;gap:16px;flex-wrap:wrap;">'
+    '<span style="color:#ffffff;font-size:26px;font-weight:700;letter-spacing:.5px;'
+    "font-family:'Inter','Trebuchet MS',sans-serif;\">Helvina</span>"
+    '<span style="color:#7FD8C4;font-size:13px;font-weight:500;border-left:1px solid #33485e;'
+    'padding-left:16px;">L\'investissement senior, éclairé par la donnée</span>'
+    '<span style="color:#9fb3c8;font-size:12px;margin-left:auto;">Suisse romande · VD · GE · FR</span>'
+    "</div>",
     unsafe_allow_html=True,
 )
 

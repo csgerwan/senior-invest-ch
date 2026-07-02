@@ -97,45 +97,118 @@ requirements-dev.txt      # deps scripts (régénération données)
 
 ---
 
-## 5. Rafraîchir les données (chaîne complète)
+## 5. ⭐ METTRE À JOUR LES DONNÉES (la partie la plus importante)
 
-Chaque script se lance **depuis la racine du projet**, environnement activé
-(`source .venv/bin/activate`, et `pip install -r requirements-dev.txt` la 1re fois).
-Les scripts sont numérotés dans l'ordre du pipeline :
+C'est **le** point à maîtriser pour faire vivre l'outil. Prends 5 minutes pour lire le modèle
+mental ci-dessous : une fois compris, tout le reste est mécanique.
 
-```bash
-# --- Communes & démographie ---
-python scripts/01_prepare_communes_vd.py      # limites communales (VD+GE+FR)
-python scripts/02_fetch_demographie_vd.py     # population par âge (OFS)
+### 5.1 Le modèle mental (comment ça circule)
 
-# --- EMS (concurrence) : un script par canton, puis unification ---
-python scripts/03a_parse_liste_lamal.py       # VD : parse le PDF LAMal
-python scripts/03_fetch_ems_vd.py             # VD : géolocalisation
-python scripts/03_ge_ems.py                   # GE
-python scripts/03_fr_ems.py                   # FR
-python scripts/03z_unify_ems.py               # -> ems.csv (258 EMS unifiés)
-
-# --- Pouvoir d'achat ---
-python scripts/04a_parse_revenu_ifd.py        # revenu (ESTV, 3 cantons)
-python scripts/04b_parse_coefficients.py      # coefficient VD
-python scripts/04b2_coefficients_romandie.py  # coefficients VD+GE+FR unifiés
-python scripts/04c_parse_fortune_districts.py # fortune (contexte, VD)
-python scripts/04_build_pouvoir_achat.py      # -> indice pouvoir d'achat
-
-# --- Immobilier (Apify, cf. §6) ---
-APIFY_TOKEN=xxx python scripts/05_fetch_homegate_apify.py   # VD
-APIFY_TOKEN=xxx python scripts/05_ge_fetch_homegate.py      # GE
-python scripts/05b_build_prix_m2.py           # VD : prix/m² par commune
-python scripts/05b_ge_build_prix_m2.py        # GE : prix/m² par commune
-python scripts/04d_build_immobilier.py        # assemble VD+GE (+ estimation voisinage)
-
-# --- Synthèse ---
-python scripts/06_build_score.py              # score d'opportunité (4 critères)
-python scripts/07_build_radar.py              # notes du radar « Évaluer un bien »
+```
+   SOURCE officielle          SCRIPT                 FICHIER              APP            EN LIGNE
+   (OFS, ge.ch, Apify…)  →   scripts/NN_*.py   →   data/processed/*  →  Streamlit  →  git push
+        (internet)            (transforme)          (ce que l'app lit)   (affiche)     (déploie)
 ```
 
-**Règle d'or** : après toute mise à jour de données, faire `git add` + `git commit` + `git push`.
-Streamlit Cloud **redéploie automatiquement** l'app en ligne à chaque push sur `main`.
+Trois choses à retenir :
+1. **L'app ne lit QUE `data/processed/`.** Elle ne va jamais chercher une donnée en direct.
+   Donc tant qu'on n'a pas relancé le bon script, l'app affiche l'ancienne donnée.
+2. **Chaque donnée a un script dédié**, numéroté. On relance **seulement** le script de la
+   donnée qu'on veut mettre à jour (+ ceux qui en dépendent, cf. 5.3).
+3. **Rien n'est en ligne tant qu'on n'a pas fait `git push`.** Le push déclenche
+   automatiquement le redéploiement sur Streamlit Cloud (~1-3 min).
+
+### 5.2 Avant de commencer (à faire une seule fois)
+
+```bash
+cd senior-invest-ch
+source .venv/bin/activate
+pip install -r requirements-dev.txt   # dépendances des scripts (geopandas, pdfplumber, openpyxl…)
+```
+Tous les scripts se lancent **depuis la racine du projet**, environnement activé.
+
+### 5.3 L'ordre des dépendances (à respecter)
+
+Certaines données en nourrissent d'autres. Si tu changes une donnée « amont », il faut
+**relancer les scripts « aval »**. La règle simple :
+
+> **Après CHAQUE mise à jour de données, relancer TOUJOURS `06` puis `07` à la fin.**
+> (Le score et le radar agrègent tout le reste.)
+
+```
+communes (01) ─┬─> démographie (02) ─────────────┐
+               ├─> EMS (03*, 03z) ────────────────┤
+               ├─> pouvoir d'achat (04*) ─────────┼──> SCORE (06) ──> RADAR (07)
+               └─> immobilier (05*, 04d) ─────────┘
+```
+
+### 5.4 Les recettes, donnée par donnée
+
+Pour chaque bloc : **quand** le mettre à jour, **la commande**, et **comment vérifier**.
+Après le bloc concerné, **finir toujours par `06` puis `07`** (cf. 5.3), puis pousser (5.5).
+
+#### 📊 Démographie (population senior) — *à refaire ~1×/an*
+Quand l'OFS publie une nouvelle année (`ANNEE` en haut de `scripts/02_...`).
+```bash
+python scripts/02_fetch_demographie_vd.py
+python scripts/06_build_score.py && python scripts/07_build_radar.py
+```
+Vérif : le script affiche « ✅ N communes écrites » et les totaux 65+/80+.
+
+#### 🏥 EMS (concurrence) — *à refaire quand un canton publie une nouvelle liste*
+Un script par canton, **puis toujours l'unification** :
+```bash
+# Vaud (nouveau PDF LAMal) :
+python scripts/03a_parse_liste_lamal.py && python scripts/03_fetch_ems_vd.py
+# Genève (nouveau PDF SeSPA) :
+python scripts/03_ge_ems.py
+# Fribourg (nouvelle ordonnance) :
+python scripts/03_fr_ems.py
+# TOUJOURS après un des trois :
+python scripts/03z_unify_ems.py
+python scripts/06_build_score.py && python scripts/07_build_radar.py
+```
+Vérif : `03z` affiche « 258 EMS · … lits · … communes ». (Si tu changes le PDF source,
+mets à jour le chemin en haut du script correspondant.)
+
+#### 💰 Pouvoir d'achat (revenu + fiscalité) — *à refaire quand ESTV/cantons publient*
+```bash
+python scripts/04a_parse_revenu_ifd.py         # nouveau xlsx ESTV
+python scripts/04b2_coefficients_romandie.py   # nouveaux coefficients d'impôt
+python scripts/04_build_pouvoir_achat.py
+python scripts/06_build_score.py && python scripts/07_build_radar.py
+```
+Vérif : « ✅ 463/467 communes » avec un indice.
+
+#### 🏗️ Immobilier (prix/m²) — *à refaire aussi souvent qu'on veut (prix vivants)*
+⚠️ Nécessite le token Apify (voir §6). Coûte du crédit (~0,003 $/annonce).
+```bash
+export APIFY_TOKEN=xxx                          # ton token Apify
+python scripts/05_fetch_homegate_apify.py       # VD
+python scripts/05_ge_fetch_homegate.py          # GE
+python scripts/05b_build_prix_m2.py             # VD -> prix/m²
+python scripts/05b_ge_build_prix_m2.py          # GE -> prix/m²
+python scripts/04d_build_immobilier.py          # assemble
+python scripts/06_build_score.py && python scripts/07_build_radar.py
+```
+Vérif : `04d` affiche « ✅ 467 communes … (annonces …, voisinage …) ».
+
+### 5.5 Publier la mise à jour en ligne (l'étape qu'on oublie)
+
+Tant que ce n'est pas poussé, **seul ton ordinateur** voit la nouvelle donnée.
+```bash
+git add data/processed              # les fichiers que l'app lit
+git commit -m "MAJ données : <ce que tu as changé>"
+git push
+```
+→ Streamlit Cloud redéploie tout seul en ~1-3 min. Recharge le lien `….streamlit.app`
+(si figé : menu « ⋮ » → **Reboot app**).
+
+### 5.6 Reconstruire TOUT depuis zéro (rare)
+
+Si tu veux tout régénérer d'un coup, lance les scripts **dans l'ordre des numéros**
+(01 → 02 → 03a → 03_* → 03z → 04a → 04b → 04b2 → 04c → 04 → 05_* → 05b_* → 04d → 06 → 07).
+Prévois le token Apify pour les `05`.
 
 ---
 

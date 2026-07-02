@@ -134,7 +134,7 @@ if lat is None:
 
 props = commune_de(lon, lat, geo)
 if not props:
-    st.error("Cette adresse ne semble pas dans le canton de Vaud (hors périmètre V1).")
+    st.error("Cette adresse ne semble pas en Suisse romande couverte (Vaud, Genève, Fribourg).")
     st.stop()
 
 ofs = props["ofs"]

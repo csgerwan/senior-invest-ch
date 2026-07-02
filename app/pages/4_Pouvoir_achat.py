@@ -69,7 +69,7 @@ with col2:
         st.write(f"• {r['nom']} — **{fmt.format(r[col]).replace(',', chr(39))}**")
 
 with col1:
-    m = folium.Map(location=[46.6, 6.6], zoom_start=9, tiles="CartoDB positron")
+    m = folium.Map(location=[46.55, 6.75], zoom_start=8, tiles="CartoDB positron")
 
     for f in geo["features"]:
         o = f["properties"]["ofs"]

@@ -20,7 +20,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 GEOJSON_PATH = PROJECT_ROOT / "data" / "processed" / "communes_vd.geojson"
 
 brand.page_header("🗺️", "Carte des communes",
-                  "Les 300 communes vaudoises et leurs limites officielles.", "OFS · 2025")
+                  "Les communes de Suisse romande (VD · GE · FR) et leurs limites officielles.",
+                  "OFS · 2025")
 
 
 @st.cache_data
@@ -32,8 +33,14 @@ def load_communes():
 geo = load_communes()
 features = geo["features"]
 
-# --- Filtre par district ---
-districts = sorted({f["properties"]["district"] for f in features})
+# --- Filtre par canton, puis par district ---
+cantons = sorted({f["properties"]["canton"] for f in features})
+choix_canton = st.sidebar.multiselect(
+    "Filtrer par canton", options=cantons, default=cantons,
+    help="Vaud, Genève, Fribourg.")
+feats_canton = [f for f in features if f["properties"]["canton"] in choix_canton]
+
+districts = sorted({f["properties"]["district"] for f in feats_canton})
 choix = st.sidebar.multiselect(
     "Filtrer par district",
     options=districts,
@@ -41,7 +48,7 @@ choix = st.sidebar.multiselect(
     help="Décoche des districts pour n'afficher que certaines zones.",
 )
 
-features_filtrees = [f for f in features if f["properties"]["district"] in choix]
+features_filtrees = [f for f in feats_canton if f["properties"]["district"] in choix]
 geo_filtre = {"type": "FeatureCollection", "features": features_filtrees}
 
 col1, col2 = st.columns([3, 1])
@@ -56,7 +63,7 @@ with col2:
 
 with col1:
     # Carte centrée sur le canton de Vaud
-    m = folium.Map(location=[46.6, 6.6], zoom_start=9, tiles="CartoDB positron")
+    m = folium.Map(location=[46.55, 6.75], zoom_start=8, tiles="CartoDB positron")
 
     folium.GeoJson(
         geo_filtre,

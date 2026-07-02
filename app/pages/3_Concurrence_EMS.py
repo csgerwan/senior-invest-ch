@@ -22,14 +22,14 @@ from streamlit_folium import st_folium
 ROOT = Path(__file__).resolve().parents[2]
 GEO = ROOT / "data/processed/communes_vd.geojson"
 DEMO = ROOT / "data/processed/demographie_vd.csv"
-EMS = ROOT / "data/processed/ems_vd.csv"
+EMS = ROOT / "data/processed/ems.csv"  # unifié VD+GE+FR
 
-# Repères officiels cantonaux (INFOSAN / DGS Vaud, 2024)
+# Repère d'occupation (référence vaudoise, INFOSAN / DGS Vaud)
 VD_TAUX_OCCUPATION = 98  # %
 
 brand.page_header("🏥", "Concurrence — EMS",
-                  "L'offre d'EMS (lits) face à la demande senior · occupation cantonale ~98 %.",
-                  "LAMal VD · 2025")
+                  "L'offre d'EMS (lits) face à la demande senior · occupation VD réf. ~98 %.",
+                  "Listes cantonales · 2025-2026")
 
 
 @st.cache_data
@@ -48,7 +48,7 @@ lits_localises = int(ems.dropna(subset=["ofs"])["lits"].sum())
 
 # --- Agrégat par commune ---
 par_commune = ems.dropna(subset=["ofs"]).groupby("ofs").agg(
-    nb_ems=("nom", "count"), lits_commune=("lits", "sum")).reset_index()
+    nb_ems=("nom_clean", "count"), lits_commune=("lits", "sum")).reset_index()
 d = demo.merge(par_commune, on="ofs", how="left")
 d["nb_ems"] = d["nb_ems"].fillna(0).astype(int)
 d["lits_commune"] = d["lits_commune"].fillna(0)
@@ -76,9 +76,9 @@ infos = d.set_index("ofs").to_dict("index")
 col1, col2 = st.columns([3, 1])
 
 with col2:
-    st.metric("Établissements (liste off.)", len(ems))
-    st.metric("Lits totaux (canton)", f"{lits_total:,}".replace(",", "'"))
-    st.metric("Occupation (canton)", f"{VD_TAUX_OCCUPATION} %")
+    st.metric("Établissements (listes off.)", len(ems))
+    st.metric("Lits totaux (3 cantons)", f"{lits_total:,}".replace(",", "'"))
+    st.metric("Occupation (réf. VD)", f"{VD_TAUX_OCCUPATION} %")
     ratio = lits_total / demo["pop_80plus"].sum() * 100
     st.metric("Lits pour 100 pers. de 80+", f"{ratio:.0f}")
     st.caption(f"Géolocalisés : {len(ems_loc)}/{len(ems)} EMS · "
@@ -87,7 +87,7 @@ with col2:
             "« tendues » (beaucoup de 80+ pour peu de lits) sont les cibles à creuser.")
 
 with col1:
-    m = folium.Map(location=[46.6, 6.6], zoom_start=9, tiles="CartoDB positron")
+    m = folium.Map(location=[46.55, 6.75], zoom_start=8, tiles="CartoDB positron")
     if vals:
         cmap = cm.linear.YlOrRd_09.scale(min(vals.values()), max(vals.values()))
         cmap.caption = cap
@@ -142,8 +142,9 @@ with t1:
         "lits_commune": "Lits", "nb_ems": "Nb EMS", "tension": "80+/lit"}),
         hide_index=True, use_container_width=True)
 with t2:
-    st.caption(f"{len(ems)} établissements (EMS + EPSM), source liste LAMal VD 2025.")
-    st.dataframe(ems[["nom_clean", "type", "lits", "commune", "geo_source"]].rename(columns={
-        "nom_clean": "Établissement", "type": "Type", "lits": "Lits",
-        "commune": "Commune", "geo_source": "Géoloc."}).sort_values("Lits", ascending=False),
-        hide_index=True, use_container_width=True)
+    st.caption(f"{len(ems)} établissements. Sources : liste LAMal VD 2025, "
+               "SeSPA Genève 2026, ordonnance RSF 834.2.41 Fribourg.")
+    st.dataframe(ems[["nom_clean", "canton", "type", "lits", "commune", "geo_source"]].rename(
+        columns={"nom_clean": "Établissement", "canton": "Canton", "type": "Type",
+                 "lits": "Lits", "commune": "Commune", "geo_source": "Géoloc."}).sort_values(
+        "Lits", ascending=False), hide_index=True, use_container_width=True)

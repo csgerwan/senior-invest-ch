@@ -37,7 +37,7 @@ st.markdown(
                    font-family:'Inter','Trebuchet MS',sans-serif;">Helvina</span>
       <span style="color:#7FD8C4;font-size:13px;font-weight:500;border-left:1px solid #33485e;
                    padding-left:16px;">L'investissement senior, éclairé par la donnée</span>
-      <span style="color:#9fb3c8;font-size:12px;margin-left:auto;">Canton de Vaud</span>
+      <span style="color:#9fb3c8;font-size:12px;margin-left:auto;">Suisse romande · VD · GE · FR</span>
     </div>
     """,
     unsafe_allow_html=True,

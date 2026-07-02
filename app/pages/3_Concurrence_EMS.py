@@ -118,10 +118,12 @@ with col1:
         cmap.add_to(m)
 
     for e in ems_loc.itertuples():
+        lits_e = int(e.lits) if pd.notna(e.lits) else 0
+        libelle_lits = f"{lits_e} lits" if lits_e else "lits n.d."
         folium.CircleMarker(
-            [e.lat, e.lon], radius=3 + (e.lits or 0) ** 0.5 / 2,
+            [e.lat, e.lon], radius=3 + lits_e ** 0.5 / 2,
             color="#1a5276", fill=True, fill_color="#2980b9", fill_opacity=0.85,
-            tooltip=f"{e.nom_clean} — {int(e.lits)} lits ({e.commune})").add_to(m)
+            tooltip=f"{e.nom_clean} — {libelle_lits} ({e.commune})").add_to(m)
 
     st_folium(m, width=None, height=600, returned_objects=[])
     st.caption("⚪ Communes en gris = aucun lit recensé localement (ou EMS non géolocalisé). "

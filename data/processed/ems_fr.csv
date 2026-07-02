@@ -1,0 +1,40 @@
+nom_clean,type,lits,lat,lon,geo_source,ofs,commune
+Home médicalisé de la Sarine,EMS,110,46.79454803466797,7.130764007568359,geo.admin,2228,Villars-sur-Glâne
+EMS La Providence,EMS,92,46.80414679990187,7.159704558847937,geo.admin,2196,Fribourg
+Résidence des Chênes,EMS,70,46.811668395996094,7.178083896636963,geo.admin,2196,Fribourg
+"Les Bonnesfontaines, Résidence bourgeoisiale",EMS,87,46.80414679990187,7.159704558847937,geo.admin,2196,Fribourg
+Foyer Rose d’Automne,EMS,32,46.79005813598633,7.1098551750183105,geo.admin,2228,Villars-sur-Glâne
+Résidence Les Martinets,EMS,100,46.79107666015625,7.1360650062561035,geo.admin,2228,Villars-sur-Glâne
+Résidence Les Epinettes,EMS,52,46.77875518798828,7.156270980834961,geo.admin,2206,Marly
+Résidence Saint-Martin,EMS,102,46.752357482910156,7.034700870513916,geo.admin,2186,Cottens (FR)
+Home du Gibloux,EMS,74,46.721168518066406,7.060734272003174,geo.admin,2236,Gibloux
+Résidence Le Manoir,EMS,87,46.812522888183594,7.12816858291626,geo.admin,2197,Givisiez
+Villa Beausite,EMS,80,46.80574417114258,7.163895130157471,geo.admin,2196,Fribourg
+Foyer Les Peupliers,EMS,17,46.74608612060547,7.171676158905029,geo.admin,2220,Le Mouret
+Pflegeheim Maggenberg,EMS,90,46.810184478759766,7.212742328643799,geo.admin,2306,Tafers
+Pflegeheim Aergera,EMS,34,46.76081085205078,7.209704875946045,geo.admin,2294,Giffers
+Pflegeheim Bachmatte,EMS,45,46.74118423461914,7.283893585205078,geo.admin,2299,Plaffeien
+Alters- und Pflegeheim St. Martin,EMS,46,46.82422637939453,7.266120910644531,geo.admin,2306,Tafers
+Stiftung St. Wolfgang,EMS,160,46.8345947265625,7.1868791580200195,geo.admin,2293,Düdingen
+EMS d’Humilimont,EMS,33,46.65767288208008,7.062835693359375,geo.admin,2140,Marsens
+Foyers de la Ville de Bulle,EMS,132,46.62684631347656,7.049800872802734,geo.admin,2125,Bulle
+Home Vallée de la Jogne,EMS,48,46.62274932861328,7.157085418701172,geo.admin,2163,Val-de-Charmey
+Foyer La Rose des Vents,EMS,44,46.60941696166992,7.136488437652588,geo.admin,2124,Broc
+Foyer Saint-Joseph,EMS,144,46.697452545166016,7.155611991882324,geo.admin,2149,La Roche
+Home de la Vallée de l’Intyamon,EMS,44,46.53959274291992,7.068479061126709,geo.admin,2162,Bas-Intyamon
+Foyer Saint-Vincent,EMS,40,46.61885070800781,7.025303840637207,geo.admin,2160,Vuadens
+Foyer Saint-Germain,EMS,36,46.58864212036133,7.082198619842529,geo.admin,2135,Gruyères
+Pflegeheim des Seebezirks,EMS,65,46.93345986625283,7.144716810675141,geo.admin,2275,Murten
+Pflegeheim Jeuss,EMS,46,46.90290069580078,7.178050994873047,geo.admin,2391,Staatswald Galm
+Home médicalisé Saint-François,EMS,44,46.86577224731445,7.124781131744385,geo.admin,2254,Courtepin
+Home du Vully,EMS,36,46.963165283203125,7.103609085083008,geo.admin,2284,Mont-Vully
+Alters- und Pflegeheim Kerzers,EMS,38,46.988182067871094,7.172326564788818,geo.admin,2265,Kerzers
+Alters- und Pflegeheim Ulmiz,EMS,28,46.932682037353516,7.200314998626709,geo.admin,2278,Ulmiz
+Stiftung Résidence Beaulieu,EMS,20,46.93345986625283,7.144716810675141,geo.admin,2275,Murten
+Réseau Santé Glâne,EMS,206,46.69293975830078,6.905735015869141,geo.admin,2063,Billens-Hennens
+EMS Les Grèves du Lac,EMS,32,46.90360641479492,6.933178901672363,geo.admin,2022,Gletterens
+Homes médicalisés de la Broye,EMS,177,46.84336853027344,6.854987144470215,geo.admin,2054,Estavayer
+Maison Saint-Joseph,EMS,81,46.529239654541016,6.8990302085876465,geo.admin,2325,Châtel-Saint-Denis
+EMS Le Châtelet,EMS,68,46.52309799194336,6.8718438148498535,geo.admin,2321,Attalens
+EMS Les Camélias,EMS,15,46.655853271484375,7.058834552764893,geo.admin,2140,Marsens
+Institution de santé pour religieux de Fribourg,EMS,70,46.810935974121094,7.139803886413574,geo.admin,2196,Fribourg

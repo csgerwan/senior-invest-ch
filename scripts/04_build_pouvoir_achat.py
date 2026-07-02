@@ -9,7 +9,13 @@ Fusionne les briques préparées :
 Indice composite (0-100), basé sur les deux indicateurs réellement communaux :
   indice = moyenne( revenu_normalisé , (100 - coefficient_normalisé) )
   -> un revenu élevé tire l'indice vers le haut ; une charge fiscale élevée le baisse.
-La fortune (district) est jointe comme CONTEXTE, pas dans l'indice.
+La fortune (district) est jointe comme CONTEXTE, pas dans l'indice (VD uniquement).
+
+Multi-cantons (VD + GE + FR) :
+  - le revenu (IFD, base fédérale) est comparable -> normalisé GLOBALEMENT ;
+  - le coefficient d'impôt communal n'a PAS la même base selon le canton
+    (VD % impôt cantonal, GE centimes additionnels, FR % impôt cantonal) -> normalisé
+    PAR CANTON (attractivité fiscale relative interne au canton).
 
 Sortie : data/processed/pouvoir_achat_vd.csv
 
@@ -25,7 +31,7 @@ import pandas as pd
 ROOT = Path(".")
 GEO = ROOT / "data/processed/communes_vd.geojson"
 REVENU = ROOT / "data/processed/revenu_vd.csv"
-COEFF = ROOT / "data/processed/coefficients_vd.csv"
+COEFF = ROOT / "data/processed/coefficients_romandie.csv"
 FORTUNE = ROOT / "data/processed/fortune_districts.csv"
 OUT = ROOT / "data/processed/pouvoir_achat_vd.csv"
 
@@ -40,6 +46,7 @@ def main():
     geo = json.loads(GEO.read_text(encoding="utf-8"))
     base = pd.DataFrame([{"ofs": f["properties"]["ofs"],
                           "nom": f["properties"]["nom"],
+                          "canton": f["properties"]["canton"],
                           "district": f["properties"]["district"]}
                          for f in geo["features"]])
 
@@ -53,9 +60,10 @@ def main():
           .merge(coeff, on="ofs", how="left")
           .merge(fortune, on="district", how="left"))
 
-    # Normalisations (sur les communes ayant les deux indicateurs)
+    # Revenu (base fédérale) : comparable -> normalisation GLOBALE
     df["revenu_norm"] = minmax(df["revenu_median_est"])
-    df["coeff_norm"] = minmax(df["coefficient"])
+    # Coefficient d'impôt : base différente selon canton -> normalisation PAR CANTON
+    df["coeff_norm"] = df.groupby("canton")["coefficient"].transform(minmax)
     # Indice : revenu (+) et charge fiscale (-)
     df["indice_pouvoir_achat"] = ((df["revenu_norm"] + (100 - df["coeff_norm"])) / 2).round(1)
 

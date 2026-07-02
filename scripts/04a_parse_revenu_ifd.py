@@ -23,7 +23,7 @@ import pandas as pd
 
 XLSX = Path("data/raw/ifd_revenu_communes_2022.xlsx")
 OUT = Path("data/processed/revenu_vd.csv")
-KANTON_VD = "22"
+CANTONS = {"22", "10", "25"}  # Vaud (22), Fribourg (10), Genève (25)
 
 # Bornes basses/hautes de chaque tranche (CHF). La dernière est plafonnée
 # (sans effet sur la médiane). La tranche "0" est traitée comme [0, 1].
@@ -68,7 +68,7 @@ def main():
     for r in rows[3:]:
         if r[0] not in (None, ""):
             kanton = str(r[0]).strip()
-        if kanton != KANTON_VD or r[2] in (None, ""):
+        if kanton not in CANTONS or r[2] in (None, ""):
             continue
         ofs = str(n(r[2]))
         nom = str(r[3]).strip() if r[3] else ""

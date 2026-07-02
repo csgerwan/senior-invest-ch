@@ -96,10 +96,25 @@ def main():
     noms = codes_ofs_vd()
     ofs_codes = list(noms.keys())
 
+    # Ne garder que les codes réellement présents dans la table OFS (évite les 400)
+    meta = requests.get(TABLE_URL, timeout=60).json()
+    reg = [v for v in meta["variables"] if v["code"] == REGION_CODE][0]
+    valides = set(reg["values"])
+    absents = [o for o in ofs_codes if o not in valides]
+    ofs_codes = [o for o in ofs_codes if o in valides]
+    if absents:
+        print(f"  ⚠️ {len(absents)} communes absentes de la table OFS (ignorées) : {absents[:8]}...")
+
     print(f"Interrogation de l'OFS pour {len(ofs_codes)} communes (année {ANNEE})...")
-    r = requests.post(TABLE_URL, json=construire_requete(ofs_codes), timeout=120)
-    r.raise_for_status()
-    df = parser_jsonstat(r.json())
+    # L'API PXWeb limite la taille des requêtes -> on découpe en lots
+    lots = [ofs_codes[i:i + 120] for i in range(0, len(ofs_codes), 120)]
+    parts = []
+    for i, lot in enumerate(lots, 1):
+        r = requests.post(TABLE_URL, json=construire_requete(lot), timeout=120)
+        r.raise_for_status()
+        parts.append(parser_jsonstat(r.json()))
+        print(f"  lot {i}/{len(lots)} ({len(lot)} communes) ✓")
+    df = pd.concat(parts, ignore_index=True)
 
     # Agrégations par commune
     total = df.groupby("ofs")["valeur"].sum().rename("pop_totale")

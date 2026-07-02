@@ -16,7 +16,7 @@ Lancer depuis la racine du projet :
 import json
 from pathlib import Path
 
-RAW = Path("data/raw/communes_vd.geojson")
+RAW = Path("data/raw/communes_romandie.geojson")  # VD + GE + FR
 OUT = Path("data/processed/communes_vd.geojson")
 
 
@@ -32,10 +32,13 @@ def main():
 
     for feature in data["features"]:
         p = feature["properties"]
+        canton = flatten(p.get("kan_name"))
+        district = flatten(p.get("bez_name")) or canton  # repli : canton si pas de district
         feature["properties"] = {
             "nom": flatten(p.get("gem_name")),
             "ofs": str(flatten(p.get("gem_code"))),  # numéro OFS = clé de jointure
-            "district": flatten(p.get("bez_name")),
+            "district": district,
+            "canton": canton,
         }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)

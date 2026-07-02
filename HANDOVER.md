@@ -11,6 +11,35 @@ donnée, où sont les accès, et ce qu'il reste à faire.
 
 ---
 
+## 0. 🤖 Pour Claude Code (copier-coller ce bloc comme instruction)
+
+> Si tu reprends ce projet, colle le bloc ci-dessous à un agent **Claude Code** ouvert dans un
+> dossier vide. Il fera **toute la partie technique** automatiquement, et s'arrêtera aux 3 gestes
+> qui exigent un humain (transferts de comptes).
+
+```
+Tu reprends le projet "Senior Invest CH". Fais dans l'ordre :
+
+1. Clone https://github.com/csgerwan/senior-invest-ch.git puis entre dans le dossier.
+2. Lance `bash setup.sh --run` pour installer et démarrer l'app en local
+   (ou `bash setup.sh --dev` si je veux aussi pouvoir régénérer les données).
+3. Lis HANDOVER.md et confirme-moi que l'app tourne sur http://localhost:8501.
+4. Quand je te demanderai de mettre à jour une donnée, suis HANDOVER.md §5
+   (relance le bon script, PUIS toujours 06 et 07, PUIS git commit + git push).
+
+NE FAIS PAS ces 3 étapes (elles exigent une action humaine dans un navigateur), mais
+RAPPELLE-LES-MOI à la fin :
+  a) transférer/partager le dépôt GitHub vers mon compte ou l'organisation Helvina ;
+  b) redéployer l'app sur share.streamlit.io depuis MON compte Streamlit ;
+  c) créer MON compte Apify gratuit et me faire mettre le token dans APIFY_TOKEN.
+```
+
+**Ce que l'agent automatise** : clone, installation, lancement, régénération des données,
+`git commit`/`git push`. **Ce qui reste manuel** : les 3 gestes a/b/c ci-dessus (comptes +
+identifiants — cf. §1 et §6).
+
+---
+
 ## 1. Les 4 accès à transférer
 
 Le projet vit à quatre endroits. Pour une reprise complète, il faut récupérer les quatre :
@@ -30,6 +59,9 @@ Le projet vit à quatre endroits. Pour une reprise complète, il faut récupére
 ## 2. Lancer l'application en local
 
 Prérequis : **Python 3.9+** (le projet a été développé sous 3.9.6, sans Node).
+
+**Raccourci** (fait tout automatiquement) : après `git clone` et `cd senior-invest-ch`,
+lance `bash setup.sh --run`. Sinon, les étapes manuelles :
 
 ```bash
 # 1. Récupérer le code

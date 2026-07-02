@@ -24,7 +24,7 @@ from shapely.geometry import Point, shape
 ROOT = Path(".")
 GEO = ROOT / "data/processed/communes_vd.geojson"
 DEMO = ROOT / "data/processed/demographie_vd.csv"
-EMS = ROOT / "data/processed/ems_vd.csv"
+EMS = ROOT / "data/processed/ems.csv"  # unifié VD+GE+FR
 PA = ROOT / "data/processed/pouvoir_achat_vd.csv"
 IMMO = ROOT / "data/processed/immobilier_vd.csv"
 OUT = ROOT / "data/processed/score_opportunite_vd.csv"
